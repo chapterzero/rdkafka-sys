@@ -15,9 +15,11 @@ pub struct Message {
 impl Message {
     fn from_kafka_msg(msg: *mut rd_kafka_message_t) -> Self {
         unsafe {
-            let payload = CStr::from_ptr((*msg).payload as *const c_char).to_string_lossy();
+            let b = CStr::from_ptr((*msg).payload as *const c_char).to_bytes();
+            let payload_len = (*msg).len as usize;
             Self {
-                payload: payload.to_string(),
+                // payload: payload.to_string(),
+                payload: String::from_utf8_lossy(&b[..payload_len]).to_string(),
                 partition: (*msg).partition,
                 offset: (*msg).offset,
             }
