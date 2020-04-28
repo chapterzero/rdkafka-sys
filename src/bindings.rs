@@ -635,29 +635,6 @@ pub type __pid_t = ::std::os::raw::c_int;
 pub struct __fsid_t {
     pub __val: [::std::os::raw::c_int; 2usize],
 }
-#[test]
-fn bindgen_test_layout___fsid_t() {
-    assert_eq!(
-        ::std::mem::size_of::<__fsid_t>(),
-        8usize,
-        concat!("Size of: ", stringify!(__fsid_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__fsid_t>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__fsid_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__fsid_t>())).__val as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__fsid_t),
-            "::",
-            stringify!(__val)
-        )
-    );
-}
 pub type __clock_t = ::std::os::raw::c_long;
 pub type __rlim_t = ::std::os::raw::c_ulong;
 pub type __rlim64_t = ::std::os::raw::c_ulong;
@@ -698,112 +675,11 @@ pub union __mbstate_t__bindgen_ty_1 {
     pub __wchb: [::std::os::raw::c_char; 4usize],
     _bindgen_union_align: u32,
 }
-#[test]
-fn bindgen_test_layout___mbstate_t__bindgen_ty_1() {
-    assert_eq!(
-        ::std::mem::size_of::<__mbstate_t__bindgen_ty_1>(),
-        4usize,
-        concat!("Size of: ", stringify!(__mbstate_t__bindgen_ty_1))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__mbstate_t__bindgen_ty_1>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__mbstate_t__bindgen_ty_1))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__mbstate_t__bindgen_ty_1>())).__wch as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__mbstate_t__bindgen_ty_1),
-            "::",
-            stringify!(__wch)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__mbstate_t__bindgen_ty_1>())).__wchb as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__mbstate_t__bindgen_ty_1),
-            "::",
-            stringify!(__wchb)
-        )
-    );
-}
-#[test]
-fn bindgen_test_layout___mbstate_t() {
-    assert_eq!(
-        ::std::mem::size_of::<__mbstate_t>(),
-        8usize,
-        concat!("Size of: ", stringify!(__mbstate_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__mbstate_t>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__mbstate_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__mbstate_t>())).__count as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__mbstate_t),
-            "::",
-            stringify!(__count)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__mbstate_t>())).__value as *const _ as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__mbstate_t),
-            "::",
-            stringify!(__value)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _G_fpos_t {
     pub __pos: __off_t,
     pub __state: __mbstate_t,
-}
-#[test]
-fn bindgen_test_layout__G_fpos_t() {
-    assert_eq!(
-        ::std::mem::size_of::<_G_fpos_t>(),
-        16usize,
-        concat!("Size of: ", stringify!(_G_fpos_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<_G_fpos_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(_G_fpos_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_G_fpos_t>())).__pos as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_G_fpos_t),
-            "::",
-            stringify!(__pos)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_G_fpos_t>())).__state as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_G_fpos_t),
-            "::",
-            stringify!(__state)
-        )
-    );
 }
 pub type __fpos_t = _G_fpos_t;
 #[repr(C)]
@@ -811,39 +687,6 @@ pub type __fpos_t = _G_fpos_t;
 pub struct _G_fpos64_t {
     pub __pos: __off64_t,
     pub __state: __mbstate_t,
-}
-#[test]
-fn bindgen_test_layout__G_fpos64_t() {
-    assert_eq!(
-        ::std::mem::size_of::<_G_fpos64_t>(),
-        16usize,
-        concat!("Size of: ", stringify!(_G_fpos64_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<_G_fpos64_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(_G_fpos64_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_G_fpos64_t>())).__pos as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_G_fpos64_t),
-            "::",
-            stringify!(__pos)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_G_fpos64_t>())).__state as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_G_fpos64_t),
-            "::",
-            stringify!(__state)
-        )
-    );
 }
 pub type __fpos64_t = _G_fpos64_t;
 pub type __FILE = _IO_FILE;
@@ -896,309 +739,6 @@ pub struct _IO_FILE {
     pub __pad5: size_t,
     pub _mode: ::std::os::raw::c_int,
     pub _unused2: [::std::os::raw::c_char; 20usize],
-}
-#[test]
-fn bindgen_test_layout__IO_FILE() {
-    assert_eq!(
-        ::std::mem::size_of::<_IO_FILE>(),
-        216usize,
-        concat!("Size of: ", stringify!(_IO_FILE))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<_IO_FILE>(),
-        8usize,
-        concat!("Alignment of ", stringify!(_IO_FILE))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._flags as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_flags)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_read_ptr as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_read_ptr)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_read_end as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_read_end)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_read_base as *const _ as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_read_base)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_write_base as *const _ as usize },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_write_base)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_write_ptr as *const _ as usize },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_write_ptr)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_write_end as *const _ as usize },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_write_end)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_buf_base as *const _ as usize },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_buf_base)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_buf_end as *const _ as usize },
-        64usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_buf_end)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_save_base as *const _ as usize },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_save_base)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_backup_base as *const _ as usize },
-        80usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_backup_base)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_save_end as *const _ as usize },
-        88usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_IO_save_end)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._markers as *const _ as usize },
-        96usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_markers)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._chain as *const _ as usize },
-        104usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_chain)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._fileno as *const _ as usize },
-        112usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_fileno)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._flags2 as *const _ as usize },
-        116usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_flags2)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._old_offset as *const _ as usize },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_old_offset)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._cur_column as *const _ as usize },
-        128usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_cur_column)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._vtable_offset as *const _ as usize },
-        130usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_vtable_offset)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._shortbuf as *const _ as usize },
-        131usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_shortbuf)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._lock as *const _ as usize },
-        136usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_lock)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._offset as *const _ as usize },
-        144usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_offset)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._codecvt as *const _ as usize },
-        152usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_codecvt)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._wide_data as *const _ as usize },
-        160usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_wide_data)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._freeres_list as *const _ as usize },
-        168usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_freeres_list)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._freeres_buf as *const _ as usize },
-        176usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_freeres_buf)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>())).__pad5 as *const _ as usize },
-        184usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(__pad5)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._mode as *const _ as usize },
-        192usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_mode)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._unused2 as *const _ as usize },
-        196usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_IO_FILE),
-            "::",
-            stringify!(_unused2)
-        )
-    );
 }
 pub type off_t = __off_t;
 pub type ssize_t = __ssize_t;
@@ -1675,39 +1215,6 @@ pub struct imaxdiv_t {
     pub quot: ::std::os::raw::c_long,
     pub rem: ::std::os::raw::c_long,
 }
-#[test]
-fn bindgen_test_layout_imaxdiv_t() {
-    assert_eq!(
-        ::std::mem::size_of::<imaxdiv_t>(),
-        16usize,
-        concat!("Size of: ", stringify!(imaxdiv_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<imaxdiv_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(imaxdiv_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<imaxdiv_t>())).quot as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(imaxdiv_t),
-            "::",
-            stringify!(quot)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<imaxdiv_t>())).rem as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(imaxdiv_t),
-            "::",
-            stringify!(rem)
-        )
-    );
-}
 extern "C" {
     pub fn imaxabs(__n: intmax_t) -> intmax_t;
 }
@@ -1778,29 +1285,6 @@ pub type register_t = ::std::os::raw::c_long;
 pub struct __sigset_t {
     pub __val: [::std::os::raw::c_ulong; 16usize],
 }
-#[test]
-fn bindgen_test_layout___sigset_t() {
-    assert_eq!(
-        ::std::mem::size_of::<__sigset_t>(),
-        128usize,
-        concat!("Size of: ", stringify!(__sigset_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__sigset_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__sigset_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__sigset_t>())).__val as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__sigset_t),
-            "::",
-            stringify!(__val)
-        )
-    );
-}
 pub type sigset_t = __sigset_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -1808,77 +1292,11 @@ pub struct timeval {
     pub tv_sec: __time_t,
     pub tv_usec: __suseconds_t,
 }
-#[test]
-fn bindgen_test_layout_timeval() {
-    assert_eq!(
-        ::std::mem::size_of::<timeval>(),
-        16usize,
-        concat!("Size of: ", stringify!(timeval))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<timeval>(),
-        8usize,
-        concat!("Alignment of ", stringify!(timeval))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<timeval>())).tv_sec as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(timeval),
-            "::",
-            stringify!(tv_sec)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<timeval>())).tv_usec as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(timeval),
-            "::",
-            stringify!(tv_usec)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct timespec {
     pub tv_sec: __time_t,
     pub tv_nsec: __syscall_slong_t,
-}
-#[test]
-fn bindgen_test_layout_timespec() {
-    assert_eq!(
-        ::std::mem::size_of::<timespec>(),
-        16usize,
-        concat!("Size of: ", stringify!(timespec))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<timespec>(),
-        8usize,
-        concat!("Alignment of ", stringify!(timespec))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<timespec>())).tv_sec as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(timespec),
-            "::",
-            stringify!(tv_sec)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<timespec>())).tv_nsec as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(timespec),
-            "::",
-            stringify!(tv_nsec)
-        )
-    );
 }
 pub type suseconds_t = __suseconds_t;
 pub type __fd_mask = ::std::os::raw::c_long;
@@ -1886,29 +1304,6 @@ pub type __fd_mask = ::std::os::raw::c_long;
 #[derive(Debug, Copy, Clone)]
 pub struct fd_set {
     pub __fds_bits: [__fd_mask; 16usize],
-}
-#[test]
-fn bindgen_test_layout_fd_set() {
-    assert_eq!(
-        ::std::mem::size_of::<fd_set>(),
-        128usize,
-        concat!("Size of: ", stringify!(fd_set))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<fd_set>(),
-        8usize,
-        concat!("Alignment of ", stringify!(fd_set))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<fd_set>())).__fds_bits as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(fd_set),
-            "::",
-            stringify!(__fds_bits)
-        )
-    );
 }
 pub type fd_mask = __fd_mask;
 extern "C" {
@@ -1940,67 +1335,11 @@ pub struct __pthread_internal_list {
     pub __prev: *mut __pthread_internal_list,
     pub __next: *mut __pthread_internal_list,
 }
-#[test]
-fn bindgen_test_layout___pthread_internal_list() {
-    assert_eq!(
-        ::std::mem::size_of::<__pthread_internal_list>(),
-        16usize,
-        concat!("Size of: ", stringify!(__pthread_internal_list))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__pthread_internal_list>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__pthread_internal_list))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_internal_list>())).__prev as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_internal_list),
-            "::",
-            stringify!(__prev)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_internal_list>())).__next as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_internal_list),
-            "::",
-            stringify!(__next)
-        )
-    );
-}
 pub type __pthread_list_t = __pthread_internal_list;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __pthread_internal_slist {
     pub __next: *mut __pthread_internal_slist,
-}
-#[test]
-fn bindgen_test_layout___pthread_internal_slist() {
-    assert_eq!(
-        ::std::mem::size_of::<__pthread_internal_slist>(),
-        8usize,
-        concat!("Size of: ", stringify!(__pthread_internal_slist))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__pthread_internal_slist>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__pthread_internal_slist))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_internal_slist>())).__next as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_internal_slist),
-            "::",
-            stringify!(__next)
-        )
-    );
 }
 pub type __pthread_slist_t = __pthread_internal_slist;
 #[repr(C)]
@@ -2014,99 +1353,6 @@ pub struct __pthread_mutex_s {
     pub __spins: ::std::os::raw::c_short,
     pub __elision: ::std::os::raw::c_short,
     pub __list: __pthread_list_t,
-}
-#[test]
-fn bindgen_test_layout___pthread_mutex_s() {
-    assert_eq!(
-        ::std::mem::size_of::<__pthread_mutex_s>(),
-        40usize,
-        concat!("Size of: ", stringify!(__pthread_mutex_s))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__pthread_mutex_s>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__pthread_mutex_s))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__lock as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_mutex_s),
-            "::",
-            stringify!(__lock)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__count as *const _ as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_mutex_s),
-            "::",
-            stringify!(__count)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__owner as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_mutex_s),
-            "::",
-            stringify!(__owner)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__nusers as *const _ as usize },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_mutex_s),
-            "::",
-            stringify!(__nusers)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__kind as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_mutex_s),
-            "::",
-            stringify!(__kind)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__spins as *const _ as usize },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_mutex_s),
-            "::",
-            stringify!(__spins)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__elision as *const _ as usize },
-        22usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_mutex_s),
-            "::",
-            stringify!(__elision)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__list as *const _ as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_mutex_s),
-            "::",
-            stringify!(__list)
-        )
-    );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -2123,153 +1369,6 @@ pub struct __pthread_rwlock_arch_t {
     pub __pad1: [::std::os::raw::c_uchar; 7usize],
     pub __pad2: ::std::os::raw::c_ulong,
     pub __flags: ::std::os::raw::c_uint,
-}
-#[test]
-fn bindgen_test_layout___pthread_rwlock_arch_t() {
-    assert_eq!(
-        ::std::mem::size_of::<__pthread_rwlock_arch_t>(),
-        56usize,
-        concat!("Size of: ", stringify!(__pthread_rwlock_arch_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__pthread_rwlock_arch_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__pthread_rwlock_arch_t))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__readers as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__readers)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__writers as *const _ as usize
-        },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__writers)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__wrphase_futex as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__wrphase_futex)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__writers_futex as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__writers_futex)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__pad3 as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__pad3)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__pad4 as *const _ as usize },
-        20usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__pad4)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__cur_writer as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__cur_writer)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__shared as *const _ as usize
-        },
-        28usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__shared)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__rwelision as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__rwelision)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__pad1 as *const _ as usize },
-        33usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__pad1)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__pad2 as *const _ as usize },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__pad2)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__flags as *const _ as usize },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_rwlock_arch_t),
-            "::",
-            stringify!(__flags)
-        )
-    );
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -2295,88 +1394,6 @@ pub struct __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 {
     pub __low: ::std::os::raw::c_uint,
     pub __high: ::std::os::raw::c_uint,
 }
-#[test]
-fn bindgen_test_layout___pthread_cond_s__bindgen_ty_1__bindgen_ty_1() {
-    assert_eq!(
-        ::std::mem::size_of::<__pthread_cond_s__bindgen_ty_1__bindgen_ty_1>(),
-        8usize,
-        concat!(
-            "Size of: ",
-            stringify!(__pthread_cond_s__bindgen_ty_1__bindgen_ty_1)
-        )
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__pthread_cond_s__bindgen_ty_1__bindgen_ty_1>(),
-        4usize,
-        concat!(
-            "Alignment of ",
-            stringify!(__pthread_cond_s__bindgen_ty_1__bindgen_ty_1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_1__bindgen_ty_1>())).__low
-                as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s__bindgen_ty_1__bindgen_ty_1),
-            "::",
-            stringify!(__low)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_1__bindgen_ty_1>())).__high
-                as *const _ as usize
-        },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s__bindgen_ty_1__bindgen_ty_1),
-            "::",
-            stringify!(__high)
-        )
-    );
-}
-#[test]
-fn bindgen_test_layout___pthread_cond_s__bindgen_ty_1() {
-    assert_eq!(
-        ::std::mem::size_of::<__pthread_cond_s__bindgen_ty_1>(),
-        8usize,
-        concat!("Size of: ", stringify!(__pthread_cond_s__bindgen_ty_1))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__pthread_cond_s__bindgen_ty_1>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__pthread_cond_s__bindgen_ty_1))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_1>())).__wseq as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s__bindgen_ty_1),
-            "::",
-            stringify!(__wseq)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_1>())).__wseq32 as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s__bindgen_ty_1),
-            "::",
-            stringify!(__wseq32)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union __pthread_cond_s__bindgen_ty_2 {
@@ -2390,153 +1407,6 @@ pub struct __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 {
     pub __low: ::std::os::raw::c_uint,
     pub __high: ::std::os::raw::c_uint,
 }
-#[test]
-fn bindgen_test_layout___pthread_cond_s__bindgen_ty_2__bindgen_ty_1() {
-    assert_eq!(
-        ::std::mem::size_of::<__pthread_cond_s__bindgen_ty_2__bindgen_ty_1>(),
-        8usize,
-        concat!(
-            "Size of: ",
-            stringify!(__pthread_cond_s__bindgen_ty_2__bindgen_ty_1)
-        )
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__pthread_cond_s__bindgen_ty_2__bindgen_ty_1>(),
-        4usize,
-        concat!(
-            "Alignment of ",
-            stringify!(__pthread_cond_s__bindgen_ty_2__bindgen_ty_1)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_2__bindgen_ty_1>())).__low
-                as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s__bindgen_ty_2__bindgen_ty_1),
-            "::",
-            stringify!(__low)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_2__bindgen_ty_1>())).__high
-                as *const _ as usize
-        },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s__bindgen_ty_2__bindgen_ty_1),
-            "::",
-            stringify!(__high)
-        )
-    );
-}
-#[test]
-fn bindgen_test_layout___pthread_cond_s__bindgen_ty_2() {
-    assert_eq!(
-        ::std::mem::size_of::<__pthread_cond_s__bindgen_ty_2>(),
-        8usize,
-        concat!("Size of: ", stringify!(__pthread_cond_s__bindgen_ty_2))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__pthread_cond_s__bindgen_ty_2>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__pthread_cond_s__bindgen_ty_2))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_2>())).__g1_start as *const _
-                as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s__bindgen_ty_2),
-            "::",
-            stringify!(__g1_start)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_2>())).__g1_start32 as *const _
-                as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s__bindgen_ty_2),
-            "::",
-            stringify!(__g1_start32)
-        )
-    );
-}
-#[test]
-fn bindgen_test_layout___pthread_cond_s() {
-    assert_eq!(
-        ::std::mem::size_of::<__pthread_cond_s>(),
-        48usize,
-        concat!("Size of: ", stringify!(__pthread_cond_s))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__pthread_cond_s>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__pthread_cond_s))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_cond_s>())).__g_refs as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s),
-            "::",
-            stringify!(__g_refs)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_cond_s>())).__g_size as *const _ as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s),
-            "::",
-            stringify!(__g_size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_cond_s>())).__g1_orig_size as *const _ as usize },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s),
-            "::",
-            stringify!(__g1_orig_size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_cond_s>())).__wrefs as *const _ as usize },
-        36usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s),
-            "::",
-            stringify!(__wrefs)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__pthread_cond_s>())).__g_signals as *const _ as usize },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__pthread_cond_s),
-            "::",
-            stringify!(__g_signals)
-        )
-    );
-}
 pub type pthread_t = ::std::os::raw::c_ulong;
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -2545,78 +1415,12 @@ pub union pthread_mutexattr_t {
     pub __align: ::std::os::raw::c_int,
     _bindgen_union_align: u32,
 }
-#[test]
-fn bindgen_test_layout_pthread_mutexattr_t() {
-    assert_eq!(
-        ::std::mem::size_of::<pthread_mutexattr_t>(),
-        4usize,
-        concat!("Size of: ", stringify!(pthread_mutexattr_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<pthread_mutexattr_t>(),
-        4usize,
-        concat!("Alignment of ", stringify!(pthread_mutexattr_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_mutexattr_t>())).__size as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_mutexattr_t),
-            "::",
-            stringify!(__size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_mutexattr_t>())).__align as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_mutexattr_t),
-            "::",
-            stringify!(__align)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_condattr_t {
     pub __size: [::std::os::raw::c_char; 4usize],
     pub __align: ::std::os::raw::c_int,
     _bindgen_union_align: u32,
-}
-#[test]
-fn bindgen_test_layout_pthread_condattr_t() {
-    assert_eq!(
-        ::std::mem::size_of::<pthread_condattr_t>(),
-        4usize,
-        concat!("Size of: ", stringify!(pthread_condattr_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<pthread_condattr_t>(),
-        4usize,
-        concat!("Alignment of ", stringify!(pthread_condattr_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_condattr_t>())).__size as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_condattr_t),
-            "::",
-            stringify!(__size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_condattr_t>())).__align as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_condattr_t),
-            "::",
-            stringify!(__align)
-        )
-    );
 }
 pub type pthread_key_t = ::std::os::raw::c_uint;
 pub type pthread_once_t = ::std::os::raw::c_int;
@@ -2627,39 +1431,6 @@ pub union pthread_attr_t {
     pub __align: ::std::os::raw::c_long,
     _bindgen_union_align: [u64; 7usize],
 }
-#[test]
-fn bindgen_test_layout_pthread_attr_t() {
-    assert_eq!(
-        ::std::mem::size_of::<pthread_attr_t>(),
-        56usize,
-        concat!("Size of: ", stringify!(pthread_attr_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<pthread_attr_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(pthread_attr_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_attr_t>())).__size as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_attr_t),
-            "::",
-            stringify!(__size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_attr_t>())).__align as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_attr_t),
-            "::",
-            stringify!(__align)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_mutex_t {
@@ -2667,49 +1438,6 @@ pub union pthread_mutex_t {
     pub __size: [::std::os::raw::c_char; 40usize],
     pub __align: ::std::os::raw::c_long,
     _bindgen_union_align: [u64; 5usize],
-}
-#[test]
-fn bindgen_test_layout_pthread_mutex_t() {
-    assert_eq!(
-        ::std::mem::size_of::<pthread_mutex_t>(),
-        40usize,
-        concat!("Size of: ", stringify!(pthread_mutex_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<pthread_mutex_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(pthread_mutex_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_mutex_t>())).__data as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_mutex_t),
-            "::",
-            stringify!(__data)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_mutex_t>())).__size as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_mutex_t),
-            "::",
-            stringify!(__size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_mutex_t>())).__align as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_mutex_t),
-            "::",
-            stringify!(__align)
-        )
-    );
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -2719,49 +1447,6 @@ pub union pthread_cond_t {
     pub __align: ::std::os::raw::c_longlong,
     _bindgen_union_align: [u64; 6usize],
 }
-#[test]
-fn bindgen_test_layout_pthread_cond_t() {
-    assert_eq!(
-        ::std::mem::size_of::<pthread_cond_t>(),
-        48usize,
-        concat!("Size of: ", stringify!(pthread_cond_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<pthread_cond_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(pthread_cond_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_cond_t>())).__data as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_cond_t),
-            "::",
-            stringify!(__data)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_cond_t>())).__size as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_cond_t),
-            "::",
-            stringify!(__size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_cond_t>())).__align as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_cond_t),
-            "::",
-            stringify!(__align)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_rwlock_t {
@@ -2770,88 +1455,12 @@ pub union pthread_rwlock_t {
     pub __align: ::std::os::raw::c_long,
     _bindgen_union_align: [u64; 7usize],
 }
-#[test]
-fn bindgen_test_layout_pthread_rwlock_t() {
-    assert_eq!(
-        ::std::mem::size_of::<pthread_rwlock_t>(),
-        56usize,
-        concat!("Size of: ", stringify!(pthread_rwlock_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<pthread_rwlock_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(pthread_rwlock_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_rwlock_t>())).__data as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_rwlock_t),
-            "::",
-            stringify!(__data)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_rwlock_t>())).__size as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_rwlock_t),
-            "::",
-            stringify!(__size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_rwlock_t>())).__align as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_rwlock_t),
-            "::",
-            stringify!(__align)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_rwlockattr_t {
     pub __size: [::std::os::raw::c_char; 8usize],
     pub __align: ::std::os::raw::c_long,
     _bindgen_union_align: u64,
-}
-#[test]
-fn bindgen_test_layout_pthread_rwlockattr_t() {
-    assert_eq!(
-        ::std::mem::size_of::<pthread_rwlockattr_t>(),
-        8usize,
-        concat!("Size of: ", stringify!(pthread_rwlockattr_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<pthread_rwlockattr_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(pthread_rwlockattr_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_rwlockattr_t>())).__size as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_rwlockattr_t),
-            "::",
-            stringify!(__size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_rwlockattr_t>())).__align as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_rwlockattr_t),
-            "::",
-            stringify!(__align)
-        )
-    );
 }
 pub type pthread_spinlock_t = ::std::os::raw::c_int;
 #[repr(C)]
@@ -2861,39 +1470,6 @@ pub union pthread_barrier_t {
     pub __align: ::std::os::raw::c_long,
     _bindgen_union_align: [u64; 4usize],
 }
-#[test]
-fn bindgen_test_layout_pthread_barrier_t() {
-    assert_eq!(
-        ::std::mem::size_of::<pthread_barrier_t>(),
-        32usize,
-        concat!("Size of: ", stringify!(pthread_barrier_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<pthread_barrier_t>(),
-        8usize,
-        concat!("Alignment of ", stringify!(pthread_barrier_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_barrier_t>())).__size as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_barrier_t),
-            "::",
-            stringify!(__size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_barrier_t>())).__align as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_barrier_t),
-            "::",
-            stringify!(__align)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union pthread_barrierattr_t {
@@ -2901,77 +1477,11 @@ pub union pthread_barrierattr_t {
     pub __align: ::std::os::raw::c_int,
     _bindgen_union_align: u32,
 }
-#[test]
-fn bindgen_test_layout_pthread_barrierattr_t() {
-    assert_eq!(
-        ::std::mem::size_of::<pthread_barrierattr_t>(),
-        4usize,
-        concat!("Size of: ", stringify!(pthread_barrierattr_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<pthread_barrierattr_t>(),
-        4usize,
-        concat!("Alignment of ", stringify!(pthread_barrierattr_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_barrierattr_t>())).__size as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_barrierattr_t),
-            "::",
-            stringify!(__size)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<pthread_barrierattr_t>())).__align as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(pthread_barrierattr_t),
-            "::",
-            stringify!(__align)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct iovec {
     pub iov_base: *mut ::std::os::raw::c_void,
     pub iov_len: size_t,
-}
-#[test]
-fn bindgen_test_layout_iovec() {
-    assert_eq!(
-        ::std::mem::size_of::<iovec>(),
-        16usize,
-        concat!("Size of: ", stringify!(iovec))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<iovec>(),
-        8usize,
-        concat!("Alignment of ", stringify!(iovec))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<iovec>())).iov_base as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(iovec),
-            "::",
-            stringify!(iov_base)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<iovec>())).iov_len as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(iovec),
-            "::",
-            stringify!(iov_len)
-        )
-    );
 }
 pub type socklen_t = __socklen_t;
 pub const __socket_type_SOCK_STREAM: __socket_type = 1;
@@ -2991,88 +1501,12 @@ pub struct sockaddr {
     pub sa_family: sa_family_t,
     pub sa_data: [::std::os::raw::c_char; 14usize],
 }
-#[test]
-fn bindgen_test_layout_sockaddr() {
-    assert_eq!(
-        ::std::mem::size_of::<sockaddr>(),
-        16usize,
-        concat!("Size of: ", stringify!(sockaddr))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<sockaddr>(),
-        2usize,
-        concat!("Alignment of ", stringify!(sockaddr))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<sockaddr>())).sa_family as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(sockaddr),
-            "::",
-            stringify!(sa_family)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<sockaddr>())).sa_data as *const _ as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(sockaddr),
-            "::",
-            stringify!(sa_data)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct sockaddr_storage {
     pub ss_family: sa_family_t,
     pub __ss_padding: [::std::os::raw::c_char; 118usize],
     pub __ss_align: ::std::os::raw::c_ulong,
-}
-#[test]
-fn bindgen_test_layout_sockaddr_storage() {
-    assert_eq!(
-        ::std::mem::size_of::<sockaddr_storage>(),
-        128usize,
-        concat!("Size of: ", stringify!(sockaddr_storage))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<sockaddr_storage>(),
-        8usize,
-        concat!("Alignment of ", stringify!(sockaddr_storage))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<sockaddr_storage>())).ss_family as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(sockaddr_storage),
-            "::",
-            stringify!(ss_family)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<sockaddr_storage>())).__ss_padding as *const _ as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(sockaddr_storage),
-            "::",
-            stringify!(__ss_padding)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<sockaddr_storage>())).__ss_align as *const _ as usize },
-        120usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(sockaddr_storage),
-            "::",
-            stringify!(__ss_align)
-        )
-    );
 }
 pub const MSG_OOB: _bindgen_ty_1 = 1;
 pub const MSG_PEEK: _bindgen_ty_1 = 2;
@@ -3107,89 +1541,6 @@ pub struct msghdr {
     pub msg_controllen: size_t,
     pub msg_flags: ::std::os::raw::c_int,
 }
-#[test]
-fn bindgen_test_layout_msghdr() {
-    assert_eq!(
-        ::std::mem::size_of::<msghdr>(),
-        56usize,
-        concat!("Size of: ", stringify!(msghdr))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<msghdr>(),
-        8usize,
-        concat!("Alignment of ", stringify!(msghdr))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<msghdr>())).msg_name as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(msghdr),
-            "::",
-            stringify!(msg_name)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<msghdr>())).msg_namelen as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(msghdr),
-            "::",
-            stringify!(msg_namelen)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<msghdr>())).msg_iov as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(msghdr),
-            "::",
-            stringify!(msg_iov)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<msghdr>())).msg_iovlen as *const _ as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(msghdr),
-            "::",
-            stringify!(msg_iovlen)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<msghdr>())).msg_control as *const _ as usize },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(msghdr),
-            "::",
-            stringify!(msg_control)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<msghdr>())).msg_controllen as *const _ as usize },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(msghdr),
-            "::",
-            stringify!(msg_controllen)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<msghdr>())).msg_flags as *const _ as usize },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(msghdr),
-            "::",
-            stringify!(msg_flags)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Debug)]
 pub struct cmsghdr {
@@ -3197,59 +1548,6 @@ pub struct cmsghdr {
     pub cmsg_level: ::std::os::raw::c_int,
     pub cmsg_type: ::std::os::raw::c_int,
     pub __cmsg_data: __IncompleteArrayField<::std::os::raw::c_uchar>,
-}
-#[test]
-fn bindgen_test_layout_cmsghdr() {
-    assert_eq!(
-        ::std::mem::size_of::<cmsghdr>(),
-        16usize,
-        concat!("Size of: ", stringify!(cmsghdr))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<cmsghdr>(),
-        8usize,
-        concat!("Alignment of ", stringify!(cmsghdr))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<cmsghdr>())).cmsg_len as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(cmsghdr),
-            "::",
-            stringify!(cmsg_len)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<cmsghdr>())).cmsg_level as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(cmsghdr),
-            "::",
-            stringify!(cmsg_level)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<cmsghdr>())).cmsg_type as *const _ as usize },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(cmsghdr),
-            "::",
-            stringify!(cmsg_type)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<cmsghdr>())).__cmsg_data as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(cmsghdr),
-            "::",
-            stringify!(__cmsg_data)
-        )
-    );
 }
 extern "C" {
     pub fn __cmsg_nxthdr(__mhdr: *mut msghdr, __cmsg: *mut cmsghdr) -> *mut cmsghdr;
@@ -3260,29 +1558,6 @@ pub type _bindgen_ty_2 = u32;
 #[derive(Debug, Copy, Clone)]
 pub struct __kernel_fd_set {
     pub fds_bits: [::std::os::raw::c_ulong; 16usize],
-}
-#[test]
-fn bindgen_test_layout___kernel_fd_set() {
-    assert_eq!(
-        ::std::mem::size_of::<__kernel_fd_set>(),
-        128usize,
-        concat!("Size of: ", stringify!(__kernel_fd_set))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__kernel_fd_set>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__kernel_fd_set))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__kernel_fd_set>())).fds_bits as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__kernel_fd_set),
-            "::",
-            stringify!(fds_bits)
-        )
-    );
 }
 pub type __kernel_sighandler_t =
     ::std::option::Option<unsafe extern "C" fn(arg1: ::std::os::raw::c_int)>;
@@ -3311,29 +1586,6 @@ pub type __kernel_ptrdiff_t = __kernel_long_t;
 pub struct __kernel_fsid_t {
     pub val: [::std::os::raw::c_int; 2usize],
 }
-#[test]
-fn bindgen_test_layout___kernel_fsid_t() {
-    assert_eq!(
-        ::std::mem::size_of::<__kernel_fsid_t>(),
-        8usize,
-        concat!("Size of: ", stringify!(__kernel_fsid_t))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__kernel_fsid_t>(),
-        4usize,
-        concat!("Alignment of ", stringify!(__kernel_fsid_t))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__kernel_fsid_t>())).val as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__kernel_fsid_t),
-            "::",
-            stringify!(val)
-        )
-    );
-}
 pub type __kernel_off_t = __kernel_long_t;
 pub type __kernel_loff_t = ::std::os::raw::c_longlong;
 pub type __kernel_time_t = __kernel_long_t;
@@ -3350,77 +1602,11 @@ pub struct linger {
     pub l_onoff: ::std::os::raw::c_int,
     pub l_linger: ::std::os::raw::c_int,
 }
-#[test]
-fn bindgen_test_layout_linger() {
-    assert_eq!(
-        ::std::mem::size_of::<linger>(),
-        8usize,
-        concat!("Size of: ", stringify!(linger))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<linger>(),
-        4usize,
-        concat!("Alignment of ", stringify!(linger))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<linger>())).l_onoff as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(linger),
-            "::",
-            stringify!(l_onoff)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<linger>())).l_linger as *const _ as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(linger),
-            "::",
-            stringify!(l_linger)
-        )
-    );
-}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct osockaddr {
     pub sa_family: ::std::os::raw::c_ushort,
     pub sa_data: [::std::os::raw::c_uchar; 14usize],
-}
-#[test]
-fn bindgen_test_layout_osockaddr() {
-    assert_eq!(
-        ::std::mem::size_of::<osockaddr>(),
-        16usize,
-        concat!("Size of: ", stringify!(osockaddr))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<osockaddr>(),
-        2usize,
-        concat!("Alignment of ", stringify!(osockaddr))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<osockaddr>())).sa_family as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(osockaddr),
-            "::",
-            stringify!(sa_family)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<osockaddr>())).sa_data as *const _ as usize },
-        2usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(osockaddr),
-            "::",
-            stringify!(sa_data)
-        )
-    );
 }
 pub const SHUT_RD: _bindgen_ty_3 = 0;
 pub const SHUT_WR: _bindgen_ty_3 = 1;
@@ -3564,46 +1750,20 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Returns the librdkafka version as integer."]
-    #[doc = ""]
-    #[doc = " @returns Version integer."]
-    #[doc = ""]
-    #[doc = " @sa See RD_KAFKA_VERSION for how to parse the integer format."]
-    #[doc = " @sa Use rd_kafka_version_str() to retreive the version as a string."]
     pub fn rd_kafka_version() -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Returns the librdkafka version as string."]
-    #[doc = ""]
-    #[doc = " @returns Version string"]
     pub fn rd_kafka_version_str() -> *const ::std::os::raw::c_char;
 }
-#[doc = "< Producer client"]
 pub const rd_kafka_type_t_RD_KAFKA_PRODUCER: rd_kafka_type_t = 0;
-#[doc = "< Consumer client"]
 pub const rd_kafka_type_t_RD_KAFKA_CONSUMER: rd_kafka_type_t = 1;
-#[doc = " @enum rd_kafka_type_t"]
-#[doc = ""]
-#[doc = " @brief rd_kafka_t handle type."]
-#[doc = ""]
-#[doc = " @sa rd_kafka_new()"]
 pub type rd_kafka_type_t = u32;
-#[doc = "< Timestamp not available"]
 pub const rd_kafka_timestamp_type_t_RD_KAFKA_TIMESTAMP_NOT_AVAILABLE: rd_kafka_timestamp_type_t = 0;
-#[doc = "< Message creation time"]
 pub const rd_kafka_timestamp_type_t_RD_KAFKA_TIMESTAMP_CREATE_TIME: rd_kafka_timestamp_type_t = 1;
-#[doc = "< Log append time"]
 pub const rd_kafka_timestamp_type_t_RD_KAFKA_TIMESTAMP_LOG_APPEND_TIME: rd_kafka_timestamp_type_t =
     2;
-#[doc = " Timestamp types"]
-#[doc = ""]
-#[doc = " @sa rd_kafka_message_timestamp()"]
 pub type rd_kafka_timestamp_type_t = u32;
 extern "C" {
-    #[doc = " @brief Retrieve supported debug contexts for use with the \\c \\\"debug\\\""]
-    #[doc = "        configuration property. (runtime)"]
-    #[doc = ""]
-    #[doc = " @returns Comma-separated list of available debugging contexts."]
     pub fn rd_kafka_get_debug_contexts() -> *const ::std::os::raw::c_char;
 }
 #[repr(C)]
@@ -3648,490 +1808,198 @@ pub struct rd_kafka_topic_result_s {
     _unused: [u8; 0],
 }
 pub type rd_kafka_topic_result_t = rd_kafka_topic_result_s;
-#[doc = " Begin internal error codes"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__BEGIN: rd_kafka_resp_err_t = -200;
-#[doc = " Received message is incorrect"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__BAD_MSG: rd_kafka_resp_err_t = -199;
-#[doc = " Bad/unknown compression"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__BAD_COMPRESSION: rd_kafka_resp_err_t = -198;
-#[doc = " Broker is going away"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__DESTROY: rd_kafka_resp_err_t = -197;
-#[doc = " Generic failure"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__FAIL: rd_kafka_resp_err_t = -196;
-#[doc = " Broker transport failure"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__TRANSPORT: rd_kafka_resp_err_t = -195;
-#[doc = " Critical system resource"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__CRIT_SYS_RESOURCE: rd_kafka_resp_err_t = -194;
-#[doc = " Failed to resolve broker"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__RESOLVE: rd_kafka_resp_err_t = -193;
-#[doc = " Produced message timed out"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__MSG_TIMED_OUT: rd_kafka_resp_err_t = -192;
-#[doc = " Reached the end of the topic+partition queue on"]
-#[doc = " the broker. Not really an error."]
-#[doc = " This event is disabled by default,"]
-#[doc = " see the `enable.partition.eof` configuration property."]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__PARTITION_EOF: rd_kafka_resp_err_t = -191;
-#[doc = " Permanent: Partition does not exist in cluster."]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__UNKNOWN_PARTITION: rd_kafka_resp_err_t = -190;
-#[doc = " File or filesystem error"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__FS: rd_kafka_resp_err_t = -189;
-#[doc = " Permanent: Topic does not exist in cluster."]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__UNKNOWN_TOPIC: rd_kafka_resp_err_t = -188;
-#[doc = " All broker connections are down."]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__ALL_BROKERS_DOWN: rd_kafka_resp_err_t = -187;
-#[doc = " Invalid argument, or invalid configuration"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__INVALID_ARG: rd_kafka_resp_err_t = -186;
-#[doc = " Operation timed out"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__TIMED_OUT: rd_kafka_resp_err_t = -185;
-#[doc = " Queue is full"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__QUEUE_FULL: rd_kafka_resp_err_t = -184;
-#[doc = " ISR count < required.acks"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__ISR_INSUFF: rd_kafka_resp_err_t = -183;
-#[doc = " Broker node update"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__NODE_UPDATE: rd_kafka_resp_err_t = -182;
-#[doc = " SSL error"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__SSL: rd_kafka_resp_err_t = -181;
-#[doc = " Waiting for coordinator to become available."]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__WAIT_COORD: rd_kafka_resp_err_t = -180;
-#[doc = " Unknown client group"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__UNKNOWN_GROUP: rd_kafka_resp_err_t = -179;
-#[doc = " Operation in progress"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__IN_PROGRESS: rd_kafka_resp_err_t = -178;
-#[doc = " Previous operation in progress, wait for it to finish."]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__PREV_IN_PROGRESS: rd_kafka_resp_err_t = -177;
-#[doc = " This operation would interfere with an existing subscription"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__EXISTING_SUBSCRIPTION: rd_kafka_resp_err_t = -176;
-#[doc = " Assigned partitions (rebalance_cb)"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__ASSIGN_PARTITIONS: rd_kafka_resp_err_t = -175;
-#[doc = " Revoked partitions (rebalance_cb)"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__REVOKE_PARTITIONS: rd_kafka_resp_err_t = -174;
-#[doc = " Conflicting use"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__CONFLICT: rd_kafka_resp_err_t = -173;
-#[doc = " Wrong state"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__STATE: rd_kafka_resp_err_t = -172;
-#[doc = " Unknown protocol"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__UNKNOWN_PROTOCOL: rd_kafka_resp_err_t = -171;
-#[doc = " Not implemented"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__NOT_IMPLEMENTED: rd_kafka_resp_err_t = -170;
-#[doc = " Authentication failure"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__AUTHENTICATION: rd_kafka_resp_err_t = -169;
-#[doc = " No stored offset"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__NO_OFFSET: rd_kafka_resp_err_t = -168;
-#[doc = " Outdated"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__OUTDATED: rd_kafka_resp_err_t = -167;
-#[doc = " Timed out in queue"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__TIMED_OUT_QUEUE: rd_kafka_resp_err_t = -166;
-#[doc = " Feature not supported by broker"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__UNSUPPORTED_FEATURE: rd_kafka_resp_err_t = -165;
-#[doc = " Awaiting cache update"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__WAIT_CACHE: rd_kafka_resp_err_t = -164;
-#[doc = " Operation interrupted (e.g., due to yield))"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__INTR: rd_kafka_resp_err_t = -163;
-#[doc = " Key serialization error"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__KEY_SERIALIZATION: rd_kafka_resp_err_t = -162;
-#[doc = " Value serialization error"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__VALUE_SERIALIZATION: rd_kafka_resp_err_t = -161;
-#[doc = " Key deserialization error"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__KEY_DESERIALIZATION: rd_kafka_resp_err_t = -160;
-#[doc = " Value deserialization error"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__VALUE_DESERIALIZATION: rd_kafka_resp_err_t = -159;
-#[doc = " Partial response"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__PARTIAL: rd_kafka_resp_err_t = -158;
-#[doc = " Modification attempted on read-only object"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__READ_ONLY: rd_kafka_resp_err_t = -157;
-#[doc = " No such entry / item not found"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__NOENT: rd_kafka_resp_err_t = -156;
-#[doc = " Read underflow"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__UNDERFLOW: rd_kafka_resp_err_t = -155;
-#[doc = " Invalid type"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__INVALID_TYPE: rd_kafka_resp_err_t = -154;
-#[doc = " Retry operation"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__RETRY: rd_kafka_resp_err_t = -153;
-#[doc = " Purged in queue"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__PURGE_QUEUE: rd_kafka_resp_err_t = -152;
-#[doc = " Purged in flight"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__PURGE_INFLIGHT: rd_kafka_resp_err_t = -151;
-#[doc = " Fatal error: see rd_kafka_fatal_error()"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__FATAL: rd_kafka_resp_err_t = -150;
-#[doc = " Inconsistent state"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__INCONSISTENT: rd_kafka_resp_err_t = -149;
-#[doc = " Gap-less ordering would not be guaranteed if proceeding"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__GAPLESS_GUARANTEE: rd_kafka_resp_err_t = -148;
-#[doc = " Maximum poll interval exceeded"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__MAX_POLL_EXCEEDED: rd_kafka_resp_err_t = -147;
-#[doc = " End internal error codes"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR__END: rd_kafka_resp_err_t = -100;
-#[doc = " Unknown broker error"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_UNKNOWN: rd_kafka_resp_err_t = -1;
-#[doc = " Success"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_NO_ERROR: rd_kafka_resp_err_t = 0;
-#[doc = " Offset out of range"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_OFFSET_OUT_OF_RANGE: rd_kafka_resp_err_t = 1;
-#[doc = " Invalid message"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_MSG: rd_kafka_resp_err_t = 2;
-#[doc = " Unknown topic or partition"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_UNKNOWN_TOPIC_OR_PART: rd_kafka_resp_err_t = 3;
-#[doc = " Invalid message size"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_MSG_SIZE: rd_kafka_resp_err_t = 4;
-#[doc = " Leader not available"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_LEADER_NOT_AVAILABLE: rd_kafka_resp_err_t = 5;
-#[doc = " Not leader for partition"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_NOT_LEADER_FOR_PARTITION: rd_kafka_resp_err_t = 6;
-#[doc = " Request timed out"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_REQUEST_TIMED_OUT: rd_kafka_resp_err_t = 7;
-#[doc = " Broker not available"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_BROKER_NOT_AVAILABLE: rd_kafka_resp_err_t = 8;
-#[doc = " Replica not available"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_REPLICA_NOT_AVAILABLE: rd_kafka_resp_err_t = 9;
-#[doc = " Message size too large"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_MSG_SIZE_TOO_LARGE: rd_kafka_resp_err_t = 10;
-#[doc = " StaleControllerEpochCode"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_STALE_CTRL_EPOCH: rd_kafka_resp_err_t = 11;
-#[doc = " Offset metadata string too large"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_OFFSET_METADATA_TOO_LARGE: rd_kafka_resp_err_t = 12;
-#[doc = " Broker disconnected before response received"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_NETWORK_EXCEPTION: rd_kafka_resp_err_t = 13;
-#[doc = " Group coordinator load in progress"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_GROUP_LOAD_IN_PROGRESS: rd_kafka_resp_err_t = 14;
-#[doc = " Group coordinator not available"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_GROUP_COORDINATOR_NOT_AVAILABLE:
     rd_kafka_resp_err_t = 15;
-#[doc = " Not coordinator for group"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_NOT_COORDINATOR_FOR_GROUP: rd_kafka_resp_err_t = 16;
-#[doc = " Invalid topic"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_TOPIC_EXCEPTION: rd_kafka_resp_err_t = 17;
-#[doc = " Message batch larger than configured server segment size"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_RECORD_LIST_TOO_LARGE: rd_kafka_resp_err_t = 18;
-#[doc = " Not enough in-sync replicas"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_NOT_ENOUGH_REPLICAS: rd_kafka_resp_err_t = 19;
-#[doc = " Message(s) written to insufficient number of in-sync replicas"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_NOT_ENOUGH_REPLICAS_AFTER_APPEND:
     rd_kafka_resp_err_t = 20;
-#[doc = " Invalid required acks value"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_REQUIRED_ACKS: rd_kafka_resp_err_t = 21;
-#[doc = " Specified group generation id is not valid"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_ILLEGAL_GENERATION: rd_kafka_resp_err_t = 22;
-#[doc = " Inconsistent group protocol"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INCONSISTENT_GROUP_PROTOCOL: rd_kafka_resp_err_t =
     23;
-#[doc = " Invalid group.id"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_GROUP_ID: rd_kafka_resp_err_t = 24;
-#[doc = " Unknown member"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_UNKNOWN_MEMBER_ID: rd_kafka_resp_err_t = 25;
-#[doc = " Invalid session timeout"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_SESSION_TIMEOUT: rd_kafka_resp_err_t = 26;
-#[doc = " Group rebalance in progress"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_REBALANCE_IN_PROGRESS: rd_kafka_resp_err_t = 27;
-#[doc = " Commit offset data size is not valid"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_COMMIT_OFFSET_SIZE: rd_kafka_resp_err_t =
     28;
-#[doc = " Topic authorization failed"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_TOPIC_AUTHORIZATION_FAILED: rd_kafka_resp_err_t =
     29;
-#[doc = " Group authorization failed"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_GROUP_AUTHORIZATION_FAILED: rd_kafka_resp_err_t =
     30;
-#[doc = " Cluster authorization failed"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_CLUSTER_AUTHORIZATION_FAILED: rd_kafka_resp_err_t =
     31;
-#[doc = " Invalid timestamp"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_TIMESTAMP: rd_kafka_resp_err_t = 32;
-#[doc = " Unsupported SASL mechanism"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_UNSUPPORTED_SASL_MECHANISM: rd_kafka_resp_err_t =
     33;
-#[doc = " Illegal SASL state"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_ILLEGAL_SASL_STATE: rd_kafka_resp_err_t = 34;
-#[doc = " Unuspported version"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_UNSUPPORTED_VERSION: rd_kafka_resp_err_t = 35;
-#[doc = " Topic already exists"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_TOPIC_ALREADY_EXISTS: rd_kafka_resp_err_t = 36;
-#[doc = " Invalid number of partitions"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_PARTITIONS: rd_kafka_resp_err_t = 37;
-#[doc = " Invalid replication factor"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_REPLICATION_FACTOR: rd_kafka_resp_err_t =
     38;
-#[doc = " Invalid replica assignment"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_REPLICA_ASSIGNMENT: rd_kafka_resp_err_t =
     39;
-#[doc = " Invalid config"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_CONFIG: rd_kafka_resp_err_t = 40;
-#[doc = " Not controller for cluster"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_NOT_CONTROLLER: rd_kafka_resp_err_t = 41;
-#[doc = " Invalid request"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_REQUEST: rd_kafka_resp_err_t = 42;
-#[doc = " Message format on broker does not support request"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_UNSUPPORTED_FOR_MESSAGE_FORMAT:
     rd_kafka_resp_err_t = 43;
-#[doc = " Policy violation"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_POLICY_VIOLATION: rd_kafka_resp_err_t = 44;
-#[doc = " Broker received an out of order sequence number"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_OUT_OF_ORDER_SEQUENCE_NUMBER: rd_kafka_resp_err_t =
     45;
-#[doc = " Broker received a duplicate sequence number"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_DUPLICATE_SEQUENCE_NUMBER: rd_kafka_resp_err_t = 46;
-#[doc = " Producer attempted an operation with an old epoch"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_PRODUCER_EPOCH: rd_kafka_resp_err_t = 47;
-#[doc = " Producer attempted a transactional operation in an invalid state"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_TXN_STATE: rd_kafka_resp_err_t = 48;
-#[doc = " Producer attempted to use a producer id which is not"]
-#[doc = "  currently assigned to its transactional id"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_PRODUCER_ID_MAPPING: rd_kafka_resp_err_t =
     49;
-#[doc = " Transaction timeout is larger than the maximum"]
-#[doc = "  value allowed by the broker's max.transaction.timeout.ms"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_TRANSACTION_TIMEOUT: rd_kafka_resp_err_t =
     50;
-#[doc = " Producer attempted to update a transaction while another"]
-#[doc = "  concurrent operation on the same transaction was ongoing"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_CONCURRENT_TRANSACTIONS: rd_kafka_resp_err_t = 51;
-#[doc = " Indicates that the transaction coordinator sending a"]
-#[doc = "  WriteTxnMarker is no longer the current coordinator for a"]
-#[doc = "  given producer"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_TRANSACTION_COORDINATOR_FENCED:
     rd_kafka_resp_err_t = 52;
-#[doc = " Transactional Id authorization failed"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_TRANSACTIONAL_ID_AUTHORIZATION_FAILED:
     rd_kafka_resp_err_t = 53;
-#[doc = " Security features are disabled"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_SECURITY_DISABLED: rd_kafka_resp_err_t = 54;
-#[doc = " Operation not attempted"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_OPERATION_NOT_ATTEMPTED: rd_kafka_resp_err_t = 55;
-#[doc = " Disk error when trying to access log file on the disk"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_KAFKA_STORAGE_ERROR: rd_kafka_resp_err_t = 56;
-#[doc = " The user-specified log directory is not found in the broker config"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_LOG_DIR_NOT_FOUND: rd_kafka_resp_err_t = 57;
-#[doc = " SASL Authentication failed"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_SASL_AUTHENTICATION_FAILED: rd_kafka_resp_err_t =
     58;
-#[doc = " Unknown Producer Id"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_UNKNOWN_PRODUCER_ID: rd_kafka_resp_err_t = 59;
-#[doc = " Partition reassignment is in progress"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_REASSIGNMENT_IN_PROGRESS: rd_kafka_resp_err_t = 60;
-#[doc = " Delegation Token feature is not enabled"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_AUTH_DISABLED:
     rd_kafka_resp_err_t = 61;
-#[doc = " Delegation Token is not found on server"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_NOT_FOUND: rd_kafka_resp_err_t =
     62;
-#[doc = " Specified Principal is not valid Owner/Renewer"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_OWNER_MISMATCH:
     rd_kafka_resp_err_t = 63;
-#[doc = " Delegation Token requests are not allowed on this connection"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_REQUEST_NOT_ALLOWED:
     rd_kafka_resp_err_t = 64;
-#[doc = " Delegation Token authorization failed"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_AUTHORIZATION_FAILED:
     rd_kafka_resp_err_t = 65;
-#[doc = " Delegation Token is expired"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_EXPIRED: rd_kafka_resp_err_t = 66;
-#[doc = " Supplied principalType is not supported"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_PRINCIPAL_TYPE: rd_kafka_resp_err_t = 67;
-#[doc = " The group is not empty"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_NON_EMPTY_GROUP: rd_kafka_resp_err_t = 68;
-#[doc = " The group id does not exist"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_GROUP_ID_NOT_FOUND: rd_kafka_resp_err_t = 69;
-#[doc = " The fetch session ID was not found"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_FETCH_SESSION_ID_NOT_FOUND: rd_kafka_resp_err_t =
     70;
-#[doc = " The fetch session epoch is invalid"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_INVALID_FETCH_SESSION_EPOCH: rd_kafka_resp_err_t =
     71;
-#[doc = " No matching listener"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_LISTENER_NOT_FOUND: rd_kafka_resp_err_t = 72;
-#[doc = " Topic deletion is disabled"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_TOPIC_DELETION_DISABLED: rd_kafka_resp_err_t = 73;
-#[doc = " Leader epoch is older than broker epoch"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_FENCED_LEADER_EPOCH: rd_kafka_resp_err_t = 74;
-#[doc = " Leader epoch is newer than broker epoch"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_UNKNOWN_LEADER_EPOCH: rd_kafka_resp_err_t = 75;
-#[doc = " Unsupported compression type"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_UNSUPPORTED_COMPRESSION_TYPE: rd_kafka_resp_err_t =
     76;
-#[doc = " Broker epoch has changed"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_STALE_BROKER_EPOCH: rd_kafka_resp_err_t = 77;
-#[doc = " Leader high watermark is not caught up"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_OFFSET_NOT_AVAILABLE: rd_kafka_resp_err_t = 78;
-#[doc = " Group member needs a valid member ID"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_MEMBER_ID_REQUIRED: rd_kafka_resp_err_t = 79;
-#[doc = " Preferred leader was not available"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_PREFERRED_LEADER_NOT_AVAILABLE:
     rd_kafka_resp_err_t = 80;
-#[doc = " Consumer group has reached maximum size"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_GROUP_MAX_SIZE_REACHED: rd_kafka_resp_err_t = 81;
-#[doc = " Consumer group has reached maximum size"]
 pub const rd_kafka_resp_err_t_RD_KAFKA_RESP_ERR_END_ALL: rd_kafka_resp_err_t = 82;
-#[doc = " @enum rd_kafka_resp_err_t"]
-#[doc = " @brief Error codes."]
-#[doc = ""]
-#[doc = " The negative error codes delimited by two underscores"]
-#[doc = " (\\c RD_KAFKA_RESP_ERR__..) denotes errors internal to librdkafka and are"]
-#[doc = " displayed as \\c \\\"Local: \\<error string..\\>\\\", while the error codes"]
-#[doc = " delimited by a single underscore (\\c RD_KAFKA_RESP_ERR_..) denote broker"]
-#[doc = " errors and are displayed as \\c \\\"Broker: \\<error string..\\>\\\"."]
-#[doc = ""]
-#[doc = " @sa Use rd_kafka_err2str() to translate an error code a human readable string"]
 pub type rd_kafka_resp_err_t = i32;
-#[doc = " @brief Error code value, name and description."]
-#[doc = "        Typically for use with language bindings to automatically expose"]
-#[doc = "        the full set of librdkafka error codes."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_err_desc {
-    #[doc = "< Error code"]
     pub code: rd_kafka_resp_err_t,
-    #[doc = "< Error name, same as code enum sans prefix"]
     pub name: *const ::std::os::raw::c_char,
-    #[doc = "< Human readable error description."]
     pub desc: *const ::std::os::raw::c_char,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_err_desc() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_err_desc>(),
-        24usize,
-        concat!("Size of: ", stringify!(rd_kafka_err_desc))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_err_desc>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_err_desc))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_err_desc>())).code as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_err_desc),
-            "::",
-            stringify!(code)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_err_desc>())).name as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_err_desc),
-            "::",
-            stringify!(name)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_err_desc>())).desc as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_err_desc),
-            "::",
-            stringify!(desc)
-        )
-    );
-}
 extern "C" {
-    #[doc = " @brief Returns the full list of error codes."]
     pub fn rd_kafka_get_err_descs(errdescs: *mut *const rd_kafka_err_desc, cntp: *mut size_t);
 }
 extern "C" {
-    #[doc = " @brief Returns a human readable representation of a kafka error."]
-    #[doc = ""]
-    #[doc = " @param err Error code to translate"]
     pub fn rd_kafka_err2str(err: rd_kafka_resp_err_t) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @brief Returns the error code name (enum name)."]
-    #[doc = ""]
-    #[doc = " @param err Error code to translate"]
     pub fn rd_kafka_err2name(err: rd_kafka_resp_err_t) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @brief Returns the last error code generated by a legacy API call"]
-    #[doc = "        in the current thread."]
-    #[doc = ""]
-    #[doc = " The legacy APIs are the ones using errno to propagate error value, namely:"]
-    #[doc = "  - rd_kafka_topic_new()"]
-    #[doc = "  - rd_kafka_consume_start()"]
-    #[doc = "  - rd_kafka_consume_stop()"]
-    #[doc = "  - rd_kafka_consume()"]
-    #[doc = "  - rd_kafka_consume_batch()"]
-    #[doc = "  - rd_kafka_consume_callback()"]
-    #[doc = "  - rd_kafka_consume_queue()"]
-    #[doc = "  - rd_kafka_produce()"]
-    #[doc = ""]
-    #[doc = " The main use for this function is to avoid converting system \\p errno"]
-    #[doc = " values to rd_kafka_resp_err_t codes for legacy APIs."]
-    #[doc = ""]
-    #[doc = " @remark The last error is stored per-thread, if multiple rd_kafka_t handles"]
-    #[doc = "         are used in the same application thread the developer needs to"]
-    #[doc = "         make sure rd_kafka_last_error() is called immediately after"]
-    #[doc = "         a failed API call."]
-    #[doc = ""]
-    #[doc = " @remark errno propagation from librdkafka is not safe on Windows"]
-    #[doc = "         and should not be used, use rd_kafka_last_error() instead."]
     pub fn rd_kafka_last_error() -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Converts the system errno value \\p errnox to a rd_kafka_resp_err_t"]
-    #[doc = "        error code upon failure from the following functions:"]
-    #[doc = "  - rd_kafka_topic_new()"]
-    #[doc = "  - rd_kafka_consume_start()"]
-    #[doc = "  - rd_kafka_consume_stop()"]
-    #[doc = "  - rd_kafka_consume()"]
-    #[doc = "  - rd_kafka_consume_batch()"]
-    #[doc = "  - rd_kafka_consume_callback()"]
-    #[doc = "  - rd_kafka_consume_queue()"]
-    #[doc = "  - rd_kafka_produce()"]
-    #[doc = ""]
-    #[doc = " @param errnox  System errno value to convert"]
-    #[doc = ""]
-    #[doc = " @returns Appropriate error code for \\p errnox"]
-    #[doc = ""]
-    #[doc = " @remark A better alternative is to call rd_kafka_last_error() immediately"]
-    #[doc = "         after any of the above functions return -1 or NULL."]
-    #[doc = ""]
-    #[doc = " @deprecated Use rd_kafka_last_error() to retrieve the last error code"]
-    #[doc = "             set by the legacy librdkafka APIs."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_last_error()"]
     pub fn rd_kafka_errno2err(errnox: ::std::os::raw::c_int) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Returns the thread-local system errno"]
-    #[doc = ""]
-    #[doc = " On most platforms this is the same as \\p errno but in case of different"]
-    #[doc = " runtimes between library and application (e.g., Windows static DLLs)"]
-    #[doc = " this provides a means for exposing the errno librdkafka uses."]
-    #[doc = ""]
-    #[doc = " @remark The value is local to the current calling thread."]
-    #[doc = ""]
-    #[doc = " @deprecated Use rd_kafka_last_error() to retrieve the last error code"]
-    #[doc = "             set by the legacy librdkafka APIs."]
     pub fn rd_kafka_errno() -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Returns the first fatal error set on this client instance,"]
-    #[doc = "        or RD_KAFKA_RESP_ERR_NO_ERROR if no fatal error has occurred."]
-    #[doc = ""]
-    #[doc = " This function is to be used with the Idempotent Producer and \\c error_cb"]
-    #[doc = " to detect fatal errors."]
-    #[doc = ""]
-    #[doc = " Generally all errors raised by \\c error_cb are to be considered"]
-    #[doc = " informational and temporary, the client will try to recover from all"]
-    #[doc = " errors in a graceful fashion (by retrying, etc)."]
-    #[doc = ""]
-    #[doc = " However, some errors should logically be considered fatal to retain"]
-    #[doc = " consistency; in particular a set of errors that may occur when using the"]
-    #[doc = " Idempotent Producer and the in-order or exactly-once producer guarantees"]
-    #[doc = " can't be satisfied."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param errstr A human readable error string (nul-terminated) is written to"]
-    #[doc = "               this location that must be of at least \\p errstr_size bytes."]
-    #[doc = "               The \\p errstr is only written to if there is a fatal error."]
-    #[doc = " @param errstr_size Writable size in \\p errstr."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR if no fatal error has been raised, else"]
-    #[doc = "          any other error code."]
     pub fn rd_kafka_fatal_error(
         rk: *mut rd_kafka_t,
         errstr: *mut ::std::os::raw::c_char,
@@ -4139,261 +2007,45 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Trigger a fatal error for testing purposes."]
-    #[doc = ""]
-    #[doc = " Since there is no practical way to trigger real fatal errors in the"]
-    #[doc = " idempotent producer, this method allows an application to trigger"]
-    #[doc = " fabricated fatal errors in tests to check its error handling code."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param err The underlying error code."]
-    #[doc = " @param reason A human readable error reason."]
-    #[doc = "               Will be prefixed with \"test_fatal_error: \" to differentiate"]
-    #[doc = "               from real fatal errors."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR if a fatal error was triggered, or"]
-    #[doc = "          RD_KAFKA_RESP_ERR__PREV_IN_PROGRESS if a previous fatal error"]
-    #[doc = "          has already been triggered."]
     pub fn rd_kafka_test_fatal_error(
         rk: *mut rd_kafka_t,
         err: rd_kafka_resp_err_t,
         reason: *const ::std::os::raw::c_char,
     ) -> rd_kafka_resp_err_t;
 }
-#[doc = " @brief Generic place holder for a specific Topic+Partition."]
-#[doc = ""]
-#[doc = " @sa rd_kafka_topic_partition_list_new()"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_topic_partition_s {
-    #[doc = "< Topic name"]
     pub topic: *mut ::std::os::raw::c_char,
-    #[doc = "< Partition"]
     pub partition: i32,
-    #[doc = "< Offset"]
     pub offset: i64,
-    #[doc = "< Metadata"]
     pub metadata: *mut ::std::os::raw::c_void,
-    #[doc = "< Metadata size"]
     pub metadata_size: size_t,
-    #[doc = "< Opaque value for application use"]
     pub opaque: *mut ::std::os::raw::c_void,
-    #[doc = "< Error code, depending on use."]
     pub err: rd_kafka_resp_err_t,
-    #[doc = "< INTERNAL USE ONLY,"]
-    #[doc = "   INITIALIZE TO ZERO, DO NOT TOUCH"]
     pub _private: *mut ::std::os::raw::c_void,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_topic_partition_s() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_topic_partition_s>(),
-        64usize,
-        concat!("Size of: ", stringify!(rd_kafka_topic_partition_s))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_topic_partition_s>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_topic_partition_s))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_topic_partition_s>())).topic as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_s),
-            "::",
-            stringify!(topic)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_topic_partition_s>())).partition as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_s),
-            "::",
-            stringify!(partition)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_topic_partition_s>())).offset as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_s),
-            "::",
-            stringify!(offset)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_topic_partition_s>())).metadata as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_s),
-            "::",
-            stringify!(metadata)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_topic_partition_s>())).metadata_size as *const _
-                as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_s),
-            "::",
-            stringify!(metadata_size)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_topic_partition_s>())).opaque as *const _ as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_s),
-            "::",
-            stringify!(opaque)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_topic_partition_s>())).err as *const _ as usize },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_s),
-            "::",
-            stringify!(err)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_topic_partition_s>()))._private as *const _ as usize
-        },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_s),
-            "::",
-            stringify!(_private)
-        )
-    );
-}
-#[doc = " @brief Generic place holder for a specific Topic+Partition."]
-#[doc = ""]
-#[doc = " @sa rd_kafka_topic_partition_list_new()"]
 pub type rd_kafka_topic_partition_t = rd_kafka_topic_partition_s;
 extern "C" {
-    #[doc = " @brief Destroy a rd_kafka_topic_partition_t."]
-    #[doc = " @remark This must not be called for elements in a topic partition list."]
     pub fn rd_kafka_topic_partition_destroy(rktpar: *mut rd_kafka_topic_partition_t);
 }
-#[doc = " @brief A growable list of Topic+Partitions."]
-#[doc = ""]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_topic_partition_list_s {
-    #[doc = "< Current number of elements"]
     pub cnt: ::std::os::raw::c_int,
-    #[doc = "< Current allocated size"]
     pub size: ::std::os::raw::c_int,
-    #[doc = "< Element array[]"]
     pub elems: *mut rd_kafka_topic_partition_t,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_topic_partition_list_s() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_topic_partition_list_s>(),
-        16usize,
-        concat!("Size of: ", stringify!(rd_kafka_topic_partition_list_s))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_topic_partition_list_s>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_topic_partition_list_s))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_topic_partition_list_s>())).cnt as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_list_s),
-            "::",
-            stringify!(cnt)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_topic_partition_list_s>())).size as *const _ as usize
-        },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_list_s),
-            "::",
-            stringify!(size)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_topic_partition_list_s>())).elems as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_topic_partition_list_s),
-            "::",
-            stringify!(elems)
-        )
-    );
-}
-#[doc = " @brief A growable list of Topic+Partitions."]
-#[doc = ""]
 pub type rd_kafka_topic_partition_list_t = rd_kafka_topic_partition_list_s;
 extern "C" {
-    #[doc = " @brief Create a new list/vector Topic+Partition container."]
-    #[doc = ""]
-    #[doc = " @param size  Initial allocated size used when the expected number of"]
-    #[doc = "              elements is known or can be estimated."]
-    #[doc = "              Avoids reallocation and possibly relocation of the"]
-    #[doc = "              elems array."]
-    #[doc = ""]
-    #[doc = " @returns A newly allocated Topic+Partition list."]
-    #[doc = ""]
-    #[doc = " @remark Use rd_kafka_topic_partition_list_destroy() to free all resources"]
-    #[doc = "         in use by a list and the list itself."]
-    #[doc = " @sa     rd_kafka_topic_partition_list_add()"]
     pub fn rd_kafka_topic_partition_list_new(
         size: ::std::os::raw::c_int,
     ) -> *mut rd_kafka_topic_partition_list_t;
 }
 extern "C" {
-    #[doc = " @brief Free all resources used by the list and the list itself."]
     pub fn rd_kafka_topic_partition_list_destroy(rkparlist: *mut rd_kafka_topic_partition_list_t);
 }
 extern "C" {
-    #[doc = " @brief Add topic+partition to list"]
-    #[doc = ""]
-    #[doc = " @param rktparlist List to extend"]
-    #[doc = " @param topic      Topic name (copied)"]
-    #[doc = " @param partition  Partition id"]
-    #[doc = ""]
-    #[doc = " @returns The object which can be used to fill in additionals fields."]
     pub fn rd_kafka_topic_partition_list_add(
         rktparlist: *mut rd_kafka_topic_partition_list_t,
         topic: *const ::std::os::raw::c_char,
@@ -4401,12 +2053,6 @@ extern "C" {
     ) -> *mut rd_kafka_topic_partition_t;
 }
 extern "C" {
-    #[doc = " @brief Add range of partitions from \\p start to \\p stop inclusive."]
-    #[doc = ""]
-    #[doc = " @param rktparlist List to extend"]
-    #[doc = " @param topic      Topic name (copied)"]
-    #[doc = " @param start      Start partition of range"]
-    #[doc = " @param stop       Last partition of range (inclusive)"]
     pub fn rd_kafka_topic_partition_list_add_range(
         rktparlist: *mut rd_kafka_topic_partition_list_t,
         topic: *const ::std::os::raw::c_char,
@@ -4415,15 +2061,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Delete partition from list."]
-    #[doc = ""]
-    #[doc = " @param rktparlist List to modify"]
-    #[doc = " @param topic      Topic name to match"]
-    #[doc = " @param partition  Partition to match"]
-    #[doc = ""]
-    #[doc = " @returns 1 if partition was found (and removed), else 0."]
-    #[doc = ""]
-    #[doc = " @remark Any held indices to elems[] are unusable after this call returns 1."]
     pub fn rd_kafka_topic_partition_list_del(
         rktparlist: *mut rd_kafka_topic_partition_list_t,
         topic: *const ::std::os::raw::c_char,
@@ -4431,32 +2068,17 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Delete partition from list by elems[] index."]
-    #[doc = ""]
-    #[doc = " @returns 1 if partition was found (and removed), else 0."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_topic_partition_list_del()"]
     pub fn rd_kafka_topic_partition_list_del_by_idx(
         rktparlist: *mut rd_kafka_topic_partition_list_t,
         idx: ::std::os::raw::c_int,
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Make a copy of an existing list."]
-    #[doc = ""]
-    #[doc = " @param src   The existing list to copy."]
-    #[doc = ""]
-    #[doc = " @returns A new list fully populated to be identical to \\p src"]
     pub fn rd_kafka_topic_partition_list_copy(
         src: *const rd_kafka_topic_partition_list_t,
     ) -> *mut rd_kafka_topic_partition_list_t;
 }
 extern "C" {
-    #[doc = " @brief Set offset to \\p offset for \\p topic and \\p partition"]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or"]
-    #[doc = "          RD_KAFKA_RESP_ERR__UNKNOWN_PARTITION if \\p partition was not found"]
-    #[doc = "          in the list."]
     pub fn rd_kafka_topic_partition_list_set_offset(
         rktparlist: *mut rd_kafka_topic_partition_list_t,
         topic: *const ::std::os::raw::c_char,
@@ -4465,9 +2087,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Find element by \\p topic and \\p partition."]
-    #[doc = ""]
-    #[doc = " @returns a pointer to the first matching element, or NULL if not found."]
     pub fn rd_kafka_topic_partition_list_find(
         rktparlist: *mut rd_kafka_topic_partition_list_t,
         topic: *const ::std::os::raw::c_char,
@@ -4475,13 +2094,6 @@ extern "C" {
     ) -> *mut rd_kafka_topic_partition_t;
 }
 extern "C" {
-    #[doc = " @brief Sort list using comparator \\p cmp."]
-    #[doc = ""]
-    #[doc = " If \\p cmp is NULL the default comparator will be used that"]
-    #[doc = " sorts by ascending topic name and partition."]
-    #[doc = ""]
-    #[doc = " \\p cmp_opaque is provided as the \\p cmp_opaque argument to \\p cmp."]
-    #[doc = ""]
     pub fn rd_kafka_topic_partition_list_sort(
         rktparlist: *mut rd_kafka_topic_partition_list_t,
         cmp: ::std::option::Option<
@@ -4494,79 +2106,34 @@ extern "C" {
         cmp_opaque: *mut ::std::os::raw::c_void,
     );
 }
-#[doc = "< va-arg sentinel"]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_END: rd_kafka_vtype_t = 0;
-#[doc = "< (const char *) Topic name"]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_TOPIC: rd_kafka_vtype_t = 1;
-#[doc = "< (rd_kafka_topic_t *) Topic handle"]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_RKT: rd_kafka_vtype_t = 2;
-#[doc = "< (int32_t) Partition"]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_PARTITION: rd_kafka_vtype_t = 3;
-#[doc = "< (void *, size_t) Message value (payload)"]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_VALUE: rd_kafka_vtype_t = 4;
-#[doc = "< (void *, size_t) Message key"]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_KEY: rd_kafka_vtype_t = 5;
-#[doc = "< (void *) Per-message application opaque"]
-#[doc = "            value. This is the same as"]
-#[doc = "            the _private field in"]
-#[doc = "            rd_kafka_message_t, also known"]
-#[doc = "            as the msg_opaque."]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_OPAQUE: rd_kafka_vtype_t = 6;
-#[doc = "< (int) RD_KAFKA_MSG_F_.. flags"]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_MSGFLAGS: rd_kafka_vtype_t = 7;
-#[doc = "< (int64_t) Milliseconds since epoch UTC"]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_TIMESTAMP: rd_kafka_vtype_t = 8;
-#[doc = "< (const char *, const void *, ssize_t)"]
-#[doc = "   Message Header"]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_HEADER: rd_kafka_vtype_t = 9;
-#[doc = "< (rd_kafka_headers_t *) Headers list"]
 pub const rd_kafka_vtype_t_RD_KAFKA_VTYPE_HEADERS: rd_kafka_vtype_t = 10;
-#[doc = " @enum rd_kafka_vtype_t"]
-#[doc = ""]
-#[doc = " @brief Var-arg tag types"]
-#[doc = ""]
-#[doc = " @sa rd_kafka_producev()"]
 pub type rd_kafka_vtype_t = u32;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_headers_s {
     _unused: [u8; 0],
 }
-#[doc = " Message Headers list"]
 pub type rd_kafka_headers_t = rd_kafka_headers_s;
 extern "C" {
-    #[doc = " @brief Create a new headers list."]
-    #[doc = ""]
-    #[doc = " @param initial_count Preallocate space for this number of headers."]
-    #[doc = "                      Any number of headers may be added, updated and"]
-    #[doc = "                      removed regardless of the initial count."]
     pub fn rd_kafka_headers_new(initial_count: size_t) -> *mut rd_kafka_headers_t;
 }
 extern "C" {
-    #[doc = " @brief Destroy the headers list. The object and any returned value pointers"]
-    #[doc = "        are not usable after this call."]
     pub fn rd_kafka_headers_destroy(hdrs: *mut rd_kafka_headers_t);
 }
 extern "C" {
-    #[doc = " @brief Make a copy of headers list \\p src."]
     pub fn rd_kafka_headers_copy(src: *const rd_kafka_headers_t) -> *mut rd_kafka_headers_t;
 }
 extern "C" {
-    #[doc = " @brief Add header with name \\p name and value \\p val (copied) of size"]
-    #[doc = "        \\p size (not including null-terminator)."]
-    #[doc = ""]
-    #[doc = " @param hdrs       Headers list."]
-    #[doc = " @param name       Header name."]
-    #[doc = " @param name_size  Header name size (not including the null-terminator)."]
-    #[doc = "                   If -1 the \\p name length is automatically acquired using"]
-    #[doc = "                   strlen()."]
-    #[doc = " @param value      Pointer to header value, or NULL (set size to 0 or -1)."]
-    #[doc = " @param value_size Size of header value. If -1 the \\p value is assumed to be a"]
-    #[doc = "                   null-terminated string and the length is automatically"]
-    #[doc = "                   acquired using strlen()."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR__READ_ONLY if the headers are read-only,"]
-    #[doc = "          else RD_KAFKA_RESP_ERR_NO_ERROR."]
     pub fn rd_kafka_header_add(
         hdrs: *mut rd_kafka_headers_t,
         name: *const ::std::os::raw::c_char,
@@ -4576,32 +2143,12 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Remove all headers for the given key (if any)."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR__READ_ONLY if the headers are read-only,"]
-    #[doc = "          RD_KAFKA_RESP_ERR__NOENT if no matching headers were found,"]
-    #[doc = "          else RD_KAFKA_RESP_ERR_NO_ERROR if headers were removed."]
     pub fn rd_kafka_header_remove(
         hdrs: *mut rd_kafka_headers_t,
         name: *const ::std::os::raw::c_char,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Find last header in list \\p hdrs matching \\p name."]
-    #[doc = ""]
-    #[doc = " @param hdrs   Headers list."]
-    #[doc = " @param name   Header to find (last match)."]
-    #[doc = " @param valuep (out) Set to a (null-terminated) const pointer to the value"]
-    #[doc = "               (may be NULL)."]
-    #[doc = " @param sizep  (out) Set to the value's size (not including null-terminator)."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR if an entry was found, else"]
-    #[doc = "          RD_KAFKA_RESP_ERR__NOENT."]
-    #[doc = ""]
-    #[doc = " @remark The returned pointer in \\p valuep includes a trailing null-terminator"]
-    #[doc = "         that is not accounted for in \\p sizep."]
-    #[doc = " @remark The returned pointer is only valid as long as the headers list and"]
-    #[doc = "         the header item is valid."]
     pub fn rd_kafka_header_get_last(
         hdrs: *const rd_kafka_headers_t,
         name: *const ::std::os::raw::c_char,
@@ -4610,17 +2157,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Iterator for headers matching \\p name."]
-    #[doc = ""]
-    #[doc = "        Same semantics as rd_kafka_header_get_last()"]
-    #[doc = ""]
-    #[doc = " @param hdrs   Headers to iterate."]
-    #[doc = " @param idx    Iterator index, start at 0 and increment by one for each call"]
-    #[doc = "               as long as RD_KAFKA_RESP_ERR_NO_ERROR is returned."]
-    #[doc = " @param name   Header name to match."]
-    #[doc = " @param valuep (out) Set to a (null-terminated) const pointer to the value"]
-    #[doc = "               (may be NULL)."]
-    #[doc = " @param sizep  (out) Set to the value's size (not including null-terminator)."]
     pub fn rd_kafka_header_get(
         hdrs: *const rd_kafka_headers_t,
         idx: size_t,
@@ -4630,11 +2166,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Iterator for all headers."]
-    #[doc = ""]
-    #[doc = "        Same semantics as rd_kafka_header_get()"]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_header_get()"]
     pub fn rd_kafka_header_get_all(
         hdrs: *const rd_kafka_headers_t,
         idx: size_t,
@@ -4643,324 +2174,74 @@ extern "C" {
         sizep: *mut size_t,
     ) -> rd_kafka_resp_err_t;
 }
-#[doc = " @brief A Kafka message as returned by the \\c rd_kafka_consume*() family"]
-#[doc = "        of functions as well as provided to the Producer \\c dr_msg_cb()."]
-#[doc = ""]
-#[doc = " For the consumer this object has two purposes:"]
-#[doc = "  - provide the application with a consumed message. (\\c err == 0)"]
-#[doc = "  - report per-topic+partition consumer errors (\\c err != 0)"]
-#[doc = ""]
-#[doc = " The application must check \\c err to decide what action to take."]
-#[doc = ""]
-#[doc = " When the application is finished with a message it must call"]
-#[doc = " rd_kafka_message_destroy() unless otherwise noted."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_message_s {
-    #[doc = "< Non-zero for error signaling."]
     pub err: rd_kafka_resp_err_t,
-    #[doc = "< Topic"]
     pub rkt: *mut rd_kafka_topic_t,
-    #[doc = "< Partition"]
     pub partition: i32,
-    #[doc = "< Producer: original message payload."]
-    #[doc = " Consumer: Depends on the value of \\c err :"]
-    #[doc = " - \\c err==0: Message payload."]
-    #[doc = " - \\c err!=0: Error string"]
     pub payload: *mut ::std::os::raw::c_void,
-    #[doc = "< Depends on the value of \\c err :"]
-    #[doc = " - \\c err==0: Message payload length"]
-    #[doc = " - \\c err!=0: Error string length"]
     pub len: size_t,
-    #[doc = "< Depends on the value of \\c err :"]
-    #[doc = " - \\c err==0: Optional message key"]
     pub key: *mut ::std::os::raw::c_void,
-    #[doc = "< Depends on the value of \\c err :"]
-    #[doc = " - \\c err==0: Optional message key length"]
     pub key_len: size_t,
-    #[doc = "< Consumer:"]
-    #[doc = " - Message offset (or offset for error"]
-    #[doc = "   if \\c err!=0 if applicable)."]
-    #[doc = "   Producer, dr_msg_cb:"]
-    #[doc = "   Message offset assigned by broker."]
-    #[doc = "   May be RD_KAFKA_OFFSET_INVALID"]
-    #[doc = "   for retried messages when"]
-    #[doc = "   idempotence is enabled."]
     pub offset: i64,
-    #[doc = "< Consumer:"]
-    #[doc = "  - rdkafka private pointer: DO NOT MODIFY"]
-    #[doc = "  Producer:"]
-    #[doc = "  - dr_msg_cb:"]
-    #[doc = "    msg_opaque from produce() call or"]
-    #[doc = "    RD_KAFKA_V_OPAQUE from producev()."]
     pub _private: *mut ::std::os::raw::c_void,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_message_s() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_message_s>(),
-        72usize,
-        concat!("Size of: ", stringify!(rd_kafka_message_s))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_message_s>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_message_s))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_message_s>())).err as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_message_s),
-            "::",
-            stringify!(err)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_message_s>())).rkt as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_message_s),
-            "::",
-            stringify!(rkt)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_message_s>())).partition as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_message_s),
-            "::",
-            stringify!(partition)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_message_s>())).payload as *const _ as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_message_s),
-            "::",
-            stringify!(payload)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_message_s>())).len as *const _ as usize },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_message_s),
-            "::",
-            stringify!(len)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_message_s>())).key as *const _ as usize },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_message_s),
-            "::",
-            stringify!(key)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_message_s>())).key_len as *const _ as usize },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_message_s),
-            "::",
-            stringify!(key_len)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_message_s>())).offset as *const _ as usize },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_message_s),
-            "::",
-            stringify!(offset)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_message_s>()))._private as *const _ as usize },
-        64usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_message_s),
-            "::",
-            stringify!(_private)
-        )
-    );
-}
-#[doc = " @brief A Kafka message as returned by the \\c rd_kafka_consume*() family"]
-#[doc = "        of functions as well as provided to the Producer \\c dr_msg_cb()."]
-#[doc = ""]
-#[doc = " For the consumer this object has two purposes:"]
-#[doc = "  - provide the application with a consumed message. (\\c err == 0)"]
-#[doc = "  - report per-topic+partition consumer errors (\\c err != 0)"]
-#[doc = ""]
-#[doc = " The application must check \\c err to decide what action to take."]
-#[doc = ""]
-#[doc = " When the application is finished with a message it must call"]
-#[doc = " rd_kafka_message_destroy() unless otherwise noted."]
 pub type rd_kafka_message_t = rd_kafka_message_s;
 extern "C" {
-    #[doc = " @brief Frees resources for \\p rkmessage and hands ownership back to rdkafka."]
     pub fn rd_kafka_message_destroy(rkmessage: *mut rd_kafka_message_t);
 }
 extern "C" {
-    #[doc = " @brief Returns the message timestamp for a consumed message."]
-    #[doc = ""]
-    #[doc = " The timestamp is the number of milliseconds since the epoch (UTC)."]
-    #[doc = ""]
-    #[doc = " \\p tstype (if not NULL) is updated to indicate the type of timestamp."]
-    #[doc = ""]
-    #[doc = " @returns message timestamp, or -1 if not available."]
-    #[doc = ""]
-    #[doc = " @remark Message timestamps require broker version 0.10.0 or later."]
     pub fn rd_kafka_message_timestamp(
         rkmessage: *const rd_kafka_message_t,
         tstype: *mut rd_kafka_timestamp_type_t,
     ) -> i64;
 }
 extern "C" {
-    #[doc = " @brief Returns the latency for a produced message measured from"]
-    #[doc = "        the produce() call."]
-    #[doc = ""]
-    #[doc = " @returns the latency in microseconds, or -1 if not available."]
     pub fn rd_kafka_message_latency(rkmessage: *const rd_kafka_message_t) -> i64;
 }
 extern "C" {
-    #[doc = " @brief Get the message header list."]
-    #[doc = ""]
-    #[doc = " The returned pointer in \\p *hdrsp is associated with the \\p rkmessage and"]
-    #[doc = " must not be used after destruction of the message object or the header"]
-    #[doc = " list is replaced with rd_kafka_message_set_headers()."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR if headers were returned,"]
-    #[doc = "          RD_KAFKA_RESP_ERR__NOENT if the message has no headers,"]
-    #[doc = "          or another error code if the headers could not be parsed."]
-    #[doc = ""]
-    #[doc = " @remark Headers require broker version 0.11.0.0 or later."]
-    #[doc = ""]
-    #[doc = " @remark As an optimization the raw protocol headers are parsed on"]
-    #[doc = "         the first call to this function."]
     pub fn rd_kafka_message_headers(
         rkmessage: *const rd_kafka_message_t,
         hdrsp: *mut *mut rd_kafka_headers_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Get the message header list and detach the list from the message"]
-    #[doc = "        making the application the owner of the headers."]
-    #[doc = "        The application must eventually destroy the headers using"]
-    #[doc = "        rd_kafka_headers_destroy()."]
-    #[doc = "        The message's headers will be set to NULL."]
-    #[doc = ""]
-    #[doc = "        Otherwise same semantics as rd_kafka_message_headers()"]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_message_headers"]
     pub fn rd_kafka_message_detach_headers(
         rkmessage: *mut rd_kafka_message_t,
         hdrsp: *mut *mut rd_kafka_headers_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Replace the message's current headers with a new list."]
-    #[doc = ""]
-    #[doc = " @param rkmessage The message to set headers."]
-    #[doc = " @param hdrs New header list. The message object assumes ownership of"]
-    #[doc = "             the list, the list will be destroyed automatically with"]
-    #[doc = "             the message object."]
-    #[doc = "             The new headers list may be updated until the message object"]
-    #[doc = "             is passed or returned to librdkafka."]
-    #[doc = ""]
-    #[doc = " @remark The existing headers object, if any, will be destroyed."]
     pub fn rd_kafka_message_set_headers(
         rkmessage: *mut rd_kafka_message_t,
         hdrs: *mut rd_kafka_headers_t,
     );
 }
 extern "C" {
-    #[doc = " @brief Returns the number of header key/value pairs"]
-    #[doc = ""]
-    #[doc = " @param hdrs   Headers to count"]
     pub fn rd_kafka_header_cnt(hdrs: *const rd_kafka_headers_t) -> size_t;
 }
 pub const rd_kafka_msg_status_t_RD_KAFKA_MSG_STATUS_NOT_PERSISTED: rd_kafka_msg_status_t = 0;
 pub const rd_kafka_msg_status_t_RD_KAFKA_MSG_STATUS_POSSIBLY_PERSISTED: rd_kafka_msg_status_t = 1;
 pub const rd_kafka_msg_status_t_RD_KAFKA_MSG_STATUS_PERSISTED: rd_kafka_msg_status_t = 2;
-#[doc = " @enum rd_kafka_msg_status_t"]
-#[doc = " @brief Message persistence status can be used by the application to"]
-#[doc = "        find out if a produced message was persisted in the topic log."]
 pub type rd_kafka_msg_status_t = u32;
 extern "C" {
-    #[doc = " @brief Returns the message's persistence status in the topic log."]
-    #[doc = ""]
-    #[doc = " @remark The message status is not available in on_acknowledgement"]
-    #[doc = "         interceptors."]
     pub fn rd_kafka_message_status(rkmessage: *const rd_kafka_message_t) -> rd_kafka_msg_status_t;
 }
-#[doc = "< Unknown configuration name."]
 pub const rd_kafka_conf_res_t_RD_KAFKA_CONF_UNKNOWN: rd_kafka_conf_res_t = -2;
-#[doc = "< Invalid configuration value."]
 pub const rd_kafka_conf_res_t_RD_KAFKA_CONF_INVALID: rd_kafka_conf_res_t = -1;
-#[doc = "< Configuration okay"]
 pub const rd_kafka_conf_res_t_RD_KAFKA_CONF_OK: rd_kafka_conf_res_t = 0;
-#[doc = " @enum rd_kafka_conf_res_t"]
-#[doc = " @brief Configuration result type"]
 pub type rd_kafka_conf_res_t = i32;
 extern "C" {
-    #[doc = " @brief Create configuration object."]
-    #[doc = ""]
-    #[doc = " When providing your own configuration to the \\c rd_kafka_*_new_*() calls"]
-    #[doc = " the rd_kafka_conf_t objects needs to be created with this function"]
-    #[doc = " which will set up the defaults."]
-    #[doc = " I.e.:"]
-    #[doc = " @code"]
-    #[doc = "   rd_kafka_conf_t *myconf;"]
-    #[doc = "   rd_kafka_conf_res_t res;"]
-    #[doc = ""]
-    #[doc = "   myconf = rd_kafka_conf_new();"]
-    #[doc = "   res = rd_kafka_conf_set(myconf, \"socket.timeout.ms\", \"600\","]
-    #[doc = "                           errstr, sizeof(errstr));"]
-    #[doc = "   if (res != RD_KAFKA_CONF_OK)"]
-    #[doc = "      die(\"%s\\n\", errstr);"]
-    #[doc = ""]
-    #[doc = "   rk = rd_kafka_new(..., myconf);"]
-    #[doc = " @endcode"]
-    #[doc = ""]
-    #[doc = " Please see CONFIGURATION.md for the default settings or use"]
-    #[doc = " rd_kafka_conf_properties_show() to provide the information at runtime."]
-    #[doc = ""]
-    #[doc = " The properties are identical to the Apache Kafka configuration properties"]
-    #[doc = " whenever possible."]
-    #[doc = ""]
-    #[doc = " @returns A new rd_kafka_conf_t object with defaults set."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_conf_set(), rd_kafka_conf_destroy()"]
     pub fn rd_kafka_conf_new() -> *mut rd_kafka_conf_t;
 }
 extern "C" {
-    #[doc = " @brief Destroys a conf object."]
     pub fn rd_kafka_conf_destroy(conf: *mut rd_kafka_conf_t);
 }
 extern "C" {
-    #[doc = " @brief Creates a copy/duplicate of configuration object \\p conf"]
-    #[doc = ""]
-    #[doc = " @remark Interceptors are NOT copied to the new configuration object."]
-    #[doc = " @sa rd_kafka_interceptor_f_on_conf_dup"]
     pub fn rd_kafka_conf_dup(conf: *const rd_kafka_conf_t) -> *mut rd_kafka_conf_t;
 }
 extern "C" {
-    #[doc = " @brief Same as rd_kafka_conf_dup() but with an array of property name"]
-    #[doc = "        prefixes to filter out (ignore) when copying."]
     pub fn rd_kafka_conf_dup_filter(
         conf: *const rd_kafka_conf_t,
         filter_cnt: size_t,
@@ -4968,29 +2249,9 @@ extern "C" {
     ) -> *mut rd_kafka_conf_t;
 }
 extern "C" {
-    #[doc = " @returns the configuration object used by an rd_kafka_t instance."]
-    #[doc = "          For use with rd_kafka_conf_get(), et.al., to extract configuration"]
-    #[doc = "          properties from a running client."]
-    #[doc = ""]
-    #[doc = " @remark the returned object is read-only and its lifetime is the same"]
-    #[doc = "         as the rd_kafka_t object."]
     pub fn rd_kafka_conf(rk: *mut rd_kafka_t) -> *const rd_kafka_conf_t;
 }
 extern "C" {
-    #[doc = " @brief Sets a configuration property."]
-    #[doc = ""]
-    #[doc = " \\p conf must have been previously created with rd_kafka_conf_new()."]
-    #[doc = ""]
-    #[doc = " Fallthrough:"]
-    #[doc = " Topic-level configuration properties may be set using this interface"]
-    #[doc = " in which case they are applied on the \\c default_topic_conf."]
-    #[doc = " If no \\c default_topic_conf has been set one will be created."]
-    #[doc = " Any sub-sequent rd_kafka_conf_set_default_topic_conf() calls will"]
-    #[doc = " replace the current default topic configuration."]
-    #[doc = ""]
-    #[doc = " @returns \\c rd_kafka_conf_res_t to indicate success or failure."]
-    #[doc = " In case of failure \\p errstr is updated to contain a human readable"]
-    #[doc = " error string."]
     pub fn rd_kafka_conf_set(
         conf: *mut rd_kafka_conf_t,
         name: *const ::std::os::raw::c_char,
@@ -5000,45 +2261,9 @@ extern "C" {
     ) -> rd_kafka_conf_res_t;
 }
 extern "C" {
-    #[doc = " @brief Enable event sourcing."]
-    #[doc = " \\p events is a bitmask of \\c RD_KAFKA_EVENT_* of events to enable"]
-    #[doc = " for consumption by `rd_kafka_queue_poll()`."]
     pub fn rd_kafka_conf_set_events(conf: *mut rd_kafka_conf_t, events: ::std::os::raw::c_int);
 }
 extern "C" {
-    #[doc = " @brief Generic event callback to be used with the event API to trigger"]
-    #[doc = "        callbacks for \\c rd_kafka_event_t objects from a background"]
-    #[doc = "        thread serving the background queue."]
-    #[doc = ""]
-    #[doc = " How to use:"]
-    #[doc = "  1. First set the event callback on the configuration object with this"]
-    #[doc = "     function, followed by creating an rd_kafka_t instance"]
-    #[doc = "     with rd_kafka_new()."]
-    #[doc = "  2. Get the instance's background queue with rd_kafka_queue_get_background()"]
-    #[doc = "     and pass it as the reply/response queue to an API that takes an"]
-    #[doc = "     event queue, such as rd_kafka_CreateTopics()."]
-    #[doc = "  3. As the response event is ready and enqueued on the background queue the"]
-    #[doc = "     event callback will be triggered from the background thread."]
-    #[doc = "  4. Prior to destroying the client instance, loose your reference to the"]
-    #[doc = "     background queue by calling rd_kafka_queue_destroy()."]
-    #[doc = ""]
-    #[doc = " The application must destroy the \\c rkev passed to \\p event cb using"]
-    #[doc = " rd_kafka_event_destroy()."]
-    #[doc = ""]
-    #[doc = " The \\p event_cb \\c opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
-    #[doc = ""]
-    #[doc = " @remark This callback is a specialized alternative to the poll-based"]
-    #[doc = "         event API described in the Event interface section."]
-    #[doc = ""]
-    #[doc = " @remark The \\p event_cb will be called spontaneously from a background"]
-    #[doc = "         thread completely managed by librdkafka."]
-    #[doc = "         Take care to perform proper locking of application objects."]
-    #[doc = ""]
-    #[doc = " @warning The application MUST NOT call rd_kafka_destroy() from the"]
-    #[doc = "          event callback."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_queue_get_background"]
     pub fn rd_kafka_conf_set_background_event_cb(
         conf: *mut rd_kafka_conf_t,
         event_cb: ::std::option::Option<
@@ -5051,7 +2276,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @deprecated See rd_kafka_conf_set_dr_msg_cb()"]
     pub fn rd_kafka_conf_set_dr_cb(
         conf: *mut rd_kafka_conf_t,
         dr_cb: ::std::option::Option<
@@ -5067,34 +2291,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief \\b Producer: Set delivery report callback in provided \\p conf object."]
-    #[doc = ""]
-    #[doc = " The delivery report callback will be called once for each message"]
-    #[doc = " accepted by rd_kafka_produce() (et.al) with \\p err set to indicate"]
-    #[doc = " the result of the produce request."]
-    #[doc = ""]
-    #[doc = " The callback is called when a message is succesfully produced or"]
-    #[doc = " if librdkafka encountered a permanent failure."]
-    #[doc = " Delivery errors occur when the retry count is exceeded, when the"]
-    #[doc = " message.timeout.ms timeout is exceeded or there is a permanent error"]
-    #[doc = " like RD_KAFKA_RESP_ERR_UNKNOWN_TOPIC_OR_PART."]
-    #[doc = ""]
-    #[doc = " An application must call rd_kafka_poll() at regular intervals to"]
-    #[doc = " serve queued delivery report callbacks."]
-    #[doc = ""]
-    #[doc = " The broker-assigned offset can be retrieved with \\c rkmessage->offset"]
-    #[doc = " and the timestamp can be retrieved using rd_kafka_message_timestamp()."]
-    #[doc = ""]
-    #[doc = " The \\p dr_msg_cb \\c opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
-    #[doc = " The per-message msg_opaque value is available in"]
-    #[doc = " \\c rd_kafka_message_t._private."]
-    #[doc = ""]
-    #[doc = " @remark The Idempotent Producer may return invalid timestamp"]
-    #[doc = "         (RD_KAFKA_TIMESTAMP_NOT_AVAILABLE), and"]
-    #[doc = "         and offset (RD_KAFKA_OFFSET_INVALID) for retried messages"]
-    #[doc = "         that were previously successfully delivered but not properly"]
-    #[doc = "         acknowledged."]
     pub fn rd_kafka_conf_set_dr_msg_cb(
         conf: *mut rd_kafka_conf_t,
         dr_msg_cb: ::std::option::Option<
@@ -5107,11 +2303,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief \\b Consumer: Set consume callback for use with"]
-    #[doc = "        rd_kafka_consumer_poll()"]
-    #[doc = ""]
-    #[doc = " The \\p consume_cb \\p opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
     pub fn rd_kafka_conf_set_consume_cb(
         conf: *mut rd_kafka_conf_t,
         consume_cb: ::std::option::Option<
@@ -5123,78 +2314,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief \\b Consumer: Set rebalance callback for use with"]
-    #[doc = "                     coordinated consumer group balancing."]
-    #[doc = ""]
-    #[doc = " The \\p err field is set to either RD_KAFKA_RESP_ERR__ASSIGN_PARTITIONS"]
-    #[doc = " or RD_KAFKA_RESP_ERR__REVOKE_PARTITIONS and 'partitions'"]
-    #[doc = " contains the full partition set that was either assigned or revoked."]
-    #[doc = ""]
-    #[doc = " Registering a \\p rebalance_cb turns off librdkafka's automatic"]
-    #[doc = " partition assignment/revocation and instead delegates that responsibility"]
-    #[doc = " to the application's \\p rebalance_cb."]
-    #[doc = ""]
-    #[doc = " The rebalance callback is responsible for updating librdkafka's"]
-    #[doc = " assignment set based on the two events: RD_KAFKA_RESP_ERR__ASSIGN_PARTITIONS"]
-    #[doc = " and RD_KAFKA_RESP_ERR__REVOKE_PARTITIONS but should also be able to handle"]
-    #[doc = " arbitrary rebalancing failures where \\p err is neither of those."]
-    #[doc = " @remark In this latter case (arbitrary error), the application must"]
-    #[doc = "         call rd_kafka_assign(rk, NULL) to synchronize state."]
-    #[doc = ""]
-    #[doc = " Without a rebalance callback this is done automatically by librdkafka"]
-    #[doc = " but registering a rebalance callback gives the application flexibility"]
-    #[doc = " in performing other operations along with the assigning/revocation,"]
-    #[doc = " such as fetching offsets from an alternate location (on assign)"]
-    #[doc = " or manually committing offsets (on revoke)."]
-    #[doc = ""]
-    #[doc = " The callback's \\p opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
-    #[doc = ""]
-    #[doc = " @remark The \\p partitions list is destroyed by librdkafka on return"]
-    #[doc = "         return from the rebalance_cb and must not be freed or"]
-    #[doc = "         saved by the application."]
-    #[doc = ""]
-    #[doc = " @remark Be careful when modifying the \\p partitions list."]
-    #[doc = "         Changing this list should only be done to change the initial"]
-    #[doc = "         offsets for each partition."]
-    #[doc = "         But a function like `rd_kafka_position()` might have unexpected"]
-    #[doc = "         effects for instance when a consumer gets assigned a partition"]
-    #[doc = "         it used to consume at an earlier rebalance. In this case, the"]
-    #[doc = "         list of partitions will be updated with the old offset for that"]
-    #[doc = "         partition. In this case, it is generally better to pass a copy"]
-    #[doc = "         of the list (see `rd_kafka_topic_partition_list_copy()`)."]
-    #[doc = "         The result of `rd_kafka_position()` is typically outdated in"]
-    #[doc = "         RD_KAFKA_RESP_ERR__ASSIGN_PARTITIONS."]
-    #[doc = ""]
-    #[doc = " The following example shows the application's responsibilities:"]
-    #[doc = " @code"]
-    #[doc = "    static void rebalance_cb (rd_kafka_t *rk, rd_kafka_resp_err_t err,"]
-    #[doc = "                              rd_kafka_topic_partition_list_t *partitions,"]
-    #[doc = "                              void *opaque) {"]
-    #[doc = ""]
-    #[doc = "        switch (err)"]
-    #[doc = "        {"]
-    #[doc = "          case RD_KAFKA_RESP_ERR__ASSIGN_PARTITIONS:"]
-    #[doc = "             // application may load offets from arbitrary external"]
-    #[doc = "             // storage here and update \\p partitions"]
-    #[doc = ""]
-    #[doc = "             rd_kafka_assign(rk, partitions);"]
-    #[doc = "             break;"]
-    #[doc = ""]
-    #[doc = "          case RD_KAFKA_RESP_ERR__REVOKE_PARTITIONS:"]
-    #[doc = "             if (manual_commits) // Optional explicit manual commit"]
-    #[doc = "                 rd_kafka_commit(rk, partitions, 0); // sync commit"]
-    #[doc = ""]
-    #[doc = "             rd_kafka_assign(rk, NULL);"]
-    #[doc = "             break;"]
-    #[doc = ""]
-    #[doc = "          default:"]
-    #[doc = "             handle_unlikely_error(err);"]
-    #[doc = "             rd_kafka_assign(rk, NULL); // sync state"]
-    #[doc = "             break;"]
-    #[doc = "         }"]
-    #[doc = "    }"]
-    #[doc = " @endcode"]
     pub fn rd_kafka_conf_set_rebalance_cb(
         conf: *mut rd_kafka_conf_t,
         rebalance_cb: ::std::option::Option<
@@ -5208,21 +2327,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief \\b Consumer: Set offset commit callback for use with consumer groups."]
-    #[doc = ""]
-    #[doc = " The results of automatic or manual offset commits will be scheduled"]
-    #[doc = " for this callback and is served by rd_kafka_consumer_poll()."]
-    #[doc = ""]
-    #[doc = " If no partitions had valid offsets to commit this callback will be called"]
-    #[doc = " with \\p err == RD_KAFKA_RESP_ERR__NO_OFFSET which is not to be considered"]
-    #[doc = " an error."]
-    #[doc = ""]
-    #[doc = " The \\p offsets list contains per-partition information:"]
-    #[doc = "   - \\c offset: committed offset (attempted)"]
-    #[doc = "   - \\c err:    commit error"]
-    #[doc = ""]
-    #[doc = " The callback's \\p opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
     pub fn rd_kafka_conf_set_offset_commit_cb(
         conf: *mut rd_kafka_conf_t,
         offset_commit_cb: ::std::option::Option<
@@ -5236,26 +2340,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Set error callback in provided conf object."]
-    #[doc = ""]
-    #[doc = " The error callback is used by librdkafka to signal warnings and errors"]
-    #[doc = " back to the application."]
-    #[doc = ""]
-    #[doc = " These errors should generally be considered informational and non-permanent,"]
-    #[doc = " the client will try to recover automatically from all type of errors."]
-    #[doc = " Given that the client and cluster configuration is correct the"]
-    #[doc = " application should treat these as temporary errors."]
-    #[doc = ""]
-    #[doc = " \\p error_cb will be triggered with \\c err set to RD_KAFKA_RESP_ERR__FATAL"]
-    #[doc = " if a fatal error has been raised; in this case use rd_kafka_fatal_error() to"]
-    #[doc = " retrieve the fatal error code and error string, and then begin terminating"]
-    #[doc = " the client instance."]
-    #[doc = ""]
-    #[doc = " If no \\p error_cb is registered, or RD_KAFKA_EVENT_ERROR has not been set"]
-    #[doc = " with rd_kafka_conf_set_events, then the errors will be logged instead."]
-    #[doc = ""]
-    #[doc = " The callback's \\p opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
     pub fn rd_kafka_conf_set_error_cb(
         conf: *mut rd_kafka_conf_t,
         error_cb: ::std::option::Option<
@@ -5269,21 +2353,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Set throttle callback."]
-    #[doc = ""]
-    #[doc = " The throttle callback is used to forward broker throttle times to the"]
-    #[doc = " application for Produce and Fetch (consume) requests."]
-    #[doc = ""]
-    #[doc = " Callbacks are triggered whenever a non-zero throttle time is returned by"]
-    #[doc = " the broker, or when the throttle time drops back to zero."]
-    #[doc = ""]
-    #[doc = " An application must call rd_kafka_poll() or rd_kafka_consumer_poll() at"]
-    #[doc = " regular intervals to serve queued callbacks."]
-    #[doc = ""]
-    #[doc = " The callback's \\p opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
-    #[doc = ""]
-    #[doc = " @remark Requires broker version 0.9.0 or later."]
     pub fn rd_kafka_conf_set_throttle_cb(
         conf: *mut rd_kafka_conf_t,
         throttle_cb: ::std::option::Option<
@@ -5298,20 +2367,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Set logger callback."]
-    #[doc = ""]
-    #[doc = " The default is to print to stderr, but a syslog logger is also available,"]
-    #[doc = " see rd_kafka_log_print and rd_kafka_log_syslog for the builtin alternatives."]
-    #[doc = " Alternatively the application may provide its own logger callback."]
-    #[doc = " Or pass \\p func as NULL to disable logging."]
-    #[doc = ""]
-    #[doc = " This is the configuration alternative to the deprecated rd_kafka_set_logger()"]
-    #[doc = ""]
-    #[doc = " @remark The log_cb will be called spontaneously from librdkafka's internal"]
-    #[doc = "         threads unless logs have been forwarded to a poll queue through"]
-    #[doc = "         \\c rd_kafka_set_log_queue()."]
-    #[doc = "         An application MUST NOT call any librdkafka APIs or do any prolonged"]
-    #[doc = "         work in a non-forwarded \\c log_cb."]
     pub fn rd_kafka_conf_set_log_cb(
         conf: *mut rd_kafka_conf_t,
         log_cb: ::std::option::Option<
@@ -5325,26 +2380,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Set statistics callback in provided conf object."]
-    #[doc = ""]
-    #[doc = " The statistics callback is triggered from rd_kafka_poll() every"]
-    #[doc = " \\c statistics.interval.ms (needs to be configured separately)."]
-    #[doc = " Function arguments:"]
-    #[doc = "   - \\p rk - Kafka handle"]
-    #[doc = "   - \\p json - String containing the statistics data in JSON format"]
-    #[doc = "   - \\p json_len - Length of \\p json string."]
-    #[doc = "   - \\p opaque - Application-provided opaque as set by"]
-    #[doc = "                 rd_kafka_conf_set_opaque()."]
-    #[doc = ""]
-    #[doc = " For more information on the format of \\p json, see"]
-    #[doc = " https://github.com/edenhill/librdkafka/wiki/Statistics"]
-    #[doc = ""]
-    #[doc = " If the application wishes to hold on to the \\p json pointer and free"]
-    #[doc = " it at a later time it must return 1 from the \\p stats_cb."]
-    #[doc = " If the application returns 0 from the \\p stats_cb then librdkafka"]
-    #[doc = " will immediately free the \\p json pointer."]
-    #[doc = ""]
-    #[doc = " See STATISTICS.md for a full definition of the JSON object."]
     pub fn rd_kafka_conf_set_stats_cb(
         conf: *mut rd_kafka_conf_t,
         stats_cb: ::std::option::Option<
@@ -5358,39 +2393,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Set SASL/OAUTHBEARER token refresh callback in provided conf object."]
-    #[doc = ""]
-    #[doc = " @param conf the configuration to mutate."]
-    #[doc = " @param oauthbearer_token_refresh_cb the callback to set; callback function"]
-    #[doc = "  arguments:<br>"]
-    #[doc = "   \\p rk - Kafka handle<br>"]
-    #[doc = "   \\p oauthbearer_config - Value of configuration property"]
-    #[doc = "                           sasl.oauthbearer.config."]
-    #[doc = "   \\p opaque - Application-provided opaque set via"]
-    #[doc = "               rd_kafka_conf_set_opaque()"]
-    #[doc = ""]
-    #[doc = " The SASL/OAUTHBEARER token refresh callback is triggered via rd_kafka_poll()"]
-    #[doc = " whenever OAUTHBEARER is the SASL mechanism and a token needs to be retrieved,"]
-    #[doc = " typically based on the configuration defined in \\c sasl.oauthbearer.config."]
-    #[doc = ""]
-    #[doc = " The callback should invoke rd_kafka_oauthbearer_set_token()"]
-    #[doc = " or rd_kafka_oauthbearer_set_token_failure() to indicate success"]
-    #[doc = " or failure, respectively."]
-    #[doc = ""]
-    #[doc = " The refresh operation is eventable and may be received via"]
-    #[doc = " rd_kafka_queue_poll() with an event type of"]
-    #[doc = " \\c RD_KAFKA_EVENT_OAUTHBEARER_TOKEN_REFRESH."]
-    #[doc = ""]
-    #[doc = " Note that before any SASL/OAUTHBEARER broker connection can succeed the"]
-    #[doc = " application must call rd_kafka_oauthbearer_set_token() once -- either"]
-    #[doc = " directly or, more typically, by invoking either rd_kafka_poll() or"]
-    #[doc = " rd_kafka_queue_poll() -- in order to cause retrieval of an initial token to"]
-    #[doc = " occur."]
-    #[doc = ""]
-    #[doc = " An unsecured JWT refresh handler is provided by librdkafka for development"]
-    #[doc = " and testing purposes, it is enabled by setting"]
-    #[doc = " the \\c enable.sasl.oauthbearer.unsecure.jwt property to true and is"]
-    #[doc = " mutually exclusive to using a refresh callback."]
     pub fn rd_kafka_conf_set_oauthbearer_token_refresh_cb(
         conf: *mut rd_kafka_conf_t,
         oauthbearer_token_refresh_cb: ::std::option::Option<
@@ -5403,21 +2405,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Set socket callback."]
-    #[doc = ""]
-    #[doc = " The socket callback is responsible for opening a socket"]
-    #[doc = " according to the supplied \\p domain, \\p type and \\p protocol."]
-    #[doc = " The socket shall be created with \\c CLOEXEC set in a racefree fashion, if"]
-    #[doc = " possible."]
-    #[doc = ""]
-    #[doc = " The callback's \\p opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
-    #[doc = ""]
-    #[doc = " Default:"]
-    #[doc = "  - on linux: racefree CLOEXEC"]
-    #[doc = "  - others  : non-racefree CLOEXEC"]
-    #[doc = ""]
-    #[doc = " @remark The callback will be called from an internal librdkafka thread."]
     pub fn rd_kafka_conf_set_socket_cb(
         conf: *mut rd_kafka_conf_t,
         socket_cb: ::std::option::Option<
@@ -5431,19 +2418,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Set connect callback."]
-    #[doc = ""]
-    #[doc = " The connect callback is responsible for connecting socket \\p sockfd"]
-    #[doc = " to peer address \\p addr."]
-    #[doc = " The \\p id field contains the broker identifier."]
-    #[doc = ""]
-    #[doc = " \\p connect_cb shall return 0 on success (socket connected) or an error"]
-    #[doc = " number (errno) on error."]
-    #[doc = ""]
-    #[doc = " The callback's \\p opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
-    #[doc = ""]
-    #[doc = " @remark The callback will be called from an internal librdkafka thread."]
     pub fn rd_kafka_conf_set_connect_cb(
         conf: *mut rd_kafka_conf_t,
         connect_cb: ::std::option::Option<
@@ -5458,14 +2432,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Set close socket callback."]
-    #[doc = ""]
-    #[doc = " Close a socket (optionally opened with socket_cb())."]
-    #[doc = ""]
-    #[doc = " The callback's \\p opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
-    #[doc = ""]
-    #[doc = " @remark The callback will be called from an internal librdkafka thread."]
     pub fn rd_kafka_conf_set_closesocket_cb(
         conf: *mut rd_kafka_conf_t,
         closesocket_cb: ::std::option::Option<
@@ -5477,21 +2443,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Set open callback."]
-    #[doc = ""]
-    #[doc = " The open callback is responsible for opening the file specified by"]
-    #[doc = " pathname, flags and mode."]
-    #[doc = " The file shall be opened with \\c CLOEXEC set in a racefree fashion, if"]
-    #[doc = " possible."]
-    #[doc = ""]
-    #[doc = " Default:"]
-    #[doc = "  - on linux: racefree CLOEXEC"]
-    #[doc = "  - others  : non-racefree CLOEXEC"]
-    #[doc = ""]
-    #[doc = " The callback's \\p opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
-    #[doc = ""]
-    #[doc = " @remark The callback will be called from an internal librdkafka thread."]
     pub fn rd_kafka_conf_set_open_cb(
         conf: *mut rd_kafka_conf_t,
         open_cb: ::std::option::Option<
@@ -5505,45 +2456,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Sets the verification callback of the broker certificate"]
-    #[doc = ""]
-    #[doc = " The verification callback is triggered from internal librdkafka threads"]
-    #[doc = " upon connecting to a broker. On each connection attempt the callback"]
-    #[doc = " will be called for each certificate in the broker's certificate chain,"]
-    #[doc = " starting at the root certification, as long as the application callback"]
-    #[doc = " returns 1 (valid certificate)."]
-    #[doc = " \\c broker_name and \\c broker_id correspond to the broker the connection"]
-    #[doc = " is being made to."]
-    #[doc = " The \\c x509_error argument indicates if OpenSSL's verification of"]
-    #[doc = " the certificate succeed (0) or failed (an OpenSSL error code)."]
-    #[doc = " The application may set the SSL context error code by returning 0"]
-    #[doc = " from the verify callback and providing a non-zero SSL context error code"]
-    #[doc = " in \\c x509_error."]
-    #[doc = " If the verify callback sets \\c x509_error to 0, returns 1, and the"]
-    #[doc = " original \\c x509_error was non-zero, the error on the SSL context will"]
-    #[doc = " be cleared."]
-    #[doc = " \\c x509_error is always a valid pointer to an int."]
-    #[doc = ""]
-    #[doc = " \\c depth is the depth of the current certificate in the chain, starting"]
-    #[doc = " at the root certificate."]
-    #[doc = ""]
-    #[doc = " The certificate itself is passed in binary DER format in \\c buf of"]
-    #[doc = " size \\c size."]
-    #[doc = ""]
-    #[doc = " The callback must return 1 if verification succeeds, or"]
-    #[doc = " 0 if verification fails and then write a human-readable error message"]
-    #[doc = " to \\c errstr (limited to \\c errstr_size bytes, including nul-term)."]
-    #[doc = ""]
-    #[doc = " The callback's \\p opaque argument is the opaque set with"]
-    #[doc = " rd_kafka_conf_set_opaque()."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_CONF_OK if SSL is supported in this build, else"]
-    #[doc = "          RD_KAFKA_CONF_INVALID."]
-    #[doc = ""]
-    #[doc = " @warning This callback will be called from internal librdkafka threads."]
-    #[doc = ""]
-    #[doc = " @remark See <openssl/x509_vfy.h> in the OpenSSL source distribution"]
-    #[doc = "         for a list of \\p x509_error codes."]
     pub fn rd_kafka_conf_set_ssl_cert_verify_cb(
         conf: *mut rd_kafka_conf_t,
         ssl_cert_verify_cb: ::std::option::Option<
@@ -5562,62 +2474,17 @@ extern "C" {
         >,
     ) -> rd_kafka_conf_res_t;
 }
-#[doc = "< Client's public key"]
 pub const rd_kafka_cert_type_t_RD_KAFKA_CERT_PUBLIC_KEY: rd_kafka_cert_type_t = 0;
-#[doc = "< Client's private key"]
 pub const rd_kafka_cert_type_t_RD_KAFKA_CERT_PRIVATE_KEY: rd_kafka_cert_type_t = 1;
-#[doc = "< CA certificate"]
 pub const rd_kafka_cert_type_t_RD_KAFKA_CERT_CA: rd_kafka_cert_type_t = 2;
 pub const rd_kafka_cert_type_t_RD_KAFKA_CERT__CNT: rd_kafka_cert_type_t = 3;
-#[doc = " @enum rd_kafka_cert_type_t"]
-#[doc = ""]
-#[doc = " @brief SSL certificate type"]
-#[doc = ""]
-#[doc = " @sa rd_kafka_conf_set_ssl_cert"]
 pub type rd_kafka_cert_type_t = u32;
-#[doc = "< PKCS#12"]
 pub const rd_kafka_cert_enc_t_RD_KAFKA_CERT_ENC_PKCS12: rd_kafka_cert_enc_t = 0;
-#[doc = "< DER / binary X.509 ASN1"]
 pub const rd_kafka_cert_enc_t_RD_KAFKA_CERT_ENC_DER: rd_kafka_cert_enc_t = 1;
-#[doc = "< PEM"]
 pub const rd_kafka_cert_enc_t_RD_KAFKA_CERT_ENC_PEM: rd_kafka_cert_enc_t = 2;
 pub const rd_kafka_cert_enc_t_RD_KAFKA_CERT_ENC__CNT: rd_kafka_cert_enc_t = 3;
-#[doc = " @enum rd_kafka_cert_enc_t"]
-#[doc = ""]
-#[doc = " @brief SSL certificate encoding"]
-#[doc = ""]
-#[doc = " @sa rd_kafka_conf_set_ssl_cert"]
 pub type rd_kafka_cert_enc_t = u32;
 extern "C" {
-    #[doc = " @brief Set certificate/key \\p cert_type from the \\p cert_enc encoded"]
-    #[doc = "        memory at \\p buffer of \\p size bytes."]
-    #[doc = ""]
-    #[doc = " @param conf Configuration object."]
-    #[doc = " @param cert_type Certificate or key type to configure."]
-    #[doc = " @param cert_enc  Buffer \\p encoding type."]
-    #[doc = " @param buffer Memory pointer to encoded certificate or key."]
-    #[doc = "               The memory is not referenced after this function returns."]
-    #[doc = " @param size Size of memory at \\p buffer."]
-    #[doc = " @param errstr Memory were a human-readable error string will be written"]
-    #[doc = "               on failure."]
-    #[doc = " @param errstr_size Size of \\p errstr, including space for nul-terminator."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_CONF_OK on success or RD_KAFKA_CONF_INVALID if the"]
-    #[doc = "          memory in \\p buffer is of incorrect encoding, or if librdkafka"]
-    #[doc = "          was not built with SSL support."]
-    #[doc = ""]
-    #[doc = " @remark Calling this method multiple times with the same \\p cert_type"]
-    #[doc = "         will replace the previous value."]
-    #[doc = ""]
-    #[doc = " @remark Calling this method with \\p buffer set to NULL will clear the"]
-    #[doc = "         configuration for \\p cert_type."]
-    #[doc = ""]
-    #[doc = " @remark The private key may require a password, which must be specified"]
-    #[doc = "         with the `ssl.key.password` configuration property prior to"]
-    #[doc = "         calling this function."]
-    #[doc = ""]
-    #[doc = " @remark Private and public keys in PEM format may also be set with the"]
-    #[doc = "         `ssl.key.pem` and `ssl.certificate.pem` configuration properties."]
     pub fn rd_kafka_conf_set_ssl_cert(
         conf: *mut rd_kafka_conf_t,
         cert_type: rd_kafka_cert_type_t,
@@ -5629,54 +2496,21 @@ extern "C" {
     ) -> rd_kafka_conf_res_t;
 }
 extern "C" {
-    #[doc = " @brief Sets the application's opaque pointer that will be passed to callbacks"]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_opaque()"]
     pub fn rd_kafka_conf_set_opaque(
         conf: *mut rd_kafka_conf_t,
         opaque: *mut ::std::os::raw::c_void,
     );
 }
 extern "C" {
-    #[doc = " @brief Retrieves the opaque pointer previously set"]
-    #[doc = "        with rd_kafka_conf_set_opaque()"]
     pub fn rd_kafka_opaque(rk: *const rd_kafka_t) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    #[doc = " @brief Sets the default topic configuration to use for automatically"]
-    #[doc = "        subscribed topics (e.g., through pattern-matched topics)."]
-    #[doc = "        The topic config object is not usable after this call."]
-    #[doc = ""]
-    #[doc = " @warning Any topic configuration settings that have been set on the"]
-    #[doc = "          global rd_kafka_conf_t object will be overwritten by this call"]
-    #[doc = "          since the implicitly created default topic config object is"]
-    #[doc = "          replaced by the user-supplied one."]
-    #[doc = ""]
-    #[doc = " @deprecated Set default topic level configuration on the"]
-    #[doc = "             global rd_kafka_conf_t object instead."]
     pub fn rd_kafka_conf_set_default_topic_conf(
         conf: *mut rd_kafka_conf_t,
         tconf: *mut rd_kafka_topic_conf_t,
     );
 }
 extern "C" {
-    #[doc = " @brief Retrieve configuration value for property \\p name."]
-    #[doc = ""]
-    #[doc = " If \\p dest is non-NULL the value will be written to \\p dest with at"]
-    #[doc = " most \\p dest_size."]
-    #[doc = ""]
-    #[doc = " \\p *dest_size is updated to the full length of the value, thus if"]
-    #[doc = " \\p *dest_size initially is smaller than the full length the application"]
-    #[doc = " may reallocate \\p dest to fit the returned \\p *dest_size and try again."]
-    #[doc = ""]
-    #[doc = " If \\p dest is NULL only the full length of the value is returned."]
-    #[doc = ""]
-    #[doc = " Fallthrough:"]
-    #[doc = " Topic-level configuration properties from the \\c default_topic_conf"]
-    #[doc = " may be retrieved using this interface."]
-    #[doc = ""]
-    #[doc = " @returns \\p RD_KAFKA_CONF_OK if the property name matched, else"]
-    #[doc = " \\p RD_KAFKA_CONF_UNKNOWN."]
     pub fn rd_kafka_conf_get(
         conf: *const rd_kafka_conf_t,
         name: *const ::std::os::raw::c_char,
@@ -5685,9 +2519,6 @@ extern "C" {
     ) -> rd_kafka_conf_res_t;
 }
 extern "C" {
-    #[doc = " @brief Retrieve topic configuration value for property \\p name."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_conf_get()"]
     pub fn rd_kafka_topic_conf_get(
         conf: *const rd_kafka_topic_conf_t,
         name: *const ::std::os::raw::c_char,
@@ -5696,67 +2527,38 @@ extern "C" {
     ) -> rd_kafka_conf_res_t;
 }
 extern "C" {
-    #[doc = " @brief Dump the configuration properties and values of \\p conf to an array"]
-    #[doc = "        with \\\"key\\\", \\\"value\\\" pairs."]
-    #[doc = ""]
-    #[doc = " The number of entries in the array is returned in \\p *cntp."]
-    #[doc = ""]
-    #[doc = " The dump must be freed with `rd_kafka_conf_dump_free()`."]
     pub fn rd_kafka_conf_dump(
         conf: *mut rd_kafka_conf_t,
         cntp: *mut size_t,
     ) -> *mut *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @brief Dump the topic configuration properties and values of \\p conf"]
-    #[doc = "        to an array with \\\"key\\\", \\\"value\\\" pairs."]
-    #[doc = ""]
-    #[doc = " The number of entries in the array is returned in \\p *cntp."]
-    #[doc = ""]
-    #[doc = " The dump must be freed with `rd_kafka_conf_dump_free()`."]
     pub fn rd_kafka_topic_conf_dump(
         conf: *mut rd_kafka_topic_conf_t,
         cntp: *mut size_t,
     ) -> *mut *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @brief Frees a configuration dump returned from `rd_kafka_conf_dump()` or"]
-    #[doc = "        `rd_kafka_topic_conf_dump()."]
     pub fn rd_kafka_conf_dump_free(arr: *mut *const ::std::os::raw::c_char, cnt: size_t);
 }
 extern "C" {
-    #[doc = " @brief Prints a table to \\p fp of all supported configuration properties,"]
-    #[doc = "        their default values as well as a description."]
     pub fn rd_kafka_conf_properties_show(fp: *mut FILE);
 }
 extern "C" {
-    #[doc = " @brief Create topic configuration object"]
-    #[doc = ""]
-    #[doc = " @sa Same semantics as for rd_kafka_conf_new()."]
     pub fn rd_kafka_topic_conf_new() -> *mut rd_kafka_topic_conf_t;
 }
 extern "C" {
-    #[doc = " @brief Creates a copy/duplicate of topic configuration object \\p conf."]
     pub fn rd_kafka_topic_conf_dup(
         conf: *const rd_kafka_topic_conf_t,
     ) -> *mut rd_kafka_topic_conf_t;
 }
 extern "C" {
-    #[doc = " @brief Creates a copy/duplicate of \\p rk 's default topic configuration"]
-    #[doc = "        object."]
     pub fn rd_kafka_default_topic_conf_dup(rk: *mut rd_kafka_t) -> *mut rd_kafka_topic_conf_t;
 }
 extern "C" {
-    #[doc = " @brief Destroys a topic conf object."]
     pub fn rd_kafka_topic_conf_destroy(topic_conf: *mut rd_kafka_topic_conf_t);
 }
 extern "C" {
-    #[doc = " @brief Sets a single rd_kafka_topic_conf_t value by property name."]
-    #[doc = ""]
-    #[doc = " \\p topic_conf should have been previously set up"]
-    #[doc = " with `rd_kafka_topic_conf_new()`."]
-    #[doc = ""]
-    #[doc = " @returns rd_kafka_conf_res_t to indicate success or failure."]
     pub fn rd_kafka_topic_conf_set(
         conf: *mut rd_kafka_topic_conf_t,
         name: *const ::std::os::raw::c_char,
@@ -5766,33 +2568,12 @@ extern "C" {
     ) -> rd_kafka_conf_res_t;
 }
 extern "C" {
-    #[doc = " @brief Sets the application's opaque pointer that will be passed to all topic"]
-    #[doc = " callbacks as the \\c rkt_opaque argument."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_topic_opaque()"]
     pub fn rd_kafka_topic_conf_set_opaque(
         conf: *mut rd_kafka_topic_conf_t,
         rkt_opaque: *mut ::std::os::raw::c_void,
     );
 }
 extern "C" {
-    #[doc = " @brief \\b Producer: Set partitioner callback in provided topic conf object."]
-    #[doc = ""]
-    #[doc = " The partitioner may be called in any thread at any time,"]
-    #[doc = " it may be called multiple times for the same message/key."]
-    #[doc = ""]
-    #[doc = " The callback's \\p rkt_opaque argument is the opaque set by"]
-    #[doc = " rd_kafka_topic_conf_set_opaque()."]
-    #[doc = " The callback's \\p msg_opaque argument is the per-message opaque"]
-    #[doc = " passed to produce()."]
-    #[doc = ""]
-    #[doc = " Partitioner function constraints:"]
-    #[doc = "   - MUST NOT call any rd_kafka_*() functions except:"]
-    #[doc = "       rd_kafka_topic_partition_available()"]
-    #[doc = "   - MUST NOT block or execute for prolonged periods of time."]
-    #[doc = "   - MUST return a value between 0 and partition_cnt-1, or the"]
-    #[doc = "     special \\c RD_KAFKA_PARTITION_UA value if partitioning"]
-    #[doc = "     could not be performed."]
     pub fn rd_kafka_topic_conf_set_partitioner_cb(
         topic_conf: *mut rd_kafka_topic_conf_t,
         partitioner: ::std::option::Option<
@@ -5808,29 +2589,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief \\b Producer: Set message queueing order comparator callback."]
-    #[doc = ""]
-    #[doc = " The callback may be called in any thread at any time,"]
-    #[doc = " it may be called multiple times for the same message."]
-    #[doc = ""]
-    #[doc = " Ordering comparator function constraints:"]
-    #[doc = "   - MUST be stable sort (same input gives same output)."]
-    #[doc = "   - MUST NOT call any rd_kafka_*() functions."]
-    #[doc = "   - MUST NOT block or execute for prolonged periods of time."]
-    #[doc = ""]
-    #[doc = " The comparator shall compare the two messages and return:"]
-    #[doc = "  - < 0 if message \\p a should be inserted before message \\p b."]
-    #[doc = "  - >=0 if message \\p a should be inserted after message \\p b."]
-    #[doc = ""]
-    #[doc = " @remark Insert sorting will be used to enqueue the message in the"]
-    #[doc = "         correct queue position, this comes at a cost of O(n)."]
-    #[doc = ""]
-    #[doc = " @remark If `queuing.strategy=fifo` new messages are enqueued to the"]
-    #[doc = "         tail of the queue regardless of msg_order_cmp, but retried messages"]
-    #[doc = "         are still affected by msg_order_cmp."]
-    #[doc = ""]
-    #[doc = " @warning THIS IS AN EXPERIMENTAL API, SUBJECT TO CHANGE OR REMOVAL,"]
-    #[doc = "          DO NOT USE IN PRODUCTION."]
     pub fn rd_kafka_topic_conf_set_msg_order_cmp(
         topic_conf: *mut rd_kafka_topic_conf_t,
         msg_order_cmp: ::std::option::Option<
@@ -5842,28 +2600,12 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Check if partition is available (has a leader broker)."]
-    #[doc = ""]
-    #[doc = " @returns 1 if the partition is available, else 0."]
-    #[doc = ""]
-    #[doc = " @warning This function must only be called from inside a partitioner function"]
     pub fn rd_kafka_topic_partition_available(
         rkt: *const rd_kafka_topic_t,
         partition: i32,
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Random partitioner."]
-    #[doc = ""]
-    #[doc = " Will try not to return unavailable partitions."]
-    #[doc = ""]
-    #[doc = " The \\p rkt_opaque argument is the opaque set by"]
-    #[doc = " rd_kafka_topic_conf_set_opaque()."]
-    #[doc = " The \\p msg_opaque argument is the per-message opaque"]
-    #[doc = " passed to produce()."]
-    #[doc = ""]
-    #[doc = " @returns a random partition between 0 and \\p partition_cnt - 1."]
-    #[doc = ""]
     pub fn rd_kafka_msg_partitioner_random(
         rkt: *const rd_kafka_topic_t,
         key: *const ::std::os::raw::c_void,
@@ -5874,17 +2616,6 @@ extern "C" {
     ) -> i32;
 }
 extern "C" {
-    #[doc = " @brief Consistent partitioner."]
-    #[doc = ""]
-    #[doc = " Uses consistent hashing to map identical keys onto identical partitions."]
-    #[doc = ""]
-    #[doc = " The \\p rkt_opaque argument is the opaque set by"]
-    #[doc = " rd_kafka_topic_conf_set_opaque()."]
-    #[doc = " The \\p msg_opaque argument is the per-message opaque"]
-    #[doc = " passed to produce()."]
-    #[doc = ""]
-    #[doc = " @returns a \\\"random\\\" partition between 0 and \\p partition_cnt - 1 based on"]
-    #[doc = "          the CRC value of the key"]
     pub fn rd_kafka_msg_partitioner_consistent(
         rkt: *const rd_kafka_topic_t,
         key: *const ::std::os::raw::c_void,
@@ -5895,19 +2626,6 @@ extern "C" {
     ) -> i32;
 }
 extern "C" {
-    #[doc = " @brief Consistent-Random partitioner."]
-    #[doc = ""]
-    #[doc = " This is the default partitioner."]
-    #[doc = " Uses consistent hashing to map identical keys onto identical partitions, and"]
-    #[doc = " messages without keys will be assigned via the random partitioner."]
-    #[doc = ""]
-    #[doc = " The \\p rkt_opaque argument is the opaque set by"]
-    #[doc = " rd_kafka_topic_conf_set_opaque()."]
-    #[doc = " The \\p msg_opaque argument is the per-message opaque"]
-    #[doc = " passed to produce()."]
-    #[doc = ""]
-    #[doc = " @returns a \\\"random\\\" partition between 0 and \\p partition_cnt - 1 based on"]
-    #[doc = "          the CRC value of the key (if provided)"]
     pub fn rd_kafka_msg_partitioner_consistent_random(
         rkt: *const rd_kafka_topic_t,
         key: *const ::std::os::raw::c_void,
@@ -5918,17 +2636,6 @@ extern "C" {
     ) -> i32;
 }
 extern "C" {
-    #[doc = " @brief Murmur2 partitioner (Java compatible)."]
-    #[doc = ""]
-    #[doc = " Uses consistent hashing to map identical keys onto identical partitions"]
-    #[doc = " using Java-compatible Murmur2 hashing."]
-    #[doc = ""]
-    #[doc = " The \\p rkt_opaque argument is the opaque set by"]
-    #[doc = " rd_kafka_topic_conf_set_opaque()."]
-    #[doc = " The \\p msg_opaque argument is the per-message opaque"]
-    #[doc = " passed to produce()."]
-    #[doc = ""]
-    #[doc = " @returns a partition between 0 and \\p partition_cnt - 1."]
     pub fn rd_kafka_msg_partitioner_murmur2(
         rkt: *const rd_kafka_topic_t,
         key: *const ::std::os::raw::c_void,
@@ -5939,18 +2646,6 @@ extern "C" {
     ) -> i32;
 }
 extern "C" {
-    #[doc = " @brief Consistent-Random Murmur2 partitioner (Java compatible)."]
-    #[doc = ""]
-    #[doc = " Uses consistent hashing to map identical keys onto identical partitions"]
-    #[doc = " using Java-compatible Murmur2 hashing."]
-    #[doc = " Messages without keys will be assigned via the random partitioner."]
-    #[doc = ""]
-    #[doc = " The \\p rkt_opaque argument is the opaque set by"]
-    #[doc = " rd_kafka_topic_conf_set_opaque()."]
-    #[doc = " The \\p msg_opaque argument is the per-message opaque"]
-    #[doc = " passed to produce()."]
-    #[doc = ""]
-    #[doc = " @returns a partition between 0 and \\p partition_cnt - 1."]
     pub fn rd_kafka_msg_partitioner_murmur2_random(
         rkt: *const rd_kafka_topic_t,
         key: *const ::std::os::raw::c_void,
@@ -5961,30 +2656,6 @@ extern "C" {
     ) -> i32;
 }
 extern "C" {
-    #[doc = " @brief Creates a new Kafka handle and starts its operation according to the"]
-    #[doc = "        specified \\p type (\\p RD_KAFKA_CONSUMER or \\p RD_KAFKA_PRODUCER)."]
-    #[doc = ""]
-    #[doc = " \\p conf is an optional struct created with `rd_kafka_conf_new()` that will"]
-    #[doc = " be used instead of the default configuration."]
-    #[doc = " The \\p conf object is freed by this function on success and must not be used"]
-    #[doc = " or destroyed by the application sub-sequently."]
-    #[doc = " See `rd_kafka_conf_set()` et.al for more information."]
-    #[doc = ""]
-    #[doc = " \\p errstr must be a pointer to memory of at least size \\p errstr_size where"]
-    #[doc = " `rd_kafka_new()` may write a human readable error message in case the"]
-    #[doc = " creation of a new handle fails. In which case the function returns NULL."]
-    #[doc = ""]
-    #[doc = " @remark \\b RD_KAFKA_CONSUMER: When a new \\p RD_KAFKA_CONSUMER"]
-    #[doc = "           rd_kafka_t handle is created it may either operate in the"]
-    #[doc = "           legacy simple consumer mode using the rd_kafka_consume_start()"]
-    #[doc = "           interface, or the High-level KafkaConsumer API."]
-    #[doc = " @remark An application must only use one of these groups of APIs on a given"]
-    #[doc = "         rd_kafka_t RD_KAFKA_CONSUMER handle."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = " @returns The Kafka handle on success or NULL on error (see \\p errstr)"]
-    #[doc = ""]
-    #[doc = " @sa To destroy the Kafka handle, use rd_kafka_destroy()."]
     pub fn rd_kafka_new(
         type_: rd_kafka_type_t,
         conf: *mut rd_kafka_conf_t,
@@ -5993,102 +2664,30 @@ extern "C" {
     ) -> *mut rd_kafka_t;
 }
 extern "C" {
-    #[doc = " @brief Destroy Kafka handle."]
-    #[doc = ""]
-    #[doc = " @remark This is a blocking operation."]
-    #[doc = " @remark rd_kafka_consumer_close() will be called from this function"]
-    #[doc = "         if the instance type is RD_KAFKA_CONSUMER, a \\c group.id was"]
-    #[doc = "         configured, and the rd_kafka_consumer_close() was not"]
-    #[doc = "         explicitly called by the application. This in turn may"]
-    #[doc = "         trigger consumer callbacks, such as rebalance_cb."]
-    #[doc = "         Use rd_kafka_destroy_flags() with"]
-    #[doc = "         RD_KAFKA_DESTROY_F_NO_CONSUMER_CLOSE to avoid this behaviour."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_destroy_flags()"]
     pub fn rd_kafka_destroy(rk: *mut rd_kafka_t);
 }
 extern "C" {
-    #[doc = " @brief Destroy Kafka handle according to specified destroy flags"]
-    #[doc = ""]
     pub fn rd_kafka_destroy_flags(rk: *mut rd_kafka_t, flags: ::std::os::raw::c_int);
 }
 extern "C" {
-    #[doc = " @brief Returns Kafka handle name."]
     pub fn rd_kafka_name(rk: *const rd_kafka_t) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @brief Returns Kafka handle type."]
     pub fn rd_kafka_type(rk: *const rd_kafka_t) -> rd_kafka_type_t;
 }
 extern "C" {
-    #[doc = " @brief Returns this client's broker-assigned group member id"]
-    #[doc = ""]
-    #[doc = " @remark This currently requires the high-level KafkaConsumer"]
-    #[doc = ""]
-    #[doc = " @returns An allocated string containing the current broker-assigned group"]
-    #[doc = "          member id, or NULL if not available."]
-    #[doc = "          The application must free the string with \\p free() or"]
-    #[doc = "          rd_kafka_mem_free()"]
     pub fn rd_kafka_memberid(rk: *const rd_kafka_t) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @brief Returns the ClusterId as reported in broker metadata."]
-    #[doc = ""]
-    #[doc = " @param rk         Client instance."]
-    #[doc = " @param timeout_ms If there is no cached value from metadata retrieval"]
-    #[doc = "                   then this specifies the maximum amount of time"]
-    #[doc = "                   (in milliseconds) the call will block waiting"]
-    #[doc = "                   for metadata to be retrieved."]
-    #[doc = "                   Use 0 for non-blocking calls."]
-    #[doc = ""]
-    #[doc = " @remark Requires broker version >=0.10.0 and api.version.request=true."]
-    #[doc = ""]
-    #[doc = " @remark The application must free the returned pointer"]
-    #[doc = "         using rd_kafka_mem_free()."]
-    #[doc = ""]
-    #[doc = " @returns a newly allocated string containing the ClusterId, or NULL"]
-    #[doc = "          if no ClusterId could be retrieved in the allotted timespan."]
     pub fn rd_kafka_clusterid(
         rk: *mut rd_kafka_t,
         timeout_ms: ::std::os::raw::c_int,
     ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @brief Returns the current ControllerId as reported in broker metadata."]
-    #[doc = ""]
-    #[doc = " @param rk         Client instance."]
-    #[doc = " @param timeout_ms If there is no cached value from metadata retrieval"]
-    #[doc = "                   then this specifies the maximum amount of time"]
-    #[doc = "                   (in milliseconds) the call will block waiting"]
-    #[doc = "                   for metadata to be retrieved."]
-    #[doc = "                   Use 0 for non-blocking calls."]
-    #[doc = ""]
-    #[doc = " @remark Requires broker version >=0.10.0 and api.version.request=true."]
-    #[doc = ""]
-    #[doc = " @returns the controller broker id (>= 0), or -1 if no ControllerId could be"]
-    #[doc = "          retrieved in the allotted timespan."]
     pub fn rd_kafka_controllerid(rk: *mut rd_kafka_t, timeout_ms: ::std::os::raw::c_int) -> i32;
 }
 extern "C" {
-    #[doc = " @brief Creates a new topic handle for topic named \\p topic."]
-    #[doc = ""]
-    #[doc = " \\p conf is an optional configuration for the topic created with"]
-    #[doc = " `rd_kafka_topic_conf_new()` that will be used instead of the default"]
-    #[doc = " topic configuration."]
-    #[doc = " The \\p conf object is freed by this function and must not be used or"]
-    #[doc = " destroyed by the application sub-sequently."]
-    #[doc = " See `rd_kafka_topic_conf_set()` et.al for more information."]
-    #[doc = ""]
-    #[doc = " Topic handles are refcounted internally and calling rd_kafka_topic_new()"]
-    #[doc = " again with the same topic name will return the previous topic handle"]
-    #[doc = " without updating the original handle's configuration."]
-    #[doc = " Applications must eventually call rd_kafka_topic_destroy() for each"]
-    #[doc = " succesfull call to rd_kafka_topic_new() to clear up resources."]
-    #[doc = ""]
-    #[doc = " @returns the new topic handle or NULL on error (use rd_kafka_errno2err()"]
-    #[doc = "          to convert system \\p errno to an rd_kafka_resp_err_t error code."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_topic_destroy()"]
     pub fn rd_kafka_topic_new(
         rk: *mut rd_kafka_t,
         topic: *const ::std::os::raw::c_char,
@@ -6096,93 +2695,36 @@ extern "C" {
     ) -> *mut rd_kafka_topic_t;
 }
 extern "C" {
-    #[doc = " @brief Loose application's topic handle refcount as previously created"]
-    #[doc = "        with `rd_kafka_topic_new()`."]
-    #[doc = ""]
-    #[doc = " @remark Since topic objects are refcounted (both internally and for the app)"]
-    #[doc = "         the topic object might not actually be destroyed by this call,"]
-    #[doc = "         but the application must consider the object destroyed."]
     pub fn rd_kafka_topic_destroy(rkt: *mut rd_kafka_topic_t);
 }
 extern "C" {
-    #[doc = " @brief Returns the topic name."]
     pub fn rd_kafka_topic_name(rkt: *const rd_kafka_topic_t) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @brief Get the \\p rkt_opaque pointer that was set in the topic configuration"]
-    #[doc = "        with rd_kafka_topic_conf_set_opaque()."]
     pub fn rd_kafka_topic_opaque(rkt: *const rd_kafka_topic_t) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    #[doc = " @brief Polls the provided kafka handle for events."]
-    #[doc = ""]
-    #[doc = " Events will cause application provided callbacks to be called."]
-    #[doc = ""]
-    #[doc = " The \\p timeout_ms argument specifies the maximum amount of time"]
-    #[doc = " (in milliseconds) that the call will block waiting for events."]
-    #[doc = " For non-blocking calls, provide 0 as \\p timeout_ms."]
-    #[doc = " To wait indefinately for an event, provide -1."]
-    #[doc = ""]
-    #[doc = " @remark  An application should make sure to call poll() at regular"]
-    #[doc = "          intervals to serve any queued callbacks waiting to be called."]
-    #[doc = " @remark  If your producer doesn't have any callback set (in particular"]
-    #[doc = "          via rd_kafka_conf_set_dr_msg_cb or rd_kafka_conf_set_error_cb)"]
-    #[doc = "          you might chose not to call poll(), though this is not"]
-    #[doc = "          recommended."]
-    #[doc = ""]
-    #[doc = " Events:"]
-    #[doc = "   - delivery report callbacks  (if dr_cb/dr_msg_cb is configured) [producer]"]
-    #[doc = "   - error callbacks (rd_kafka_conf_set_error_cb()) [all]"]
-    #[doc = "   - stats callbacks (rd_kafka_conf_set_stats_cb()) [all]"]
-    #[doc = "   - throttle callbacks (rd_kafka_conf_set_throttle_cb()) [all]"]
-    #[doc = "   - OAUTHBEARER token refresh callbacks (rd_kafka_conf_set_oauthbearer_token_refresh_cb()) [all]"]
-    #[doc = ""]
-    #[doc = " @returns the number of events served."]
     pub fn rd_kafka_poll(
         rk: *mut rd_kafka_t,
         timeout_ms: ::std::os::raw::c_int,
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Cancels the current callback dispatcher (rd_kafka_poll(),"]
-    #[doc = "        rd_kafka_consume_callback(), etc)."]
-    #[doc = ""]
-    #[doc = " A callback may use this to force an immediate return to the calling"]
-    #[doc = " code (caller of e.g. rd_kafka_poll()) without processing any further"]
-    #[doc = " events."]
-    #[doc = ""]
-    #[doc = " @remark This function MUST ONLY be called from within a librdkafka callback."]
     pub fn rd_kafka_yield(rk: *mut rd_kafka_t);
 }
 extern "C" {
-    #[doc = " @brief Pause producing or consumption for the provided list of partitions."]
-    #[doc = ""]
-    #[doc = " Success or error is returned per-partition \\p err in the \\p partitions list."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR"]
     pub fn rd_kafka_pause_partitions(
         rk: *mut rd_kafka_t,
         partitions: *mut rd_kafka_topic_partition_list_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Resume producing consumption for the provided list of partitions."]
-    #[doc = ""]
-    #[doc = " Success or error is returned per-partition \\p err in the \\p partitions list."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR"]
     pub fn rd_kafka_resume_partitions(
         rk: *mut rd_kafka_t,
         partitions: *mut rd_kafka_topic_partition_list_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Query broker for low (oldest/beginning) and high (newest/end) offsets"]
-    #[doc = "        for partition."]
-    #[doc = ""]
-    #[doc = " Offsets are returned in \\p *low and \\p *high respectively."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or an error code on failure."]
     pub fn rd_kafka_query_watermark_offsets(
         rk: *mut rd_kafka_t,
         topic: *const ::std::os::raw::c_char,
@@ -6193,20 +2735,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Get last known low (oldest/beginning) and high (newest/end) offsets"]
-    #[doc = "        for partition."]
-    #[doc = ""]
-    #[doc = " The low offset is updated periodically (if statistics.interval.ms is set)"]
-    #[doc = " while the high offset is updated on each fetched message set from the broker."]
-    #[doc = ""]
-    #[doc = " If there is no cached offset (either low or high, or both) then"]
-    #[doc = " RD_KAFKA_OFFSET_INVALID will be returned for the respective offset."]
-    #[doc = ""]
-    #[doc = " Offsets are returned in \\p *low and \\p *high respectively."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or an error code on failure."]
-    #[doc = ""]
-    #[doc = " @remark Shall only be used with an active consumer instance."]
     pub fn rd_kafka_get_watermark_offsets(
         rk: *mut rd_kafka_t,
         topic: *const ::std::os::raw::c_char,
@@ -6216,28 +2744,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Look up the offsets for the given partitions by timestamp."]
-    #[doc = ""]
-    #[doc = " The returned offset for each partition is the earliest offset whose"]
-    #[doc = " timestamp is greater than or equal to the given timestamp in the"]
-    #[doc = " corresponding partition."]
-    #[doc = ""]
-    #[doc = " The timestamps to query are represented as \\c offset in \\p offsets"]
-    #[doc = " on input, and \\c offset will contain the offset on output."]
-    #[doc = ""]
-    #[doc = " The function will block for at most \\p timeout_ms milliseconds."]
-    #[doc = ""]
-    #[doc = " @remark Duplicate Topic+Partitions are not supported."]
-    #[doc = " @remark Per-partition errors may be returned in \\c rd_kafka_topic_partition_t.err"]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR if offsets were be queried (do note"]
-    #[doc = "          that per-partition errors might be set),"]
-    #[doc = "          RD_KAFKA_RESP_ERR__TIMED_OUT if not all offsets could be fetched"]
-    #[doc = "          within \\p timeout_ms,"]
-    #[doc = "          RD_KAFKA_RESP_ERR__INVALID_ARG if the \\p offsets list is empty,"]
-    #[doc = "          RD_KAFKA_RESP_ERR__UNKNOWN_PARTITION if all partitions are unknown,"]
-    #[doc = "          RD_KAFKA_RESP_ERR_LEADER_NOT_AVAILABLE if unable to query leaders"]
-    #[doc = "          for the given partitions."]
     pub fn rd_kafka_offsets_for_times(
         rk: *mut rd_kafka_t,
         offsets: *mut rd_kafka_topic_partition_list_t,
@@ -6245,58 +2751,21 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Free pointer returned by librdkafka"]
-    #[doc = ""]
-    #[doc = " This is typically an abstraction for the free(3) call and makes sure"]
-    #[doc = " the application can use the same memory allocator as librdkafka for"]
-    #[doc = " freeing pointers returned by librdkafka."]
-    #[doc = ""]
-    #[doc = " In standard setups it is usually not necessary to use this interface"]
-    #[doc = " rather than the free(3) functione."]
-    #[doc = ""]
-    #[doc = " \\p rk must be set for memory returned by APIs that take an \\c rk argument,"]
-    #[doc = " for other APIs pass NULL for \\p rk."]
-    #[doc = ""]
-    #[doc = " @remark rd_kafka_mem_free() must only be used for pointers returned by APIs"]
-    #[doc = "         that explicitly mention using this function for freeing."]
     pub fn rd_kafka_mem_free(rk: *mut rd_kafka_t, ptr: *mut ::std::os::raw::c_void);
 }
 extern "C" {
-    #[doc = " @brief Create a new message queue."]
-    #[doc = ""]
-    #[doc = " See rd_kafka_consume_start_queue(), rd_kafka_consume_queue(), et.al."]
     pub fn rd_kafka_queue_new(rk: *mut rd_kafka_t) -> *mut rd_kafka_queue_t;
 }
 extern "C" {
-    #[doc = " Destroy a queue, purging all of its enqueued messages."]
     pub fn rd_kafka_queue_destroy(rkqu: *mut rd_kafka_queue_t);
 }
 extern "C" {
-    #[doc = " @returns a reference to the main librdkafka event queue."]
-    #[doc = " This is the queue served by rd_kafka_poll()."]
-    #[doc = ""]
-    #[doc = " Use rd_kafka_queue_destroy() to loose the reference."]
     pub fn rd_kafka_queue_get_main(rk: *mut rd_kafka_t) -> *mut rd_kafka_queue_t;
 }
 extern "C" {
-    #[doc = " @returns a reference to the librdkafka consumer queue."]
-    #[doc = " This is the queue served by rd_kafka_consumer_poll()."]
-    #[doc = ""]
-    #[doc = " Use rd_kafka_queue_destroy() to loose the reference."]
-    #[doc = ""]
-    #[doc = " @remark rd_kafka_queue_destroy() MUST be called on this queue"]
-    #[doc = "         prior to calling rd_kafka_consumer_close()."]
     pub fn rd_kafka_queue_get_consumer(rk: *mut rd_kafka_t) -> *mut rd_kafka_queue_t;
 }
 extern "C" {
-    #[doc = " @returns a reference to the partition's queue, or NULL if"]
-    #[doc = "          partition is invalid."]
-    #[doc = ""]
-    #[doc = " Use rd_kafka_queue_destroy() to loose the reference."]
-    #[doc = ""]
-    #[doc = " @remark rd_kafka_queue_destroy() MUST be called on this queue"]
-    #[doc = ""]
-    #[doc = " @remark This function only works on consumers."]
     pub fn rd_kafka_queue_get_partition(
         rk: *mut rd_kafka_t,
         topic: *const ::std::os::raw::c_char,
@@ -6304,79 +2773,21 @@ extern "C" {
     ) -> *mut rd_kafka_queue_t;
 }
 extern "C" {
-    #[doc = " @returns a reference to the background thread queue, or NULL if the"]
-    #[doc = "          background queue is not enabled."]
-    #[doc = ""]
-    #[doc = " To enable the background thread queue set a generic event handler callback"]
-    #[doc = " with rd_kafka_conf_set_background_event_cb() on the client instance"]
-    #[doc = " configuration object (rd_kafka_conf_t)."]
-    #[doc = ""]
-    #[doc = " The background queue is polled and served by librdkafka and MUST NOT be"]
-    #[doc = " polled, forwarded, or otherwise managed by the application, it may only"]
-    #[doc = " be used as the destination queue passed to queue-enabled APIs, such as"]
-    #[doc = " the Admin API."]
-    #[doc = ""]
-    #[doc = " The background thread queue provides the application with an automatically"]
-    #[doc = " polled queue that triggers the event callback in a background thread,"]
-    #[doc = " this background thread is completely managed by librdkafka."]
-    #[doc = ""]
-    #[doc = " Use rd_kafka_queue_destroy() to loose the reference."]
-    #[doc = ""]
-    #[doc = " @warning The background queue MUST NOT be read from (polled, consumed, etc),"]
-    #[doc = "          or forwarded from."]
     pub fn rd_kafka_queue_get_background(rk: *mut rd_kafka_t) -> *mut rd_kafka_queue_t;
 }
 extern "C" {
-    #[doc = " @brief Forward/re-route queue \\p src to \\p dst."]
-    #[doc = " If \\p dst is \\c NULL the forwarding is removed."]
-    #[doc = ""]
-    #[doc = " The internal refcounts for both queues are increased."]
-    #[doc = ""]
-    #[doc = " @remark Regardless of whether \\p dst is NULL or not, after calling this"]
-    #[doc = "         function, \\p src will not forward it's fetch queue to the consumer"]
-    #[doc = "         queue."]
     pub fn rd_kafka_queue_forward(src: *mut rd_kafka_queue_t, dst: *mut rd_kafka_queue_t);
 }
 extern "C" {
-    #[doc = " @brief Forward librdkafka logs (and debug) to the specified queue"]
-    #[doc = "        for serving with one of the ..poll() calls."]
-    #[doc = ""]
-    #[doc = "        This allows an application to serve log callbacks (\\c log_cb)"]
-    #[doc = "        in its thread of choice."]
-    #[doc = ""]
-    #[doc = " @param rk   Client instance."]
-    #[doc = " @param rkqu Queue to forward logs to. If the value is NULL the logs"]
-    #[doc = "        are forwarded to the main queue."]
-    #[doc = ""]
-    #[doc = " @remark The configuration property \\c log.queue MUST also be set to true."]
-    #[doc = ""]
-    #[doc = " @remark librdkafka maintains its own reference to the provided queue."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or an error code on error."]
     pub fn rd_kafka_set_log_queue(
         rk: *mut rd_kafka_t,
         rkqu: *mut rd_kafka_queue_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @returns the current number of elements in queue."]
     pub fn rd_kafka_queue_length(rkqu: *mut rd_kafka_queue_t) -> size_t;
 }
 extern "C" {
-    #[doc = " @brief Enable IO event triggering for queue."]
-    #[doc = ""]
-    #[doc = " To ease integration with IO based polling loops this API"]
-    #[doc = " allows an application to create a separate file-descriptor"]
-    #[doc = " that librdkafka will write \\p payload (of size \\p size) to"]
-    #[doc = " whenever a new element is enqueued on a previously empty queue."]
-    #[doc = ""]
-    #[doc = " To remove event triggering call with \\p fd = -1."]
-    #[doc = ""]
-    #[doc = " librdkafka will maintain a copy of the \\p payload."]
-    #[doc = ""]
-    #[doc = " @remark IO and callback event triggering are mutually exclusive."]
-    #[doc = " @remark When using forwarded queues the IO event must only be enabled"]
-    #[doc = "         on the final forwarded-to (destination) queue."]
     pub fn rd_kafka_queue_io_event_enable(
         rkqu: *mut rd_kafka_queue_t,
         fd: ::std::os::raw::c_int,
@@ -6385,20 +2796,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Enable callback event triggering for queue."]
-    #[doc = ""]
-    #[doc = " The callback will be called from an internal librdkafka thread"]
-    #[doc = " when a new element is enqueued on a previously empty queue."]
-    #[doc = ""]
-    #[doc = " To remove event triggering call with \\p event_cb = NULL."]
-    #[doc = ""]
-    #[doc = " The \\p qev_opaque is passed to the callback's \\p qev_opaque argument."]
-    #[doc = ""]
-    #[doc = " @remark IO and callback event triggering are mutually exclusive."]
-    #[doc = " @remark Since the callback may be triggered from internal librdkafka"]
-    #[doc = "         threads, the application must not perform any pro-longed work in"]
-    #[doc = "         the callback, or call any librdkafka APIs (for the same rd_kafka_t"]
-    #[doc = "         handle)."]
     pub fn rd_kafka_queue_cb_event_enable(
         rkqu: *mut rd_kafka_queue_t,
         event_cb: ::std::option::Option<
@@ -6408,37 +2805,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Start consuming messages for topic \\p rkt and \\p partition"]
-    #[doc = " at offset \\p offset which may either be an absolute \\c (0..N)"]
-    #[doc = " or one of the logical offsets:"]
-    #[doc = "  - RD_KAFKA_OFFSET_BEGINNING"]
-    #[doc = "  - RD_KAFKA_OFFSET_END"]
-    #[doc = "  - RD_KAFKA_OFFSET_STORED"]
-    #[doc = "  - RD_KAFKA_OFFSET_TAIL"]
-    #[doc = ""]
-    #[doc = " rdkafka will attempt to keep \\c queued.min.messages (config property)"]
-    #[doc = " messages in the local queue by repeatedly fetching batches of messages"]
-    #[doc = " from the broker until the threshold is reached."]
-    #[doc = ""]
-    #[doc = " The application shall use one of the `rd_kafka_consume*()` functions"]
-    #[doc = " to consume messages from the local queue, each kafka message being"]
-    #[doc = " represented as a `rd_kafka_message_t *` object."]
-    #[doc = ""]
-    #[doc = " `rd_kafka_consume_start()` must not be called multiple times for the same"]
-    #[doc = " topic and partition without stopping consumption first with"]
-    #[doc = " `rd_kafka_consume_stop()`."]
-    #[doc = ""]
-    #[doc = " @returns 0 on success or -1 on error in which case errno is set accordingly:"]
-    #[doc = "  - EBUSY    - Conflicts with an existing or previous subscription"]
-    #[doc = "               (RD_KAFKA_RESP_ERR__CONFLICT)"]
-    #[doc = "  - EINVAL   - Invalid offset, or incomplete configuration (lacking group.id)"]
-    #[doc = "               (RD_KAFKA_RESP_ERR__INVALID_ARG)"]
-    #[doc = "  - ESRCH    - requested \\p partition is invalid."]
-    #[doc = "               (RD_KAFKA_RESP_ERR__UNKNOWN_PARTITION)"]
-    #[doc = "  - ENOENT   - topic is unknown in the Kafka cluster."]
-    #[doc = "               (RD_KAFKA_RESP_ERR__UNKNOWN_TOPIC)"]
-    #[doc = ""]
-    #[doc = " Use `rd_kafka_errno2err()` to convert sytem \\c errno to `rd_kafka_resp_err_t`"]
     pub fn rd_kafka_consume_start(
         rkt: *mut rd_kafka_topic_t,
         partition: i32,
@@ -6446,18 +2812,6 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Same as rd_kafka_consume_start() but re-routes incoming messages to"]
-    #[doc = " the provided queue \\p rkqu (which must have been previously allocated"]
-    #[doc = " with `rd_kafka_queue_new()`."]
-    #[doc = ""]
-    #[doc = " The application must use one of the `rd_kafka_consume_*_queue()` functions"]
-    #[doc = " to receive fetched messages."]
-    #[doc = ""]
-    #[doc = " `rd_kafka_consume_start_queue()` must not be called multiple times for the"]
-    #[doc = " same topic and partition without stopping consumption first with"]
-    #[doc = " `rd_kafka_consume_stop()`."]
-    #[doc = " `rd_kafka_consume_start()` and `rd_kafka_consume_start_queue()` must not"]
-    #[doc = " be combined for the same topic and partition."]
     pub fn rd_kafka_consume_start_queue(
         rkt: *mut rd_kafka_topic_t,
         partition: i32,
@@ -6466,35 +2820,12 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Stop consuming messages for topic \\p rkt and \\p partition, purging"]
-    #[doc = " all messages currently in the local queue."]
-    #[doc = ""]
-    #[doc = " NOTE: To enforce synchronisation this call will block until the internal"]
-    #[doc = "       fetcher has terminated and offsets are committed to configured"]
-    #[doc = "       storage method."]
-    #[doc = ""]
-    #[doc = " The application needs to be stop all consumers before calling"]
-    #[doc = " `rd_kafka_destroy()` on the main object handle."]
-    #[doc = ""]
-    #[doc = " @returns 0 on success or -1 on error (see `errno`)."]
     pub fn rd_kafka_consume_stop(
         rkt: *mut rd_kafka_topic_t,
         partition: i32,
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Seek consumer for topic+partition to \\p offset which is either an"]
-    #[doc = "        absolute or logical offset."]
-    #[doc = ""]
-    #[doc = " If \\p timeout_ms is not 0 the call will wait this long for the"]
-    #[doc = " seek to be performed. If the timeout is reached the internal state"]
-    #[doc = " will be unknown and this function returns `RD_KAFKA_RESP_ERR__TIMED_OUT`."]
-    #[doc = " If \\p timeout_ms is 0 it will initiate the seek but return"]
-    #[doc = " immediately without any error reporting (e.g., async)."]
-    #[doc = ""]
-    #[doc = " This call triggers a fetch queue barrier flush."]
-    #[doc = ""]
-    #[doc = " @returns `RD_KAFKA_RESP_ERR__NO_ERROR` on success else an error code."]
     pub fn rd_kafka_seek(
         rkt: *mut rd_kafka_topic_t,
         partition: i32,
@@ -6503,28 +2834,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Consume a single message from topic \\p rkt and \\p partition"]
-    #[doc = ""]
-    #[doc = " \\p timeout_ms is maximum amount of time to wait for a message to be received."]
-    #[doc = " Consumer must have been previously started with `rd_kafka_consume_start()`."]
-    #[doc = ""]
-    #[doc = " @returns a message object on success or \\c NULL on error."]
-    #[doc = " The message object must be destroyed with `rd_kafka_message_destroy()`"]
-    #[doc = " when the application is done with it."]
-    #[doc = ""]
-    #[doc = " Errors (when returning NULL):"]
-    #[doc = "  - ETIMEDOUT - \\p timeout_ms was reached with no new messages fetched."]
-    #[doc = "  - ENOENT    - \\p rkt + \\p partition is unknown."]
-    #[doc = "                 (no prior `rd_kafka_consume_start()` call)"]
-    #[doc = ""]
-    #[doc = " NOTE: The returned message's \\c ..->err must be checked for errors."]
-    #[doc = " NOTE: \\c ..->err \\c == \\c RD_KAFKA_RESP_ERR__PARTITION_EOF signals that the"]
-    #[doc = "       end of the partition has been reached, which should typically not be"]
-    #[doc = "       considered an error. The application should handle this case"]
-    #[doc = "       (e.g., ignore)."]
-    #[doc = ""]
-    #[doc = " @remark on_consume() interceptors may be called from this function prior to"]
-    #[doc = "         passing message to application."]
     pub fn rd_kafka_consume(
         rkt: *mut rd_kafka_topic_t,
         partition: i32,
@@ -6532,29 +2841,6 @@ extern "C" {
     ) -> *mut rd_kafka_message_t;
 }
 extern "C" {
-    #[doc = " @brief Consume up to \\p rkmessages_size from topic \\p rkt and \\p partition"]
-    #[doc = "        putting a pointer to each message in the application provided"]
-    #[doc = "        array \\p rkmessages (of size \\p rkmessages_size entries)."]
-    #[doc = ""]
-    #[doc = " `rd_kafka_consume_batch()` provides higher throughput performance"]
-    #[doc = " than `rd_kafka_consume()`."]
-    #[doc = ""]
-    #[doc = " \\p timeout_ms is the maximum amount of time to wait for all of"]
-    #[doc = " \\p rkmessages_size messages to be put into \\p rkmessages."]
-    #[doc = " If no messages were available within the timeout period this function"]
-    #[doc = " returns 0 and \\p rkmessages remains untouched."]
-    #[doc = " This differs somewhat from `rd_kafka_consume()`."]
-    #[doc = ""]
-    #[doc = " The message objects must be destroyed with `rd_kafka_message_destroy()`"]
-    #[doc = " when the application is done with it."]
-    #[doc = ""]
-    #[doc = " @returns the number of rkmessages added in \\p rkmessages,"]
-    #[doc = " or -1 on error (same error codes as for `rd_kafka_consume()`."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_consume()"]
-    #[doc = ""]
-    #[doc = " @remark on_consume() interceptors may be called from this function prior to"]
-    #[doc = "         passing message to application."]
     pub fn rd_kafka_consume_batch(
         rkt: *mut rd_kafka_topic_t,
         partition: i32,
@@ -6564,28 +2850,6 @@ extern "C" {
     ) -> ssize_t;
 }
 extern "C" {
-    #[doc = " @brief Consumes messages from topic \\p rkt and \\p partition, calling"]
-    #[doc = " the provided callback for each consumed messsage."]
-    #[doc = ""]
-    #[doc = " `rd_kafka_consume_callback()` provides higher throughput performance"]
-    #[doc = " than both `rd_kafka_consume()` and `rd_kafka_consume_batch()`."]
-    #[doc = ""]
-    #[doc = " \\p timeout_ms is the maximum amount of time to wait for one or more messages"]
-    #[doc = " to arrive."]
-    #[doc = ""]
-    #[doc = " The provided \\p consume_cb function is called for each message,"]
-    #[doc = " the application \\b MUST \\b NOT call `rd_kafka_message_destroy()` on the"]
-    #[doc = " provided \\p rkmessage."]
-    #[doc = ""]
-    #[doc = " The \\p commit_opaque argument is passed to the \\p consume_cb"]
-    #[doc = " as \\p commit_opaque."]
-    #[doc = ""]
-    #[doc = " @returns the number of messages processed or -1 on error."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_consume()"]
-    #[doc = ""]
-    #[doc = " @remark on_consume() interceptors may be called from this function prior to"]
-    #[doc = "         passing message to application."]
     pub fn rd_kafka_consume_callback(
         rkt: *mut rd_kafka_topic_t,
         partition: i32,
@@ -6600,18 +2864,12 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Consume from queue"]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_consume()"]
     pub fn rd_kafka_consume_queue(
         rkqu: *mut rd_kafka_queue_t,
         timeout_ms: ::std::os::raw::c_int,
     ) -> *mut rd_kafka_message_t;
 }
 extern "C" {
-    #[doc = " @brief Consume batch of messages from queue"]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_consume_batch()"]
     pub fn rd_kafka_consume_batch_queue(
         rkqu: *mut rd_kafka_queue_t,
         timeout_ms: ::std::os::raw::c_int,
@@ -6620,9 +2878,6 @@ extern "C" {
     ) -> ssize_t;
 }
 extern "C" {
-    #[doc = " @brief Consume multiple messages from queue with callback"]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_consume_callback()"]
     pub fn rd_kafka_consume_callback_queue(
         rkqu: *mut rd_kafka_queue_t,
         timeout_ms: ::std::os::raw::c_int,
@@ -6636,14 +2891,6 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Store offset \\p offset for topic \\p rkt partition \\p partition."]
-    #[doc = ""]
-    #[doc = " The offset will be committed (written) to the offset store according"]
-    #[doc = " to \\c `auto.commit.interval.ms` or manual offset-less commit()"]
-    #[doc = ""]
-    #[doc = " @remark \\c `enable.auto.offset.store` must be set to \"false\" when using this API."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or an error code on error."]
     pub fn rd_kafka_offset_store(
         rkt: *mut rd_kafka_topic_t,
         partition: i32,
@@ -6651,166 +2898,48 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Store offsets for next auto-commit for one or more partitions."]
-    #[doc = ""]
-    #[doc = " The offset will be committed (written) to the offset store according"]
-    #[doc = " to \\c `auto.commit.interval.ms` or manual offset-less commit()."]
-    #[doc = ""]
-    #[doc = " Per-partition success/error status propagated through each partition's"]
-    #[doc = " \\c .err field."]
-    #[doc = ""]
-    #[doc = " @remark \\c `enable.auto.offset.store` must be set to \"false\" when using this API."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success, or"]
-    #[doc = "          RD_KAFKA_RESP_ERR__UNKNOWN_PARTITION if none of the"]
-    #[doc = "          offsets could be stored, or"]
-    #[doc = "          RD_KAFKA_RESP_ERR__INVALID_ARG if \\c enable.auto.offset.store is true."]
     pub fn rd_kafka_offsets_store(
         rk: *mut rd_kafka_t,
         offsets: *mut rd_kafka_topic_partition_list_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Subscribe to topic set using balanced consumer groups."]
-    #[doc = ""]
-    #[doc = " Wildcard (regex) topics are supported:"]
-    #[doc = " any topic name in the \\p topics list that is prefixed with \\c \\\"^\\\" will"]
-    #[doc = " be regex-matched to the full list of topics in the cluster and matching"]
-    #[doc = " topics will be added to the subscription list."]
-    #[doc = ""]
-    #[doc = " The full topic list is retrieved every \\c topic.metadata.refresh.interval.ms"]
-    #[doc = " to pick up new or delete topics that match the subscription."]
-    #[doc = " If there is any change to the matched topics the consumer will"]
-    #[doc = " immediately rejoin the group with the updated set of subscribed topics."]
-    #[doc = ""]
-    #[doc = " Regex and full topic names can be mixed in \\p topics."]
-    #[doc = ""]
-    #[doc = " @remark Only the \\c .topic field is used in the supplied \\p topics list,"]
-    #[doc = "         all other fields are ignored."]
-    #[doc = ""]
-    #[doc = " @remark subscribe() is an asynchronous method which returns immediately:"]
-    #[doc = "         background threads will (re)join the group, wait for group rebalance,"]
-    #[doc = "         issue any registered rebalance_cb, assign() the assigned partitions,"]
-    #[doc = "         and then start fetching messages. This cycle may take up to"]
-    #[doc = "         \\c session.timeout.ms * 2 or more to complete."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or"]
-    #[doc = "          RD_KAFKA_RESP_ERR__INVALID_ARG if list is empty, contains invalid"]
-    #[doc = "          topics or regexes."]
     pub fn rd_kafka_subscribe(
         rk: *mut rd_kafka_t,
         topics: *const rd_kafka_topic_partition_list_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Unsubscribe from the current subscription set."]
     pub fn rd_kafka_unsubscribe(rk: *mut rd_kafka_t) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Returns the current topic subscription"]
-    #[doc = ""]
-    #[doc = " @returns An error code on failure, otherwise \\p topic is updated"]
-    #[doc = "          to point to a newly allocated topic list (possibly empty)."]
-    #[doc = ""]
-    #[doc = " @remark The application is responsible for calling"]
-    #[doc = "         rd_kafka_topic_partition_list_destroy on the returned list."]
     pub fn rd_kafka_subscription(
         rk: *mut rd_kafka_t,
         topics: *mut *mut rd_kafka_topic_partition_list_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Poll the consumer for messages or events."]
-    #[doc = ""]
-    #[doc = " Will block for at most \\p timeout_ms milliseconds."]
-    #[doc = ""]
-    #[doc = " @remark  An application should make sure to call consumer_poll() at regular"]
-    #[doc = "          intervals, even if no messages are expected, to serve any"]
-    #[doc = "          queued callbacks waiting to be called. This is especially"]
-    #[doc = "          important when a rebalance_cb has been registered as it needs"]
-    #[doc = "          to be called and handled properly to synchronize internal"]
-    #[doc = "          consumer state."]
-    #[doc = ""]
-    #[doc = " @returns A message object which is a proper message if \\p ->err is"]
-    #[doc = "          RD_KAFKA_RESP_ERR_NO_ERROR, or an event or error for any other"]
-    #[doc = "          value."]
-    #[doc = ""]
-    #[doc = " @remark on_consume() interceptors may be called from this function prior to"]
-    #[doc = "         passing message to application."]
-    #[doc = ""]
-    #[doc = " @remark When subscribing to topics the application must call poll at"]
-    #[doc = "         least every \\c max.poll.interval.ms to remain a member of the"]
-    #[doc = "         consumer group."]
-    #[doc = ""]
-    #[doc = " Noteworthy errors returned in \\c ->err:"]
-    #[doc = " - RD_KAFKA_RESP_ERR__MAX_POLL_EXCEEDED - application failed to call"]
-    #[doc = "   poll within `max.poll.interval.ms`."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_message_t"]
     pub fn rd_kafka_consumer_poll(
         rk: *mut rd_kafka_t,
         timeout_ms: ::std::os::raw::c_int,
     ) -> *mut rd_kafka_message_t;
 }
 extern "C" {
-    #[doc = " @brief Close down the KafkaConsumer."]
-    #[doc = ""]
-    #[doc = " @remark This call will block until the consumer has revoked its assignment,"]
-    #[doc = "         calling the \\c rebalance_cb if it is configured, committed offsets"]
-    #[doc = "         to broker, and left the consumer group."]
-    #[doc = "         The maximum blocking time is roughly limited to session.timeout.ms."]
-    #[doc = ""]
-    #[doc = " @returns An error code indicating if the consumer close was succesful"]
-    #[doc = "          or not."]
-    #[doc = ""]
-    #[doc = " @remark The application still needs to call rd_kafka_destroy() after"]
-    #[doc = "         this call finishes to clean up the underlying handle resources."]
-    #[doc = ""]
     pub fn rd_kafka_consumer_close(rk: *mut rd_kafka_t) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Atomic assignment of partitions to consume."]
-    #[doc = ""]
-    #[doc = " The new \\p partitions will replace the existing assignment."]
-    #[doc = ""]
-    #[doc = " When used from a rebalance callback the application shall pass the"]
-    #[doc = " partition list passed to the callback (or a copy of it) (even if the list"]
-    #[doc = " is empty) rather than NULL to maintain internal join state."]
-    #[doc = ""]
-    #[doc = " A zero-length \\p partitions will treat the partitions as a valid,"]
-    #[doc = " albeit empty, assignment, and maintain internal state, while a \\c NULL"]
-    #[doc = " value for \\p partitions will reset and clear the internal state."]
     pub fn rd_kafka_assign(
         rk: *mut rd_kafka_t,
         partitions: *const rd_kafka_topic_partition_list_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Returns the current partition assignment"]
-    #[doc = ""]
-    #[doc = " @returns An error code on failure, otherwise \\p partitions is updated"]
-    #[doc = "          to point to a newly allocated partition list (possibly empty)."]
-    #[doc = ""]
-    #[doc = " @remark The application is responsible for calling"]
-    #[doc = "         rd_kafka_topic_partition_list_destroy on the returned list."]
     pub fn rd_kafka_assignment(
         rk: *mut rd_kafka_t,
         partitions: *mut *mut rd_kafka_topic_partition_list_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Commit offsets on broker for the provided list of partitions."]
-    #[doc = ""]
-    #[doc = " \\p offsets should contain \\c topic, \\c partition, \\c offset and possibly"]
-    #[doc = " \\c metadata."]
-    #[doc = " If \\p offsets is NULL the current partition assignment will be used instead."]
-    #[doc = ""]
-    #[doc = " If \\p async is false this operation will block until the broker offset commit"]
-    #[doc = " is done, returning the resulting success or error code."]
-    #[doc = ""]
-    #[doc = " If a rd_kafka_conf_set_offset_commit_cb() offset commit callback has been"]
-    #[doc = " configured the callback will be enqueued for a future call to"]
-    #[doc = " rd_kafka_poll(), rd_kafka_consumer_poll() or similar."]
     pub fn rd_kafka_commit(
         rk: *mut rd_kafka_t,
         offsets: *const rd_kafka_topic_partition_list_t,
@@ -6818,9 +2947,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Commit message's offset on broker for the message's partition."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_commit"]
     pub fn rd_kafka_commit_message(
         rk: *mut rd_kafka_t,
         rkmessage: *const rd_kafka_message_t,
@@ -6828,26 +2954,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Commit offsets on broker for the provided list of partitions."]
-    #[doc = ""]
-    #[doc = " See rd_kafka_commit for \\p offsets semantics."]
-    #[doc = ""]
-    #[doc = " The result of the offset commit will be posted on the provided \\p rkqu queue."]
-    #[doc = ""]
-    #[doc = " If the application uses one of the poll APIs (rd_kafka_poll(),"]
-    #[doc = " rd_kafka_consumer_poll(), rd_kafka_queue_poll(), ..) to serve the queue"]
-    #[doc = " the \\p cb callback is required."]
-    #[doc = ""]
-    #[doc = " The \\p commit_opaque argument is passed to the callback as \\p commit_opaque,"]
-    #[doc = " or if using the event API the callback is ignored and the offset commit"]
-    #[doc = " result will be returned as an RD_KAFKA_EVENT_COMMIT event and the"]
-    #[doc = " \\p commit_opaque value will be available with rd_kafka_event_opaque()."]
-    #[doc = ""]
-    #[doc = " If \\p rkqu is NULL a temporary queue will be created and the callback will"]
-    #[doc = " be served by this call."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_commit()"]
-    #[doc = " @sa rd_kafka_conf_set_offset_commit_cb()"]
     pub fn rd_kafka_commit_queue(
         rk: *mut rd_kafka_t,
         offsets: *const rd_kafka_topic_partition_list_t,
@@ -6864,16 +2970,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Retrieve committed offsets for topics+partitions."]
-    #[doc = ""]
-    #[doc = " The \\p offset field of each requested partition will either be set to"]
-    #[doc = " stored offset or to RD_KAFKA_OFFSET_INVALID in case there was no stored"]
-    #[doc = " offset for that partition."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success in which case the"]
-    #[doc = "          \\p offset or \\p err field of each \\p partitions' element is filled"]
-    #[doc = "          in with the stored offset, or a partition specific error."]
-    #[doc = "          Else returns an error code."]
     pub fn rd_kafka_committed(
         rk: *mut rd_kafka_t,
         partitions: *mut rd_kafka_topic_partition_list_t,
@@ -6881,114 +2977,12 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Retrieve current positions (offsets) for topics+partitions."]
-    #[doc = ""]
-    #[doc = " The \\p offset field of each requested partition will be set to the offset"]
-    #[doc = " of the last consumed message + 1, or RD_KAFKA_OFFSET_INVALID in case there was"]
-    #[doc = " no previous message."]
-    #[doc = ""]
-    #[doc = " @remark  In this context the last consumed message is the offset consumed"]
-    #[doc = "          by the current librdkafka instance and, in case of rebalancing, not"]
-    #[doc = "          necessarily the last message fetched from the partition."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success in which case the"]
-    #[doc = "          \\p offset or \\p err field of each \\p partitions' element is filled"]
-    #[doc = "          in with the stored offset, or a partition specific error."]
-    #[doc = "          Else returns an error code."]
     pub fn rd_kafka_position(
         rk: *mut rd_kafka_t,
         partitions: *mut rd_kafka_topic_partition_list_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Produce and send a single message to broker."]
-    #[doc = ""]
-    #[doc = " \\p rkt is the target topic which must have been previously created with"]
-    #[doc = " `rd_kafka_topic_new()`."]
-    #[doc = ""]
-    #[doc = " `rd_kafka_produce()` is an asynch non-blocking API."]
-    #[doc = " See `rd_kafka_conf_set_dr_msg_cb` on how to setup a callback to be called"]
-    #[doc = " once the delivery status (success or failure) is known. The delivery report"]
-    #[doc = " is trigged by the application calling `rd_kafka_poll()` (at regular"]
-    #[doc = " intervals) or `rd_kafka_flush()` (at termination)."]
-    #[doc = ""]
-    #[doc = " Since producing is asynchronous, you should call `rd_kafka_flush()` before"]
-    #[doc = " you destroy the producer. Otherwise, any outstanding messages will be"]
-    #[doc = " silently discarded."]
-    #[doc = ""]
-    #[doc = " When temporary errors occur, librdkafka automatically retries to produce the"]
-    #[doc = " messages. Retries are triggered after retry.backoff.ms and when the"]
-    #[doc = " leader broker for the given partition is available. Otherwise, librdkafka"]
-    #[doc = " falls back to polling the topic metadata to monitor when a new leader is"]
-    #[doc = " elected (see the topic.metadata.refresh.fast.interval.ms and"]
-    #[doc = " topic.metadata.refresh.interval.ms configurations) and then performs a"]
-    #[doc = " retry. A delivery error will occur if the message could not be produced"]
-    #[doc = " within message.timeout.ms."]
-    #[doc = ""]
-    #[doc = " See the \"Message reliability\" chapter in INTRODUCTION.md for more"]
-    #[doc = " information."]
-    #[doc = ""]
-    #[doc = " \\p partition is the target partition, either:"]
-    #[doc = "   - RD_KAFKA_PARTITION_UA (unassigned) for"]
-    #[doc = "     automatic partitioning using the topic's partitioner function, or"]
-    #[doc = "   - a fixed partition (0..N)"]
-    #[doc = ""]
-    #[doc = " \\p msgflags is zero or more of the following flags OR:ed together:"]
-    #[doc = "    RD_KAFKA_MSG_F_BLOCK - block \\p produce*() call if"]
-    #[doc = "                           \\p queue.buffering.max.messages or"]
-    #[doc = "                           \\p queue.buffering.max.kbytes are exceeded."]
-    #[doc = "                           Messages are considered in-queue from the point they"]
-    #[doc = "                           are accepted by produce() until their corresponding"]
-    #[doc = "                           delivery report callback/event returns."]
-    #[doc = "                           It is thus a requirement to call"]
-    #[doc = "                           rd_kafka_poll() (or equiv.) from a separate"]
-    #[doc = "                           thread when F_BLOCK is used."]
-    #[doc = "                           See WARNING on \\c RD_KAFKA_MSG_F_BLOCK above."]
-    #[doc = ""]
-    #[doc = "    RD_KAFKA_MSG_F_FREE - rdkafka will free(3) \\p payload when it is done"]
-    #[doc = "                          with it."]
-    #[doc = "    RD_KAFKA_MSG_F_COPY - the \\p payload data will be copied and the"]
-    #[doc = "                          \\p payload pointer will not be used by rdkafka"]
-    #[doc = "                          after the call returns."]
-    #[doc = "    RD_KAFKA_MSG_F_PARTITION - produce_batch() will honour per-message"]
-    #[doc = "                               partition, either set manually or by the"]
-    #[doc = "                               configured partitioner."]
-    #[doc = ""]
-    #[doc = "    .._F_FREE and .._F_COPY are mutually exclusive."]
-    #[doc = ""]
-    #[doc = "    If the function returns -1 and RD_KAFKA_MSG_F_FREE was specified, then"]
-    #[doc = "    the memory associated with the payload is still the caller's"]
-    #[doc = "    responsibility."]
-    #[doc = ""]
-    #[doc = " \\p payload is the message payload of size \\p len bytes."]
-    #[doc = ""]
-    #[doc = " \\p key is an optional message key of size \\p keylen bytes, if non-NULL it"]
-    #[doc = " will be passed to the topic partitioner as well as be sent with the"]
-    #[doc = " message to the broker and passed on to the consumer."]
-    #[doc = ""]
-    #[doc = " \\p msg_opaque is an optional application-provided per-message opaque"]
-    #[doc = " pointer that will provided in the message's delivery report callback"]
-    #[doc = " (\\c dr_msg_cb or \\c dr_cb) and the \\c rd_kafka_message_t \\c _private field."]
-    #[doc = ""]
-    #[doc = " @remark on_send() and on_acknowledgement() interceptors may be called"]
-    #[doc = "         from this function. on_acknowledgement() will only be called if the"]
-    #[doc = "         message fails partitioning."]
-    #[doc = ""]
-    #[doc = " @returns 0 on success or -1 on error in which case errno is set accordingly:"]
-    #[doc = "  - ENOBUFS  - maximum number of outstanding messages has been reached:"]
-    #[doc = "               \"queue.buffering.max.messages\""]
-    #[doc = "               (RD_KAFKA_RESP_ERR__QUEUE_FULL)"]
-    #[doc = "  - EMSGSIZE - message is larger than configured max size:"]
-    #[doc = "               \"messages.max.bytes\"."]
-    #[doc = "               (RD_KAFKA_RESP_ERR_MSG_SIZE_TOO_LARGE)"]
-    #[doc = "  - ESRCH    - requested \\p partition is unknown in the Kafka cluster."]
-    #[doc = "               (RD_KAFKA_RESP_ERR__UNKNOWN_PARTITION)"]
-    #[doc = "  - ENOENT   - topic is unknown in the Kafka cluster."]
-    #[doc = "               (RD_KAFKA_RESP_ERR__UNKNOWN_TOPIC)"]
-    #[doc = "  - ECANCELED - fatal error has been raised on producer, see"]
-    #[doc = "                rd_kafka_fatal_error()."]
-    #[doc = ""]
-    #[doc = " @sa Use rd_kafka_errno2err() to convert `errno` to rdkafka error code."]
     pub fn rd_kafka_produce(
         rkt: *mut rd_kafka_topic_t,
         partition: i32,
@@ -7001,45 +2995,9 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Produce and send a single message to broker."]
-    #[doc = ""]
-    #[doc = " The message is defined by a va-arg list using \\c rd_kafka_vtype_t"]
-    #[doc = " tag tuples which must be terminated with a single \\c RD_KAFKA_V_END."]
-    #[doc = ""]
-    #[doc = " @returns \\c RD_KAFKA_RESP_ERR_NO_ERROR on success, else an error code."]
-    #[doc = "          \\c RD_KAFKA_RESP_ERR__CONFLICT is returned if _V_HEADER and"]
-    #[doc = "          _V_HEADERS are mixed."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_produce, RD_KAFKA_V_END"]
     pub fn rd_kafka_producev(rk: *mut rd_kafka_t, ...) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Produce multiple messages."]
-    #[doc = ""]
-    #[doc = " If partition is RD_KAFKA_PARTITION_UA the configured partitioner will"]
-    #[doc = " be run for each message (slower), otherwise the messages will be enqueued"]
-    #[doc = " to the specified partition directly (faster)."]
-    #[doc = ""]
-    #[doc = " The messages are provided in the array \\p rkmessages of count \\p message_cnt"]
-    #[doc = " elements."]
-    #[doc = " The \\p partition and \\p msgflags are used for all provided messages."]
-    #[doc = ""]
-    #[doc = " Honoured \\p rkmessages[] fields are:"]
-    #[doc = "  - payload,len    Message payload and length"]
-    #[doc = "  - key,key_len    Optional message key"]
-    #[doc = "  - _private       Message opaque pointer (msg_opaque)"]
-    #[doc = "  - err            Will be set according to success or failure."]
-    #[doc = "                   Application only needs to check for errors if"]
-    #[doc = "                   return value != \\p message_cnt."]
-    #[doc = ""]
-    #[doc = " @remark If \\c RD_KAFKA_MSG_F_PARTITION is set in \\p msgflags, the"]
-    #[doc = "         \\c .partition field of the \\p rkmessages is used instead of"]
-    #[doc = "         \\p partition."]
-    #[doc = ""]
-    #[doc = " @returns the number of messages succesfully enqueued for producing."]
-    #[doc = ""]
-    #[doc = " @remark This interface does NOT support setting message headers on"]
-    #[doc = "         the provided \\p rkmessages."]
     pub fn rd_kafka_produce_batch(
         rkt: *mut rd_kafka_topic_t,
         partition: i32,
@@ -7049,409 +3007,58 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Wait until all outstanding produce requests, et.al, are completed."]
-    #[doc = "        This should typically be done prior to destroying a producer instance"]
-    #[doc = "        to make sure all queued and in-flight produce requests are completed"]
-    #[doc = "        before terminating."]
-    #[doc = ""]
-    #[doc = " @remark This function will call rd_kafka_poll() and thus trigger callbacks."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR__TIMED_OUT if \\p timeout_ms was reached before all"]
-    #[doc = "          outstanding requests were completed, else RD_KAFKA_RESP_ERR_NO_ERROR"]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_outq_len()"]
     pub fn rd_kafka_flush(
         rk: *mut rd_kafka_t,
         timeout_ms: ::std::os::raw::c_int,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Purge messages currently handled by the producer instance."]
-    #[doc = ""]
-    #[doc = " @param rk          Client instance."]
-    #[doc = " @param purge_flags Tells which messages to purge and how."]
-    #[doc = ""]
-    #[doc = " The application will need to call rd_kafka_poll() or rd_kafka_flush()"]
-    #[doc = " afterwards to serve the delivery report callbacks of the purged messages."]
-    #[doc = ""]
-    #[doc = " Messages purged from internal queues fail with the delivery report"]
-    #[doc = " error code set to RD_KAFKA_RESP_ERR__PURGE_QUEUE, while purged messages that"]
-    #[doc = " are in-flight to or from the broker will fail with the error code set to"]
-    #[doc = " RD_KAFKA_RESP_ERR__PURGE_INFLIGHT."]
-    #[doc = ""]
-    #[doc = " @warning Purging messages that are in-flight to or from the broker"]
-    #[doc = "          will ignore any sub-sequent acknowledgement for these messages"]
-    #[doc = "          received from the broker, effectively making it impossible"]
-    #[doc = "          for the application to know if the messages were successfully"]
-    #[doc = "          produced or not. This may result in duplicate messages if the"]
-    #[doc = "          application retries these messages at a later time."]
-    #[doc = ""]
-    #[doc = " @remark This call may block for a short time while background thread"]
-    #[doc = "         queues are purged."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success,"]
-    #[doc = "          RD_KAFKA_RESP_ERR__INVALID_ARG if the \\p purge flags are invalid"]
-    #[doc = "          or unknown,"]
-    #[doc = "          RD_KAFKA_RESP_ERR__NOT_IMPLEMENTED if called on a non-producer"]
-    #[doc = "          client instance."]
     pub fn rd_kafka_purge(
         rk: *mut rd_kafka_t,
         purge_flags: ::std::os::raw::c_int,
     ) -> rd_kafka_resp_err_t;
 }
-#[doc = " @brief Broker information"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_metadata_broker {
-    #[doc = "< Broker Id"]
     pub id: i32,
-    #[doc = "< Broker hostname"]
     pub host: *mut ::std::os::raw::c_char,
-    #[doc = "< Broker listening port"]
     pub port: ::std::os::raw::c_int,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_metadata_broker() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_metadata_broker>(),
-        24usize,
-        concat!("Size of: ", stringify!(rd_kafka_metadata_broker))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_metadata_broker>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_metadata_broker))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata_broker>())).id as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_broker),
-            "::",
-            stringify!(id)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata_broker>())).host as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_broker),
-            "::",
-            stringify!(host)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata_broker>())).port as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_broker),
-            "::",
-            stringify!(port)
-        )
-    );
-}
-#[doc = " @brief Broker information"]
 pub type rd_kafka_metadata_broker_t = rd_kafka_metadata_broker;
-#[doc = " @brief Partition information"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_metadata_partition {
-    #[doc = "< Partition Id"]
     pub id: i32,
-    #[doc = "< Partition error reported by broker"]
     pub err: rd_kafka_resp_err_t,
-    #[doc = "< Leader broker"]
     pub leader: i32,
-    #[doc = "< Number of brokers in \\p replicas"]
     pub replica_cnt: ::std::os::raw::c_int,
-    #[doc = "< Replica brokers"]
     pub replicas: *mut i32,
-    #[doc = "< Number of ISR brokers in \\p isrs"]
     pub isr_cnt: ::std::os::raw::c_int,
-    #[doc = "< In-Sync-Replica brokers"]
     pub isrs: *mut i32,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_metadata_partition() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_metadata_partition>(),
-        40usize,
-        concat!("Size of: ", stringify!(rd_kafka_metadata_partition))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_metadata_partition>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_metadata_partition))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata_partition>())).id as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_partition),
-            "::",
-            stringify!(id)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata_partition>())).err as *const _ as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_partition),
-            "::",
-            stringify!(err)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_metadata_partition>())).leader as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_partition),
-            "::",
-            stringify!(leader)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_metadata_partition>())).replica_cnt as *const _ as usize
-        },
-        12usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_partition),
-            "::",
-            stringify!(replica_cnt)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_metadata_partition>())).replicas as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_partition),
-            "::",
-            stringify!(replicas)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_metadata_partition>())).isr_cnt as *const _ as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_partition),
-            "::",
-            stringify!(isr_cnt)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_metadata_partition>())).isrs as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_partition),
-            "::",
-            stringify!(isrs)
-        )
-    );
-}
-#[doc = " @brief Partition information"]
 pub type rd_kafka_metadata_partition_t = rd_kafka_metadata_partition;
-#[doc = " @brief Topic information"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_metadata_topic {
-    #[doc = "< Topic name"]
     pub topic: *mut ::std::os::raw::c_char,
-    #[doc = "< Number of partitions in \\p partitions"]
     pub partition_cnt: ::std::os::raw::c_int,
-    #[doc = "< Partitions"]
     pub partitions: *mut rd_kafka_metadata_partition,
-    #[doc = "< Topic error reported by broker"]
     pub err: rd_kafka_resp_err_t,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_metadata_topic() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_metadata_topic>(),
-        32usize,
-        concat!("Size of: ", stringify!(rd_kafka_metadata_topic))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_metadata_topic>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_metadata_topic))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata_topic>())).topic as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_topic),
-            "::",
-            stringify!(topic)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_metadata_topic>())).partition_cnt as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_topic),
-            "::",
-            stringify!(partition_cnt)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_metadata_topic>())).partitions as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_topic),
-            "::",
-            stringify!(partitions)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata_topic>())).err as *const _ as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata_topic),
-            "::",
-            stringify!(err)
-        )
-    );
-}
-#[doc = " @brief Topic information"]
 pub type rd_kafka_metadata_topic_t = rd_kafka_metadata_topic;
-#[doc = " @brief Metadata container"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_metadata {
-    #[doc = "< Number of brokers in \\p brokers"]
     pub broker_cnt: ::std::os::raw::c_int,
-    #[doc = "< Brokers"]
     pub brokers: *mut rd_kafka_metadata_broker,
-    #[doc = "< Number of topics in \\p topics"]
     pub topic_cnt: ::std::os::raw::c_int,
-    #[doc = "< Topics"]
     pub topics: *mut rd_kafka_metadata_topic,
-    #[doc = "< Broker originating this metadata"]
     pub orig_broker_id: i32,
-    #[doc = "< Name of originating broker"]
     pub orig_broker_name: *mut ::std::os::raw::c_char,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_metadata() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_metadata>(),
-        48usize,
-        concat!("Size of: ", stringify!(rd_kafka_metadata))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_metadata>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_metadata))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata>())).broker_cnt as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata),
-            "::",
-            stringify!(broker_cnt)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata>())).brokers as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata),
-            "::",
-            stringify!(brokers)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata>())).topic_cnt as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata),
-            "::",
-            stringify!(topic_cnt)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_metadata>())).topics as *const _ as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata),
-            "::",
-            stringify!(topics)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_metadata>())).orig_broker_id as *const _ as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata),
-            "::",
-            stringify!(orig_broker_id)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_metadata>())).orig_broker_name as *const _ as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_metadata),
-            "::",
-            stringify!(orig_broker_name)
-        )
-    );
-}
-#[doc = " @brief Metadata container"]
 pub type rd_kafka_metadata_t = rd_kafka_metadata;
 extern "C" {
-    #[doc = " @brief Request Metadata from broker."]
-    #[doc = ""]
-    #[doc = " Parameters:"]
-    #[doc = "  - \\p all_topics  if non-zero: request info about all topics in cluster,"]
-    #[doc = "                   if zero: only request info about locally known topics."]
-    #[doc = "  - \\p only_rkt    only request info about this topic"]
-    #[doc = "  - \\p metadatap   pointer to hold metadata result."]
-    #[doc = "                   The \\p *metadatap pointer must be released"]
-    #[doc = "                   with rd_kafka_metadata_destroy()."]
-    #[doc = "  - \\p timeout_ms  maximum response time before failing."]
-    #[doc = ""]
-    #[doc = " Returns RD_KAFKA_RESP_ERR_NO_ERROR on success (in which case *metadatap)"]
-    #[doc = " will be set, else RD_KAFKA_RESP_ERR__TIMED_OUT on timeout or"]
-    #[doc = " other error code on error."]
     pub fn rd_kafka_metadata(
         rk: *mut rd_kafka_t,
         all_topics: ::std::os::raw::c_int,
@@ -7461,321 +3068,38 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Release metadata memory."]
     pub fn rd_kafka_metadata_destroy(metadata: *const rd_kafka_metadata);
 }
-#[doc = " @brief Group member information"]
-#[doc = ""]
-#[doc = " For more information on \\p member_metadata format, see"]
-#[doc = " https://cwiki.apache.org/confluence/display/KAFKA/A+Guide+To+The+Kafka+Protocol#AGuideToTheKafkaProtocol-GroupMembershipAPI"]
-#[doc = ""]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_group_member_info {
-    #[doc = "< Member id (generated by broker)"]
     pub member_id: *mut ::std::os::raw::c_char,
-    #[doc = "< Client's \\p client.id"]
     pub client_id: *mut ::std::os::raw::c_char,
-    #[doc = "< Client's hostname"]
     pub client_host: *mut ::std::os::raw::c_char,
-    #[doc = "< Member metadata (binary),"]
-    #[doc = "   format depends on \\p protocol_type."]
     pub member_metadata: *mut ::std::os::raw::c_void,
-    #[doc = "< Member metadata size in bytes"]
     pub member_metadata_size: ::std::os::raw::c_int,
-    #[doc = "< Member assignment (binary),"]
-    #[doc = "    format depends on \\p protocol_type."]
     pub member_assignment: *mut ::std::os::raw::c_void,
-    #[doc = "< Member assignment size in bytes"]
     pub member_assignment_size: ::std::os::raw::c_int,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_group_member_info() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_group_member_info>(),
-        56usize,
-        concat!("Size of: ", stringify!(rd_kafka_group_member_info))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_group_member_info>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_group_member_info))
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_group_member_info>())).member_id as *const _ as usize
-        },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_member_info),
-            "::",
-            stringify!(member_id)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_group_member_info>())).client_id as *const _ as usize
-        },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_member_info),
-            "::",
-            stringify!(client_id)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_group_member_info>())).client_host as *const _ as usize
-        },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_member_info),
-            "::",
-            stringify!(client_host)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_group_member_info>())).member_metadata as *const _
-                as usize
-        },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_member_info),
-            "::",
-            stringify!(member_metadata)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_group_member_info>())).member_metadata_size as *const _
-                as usize
-        },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_member_info),
-            "::",
-            stringify!(member_metadata_size)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_group_member_info>())).member_assignment as *const _
-                as usize
-        },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_member_info),
-            "::",
-            stringify!(member_assignment)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_group_member_info>())).member_assignment_size
-                as *const _ as usize
-        },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_member_info),
-            "::",
-            stringify!(member_assignment_size)
-        )
-    );
-}
-#[doc = " @brief Group information"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_group_info {
-    #[doc = "< Originating broker info"]
     pub broker: rd_kafka_metadata_broker,
-    #[doc = "< Group name"]
     pub group: *mut ::std::os::raw::c_char,
-    #[doc = "< Broker-originated error"]
     pub err: rd_kafka_resp_err_t,
-    #[doc = "< Group state"]
     pub state: *mut ::std::os::raw::c_char,
-    #[doc = "< Group protocol type"]
     pub protocol_type: *mut ::std::os::raw::c_char,
-    #[doc = "< Group protocol"]
     pub protocol: *mut ::std::os::raw::c_char,
-    #[doc = "< Group members"]
     pub members: *mut rd_kafka_group_member_info,
-    #[doc = "< Group member count"]
     pub member_cnt: ::std::os::raw::c_int,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_group_info() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_group_info>(),
-        80usize,
-        concat!("Size of: ", stringify!(rd_kafka_group_info))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_group_info>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_group_info))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_group_info>())).broker as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_info),
-            "::",
-            stringify!(broker)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_group_info>())).group as *const _ as usize },
-        24usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_info),
-            "::",
-            stringify!(group)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_group_info>())).err as *const _ as usize },
-        32usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_info),
-            "::",
-            stringify!(err)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_group_info>())).state as *const _ as usize },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_info),
-            "::",
-            stringify!(state)
-        )
-    );
-    assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<rd_kafka_group_info>())).protocol_type as *const _ as usize
-        },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_info),
-            "::",
-            stringify!(protocol_type)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_group_info>())).protocol as *const _ as usize },
-        56usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_info),
-            "::",
-            stringify!(protocol)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_group_info>())).members as *const _ as usize },
-        64usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_info),
-            "::",
-            stringify!(members)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_group_info>())).member_cnt as *const _ as usize },
-        72usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_info),
-            "::",
-            stringify!(member_cnt)
-        )
-    );
-}
-#[doc = " @brief List of groups"]
-#[doc = ""]
-#[doc = " @sa rd_kafka_group_list_destroy() to release list memory."]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_group_list {
-    #[doc = "< Groups"]
     pub groups: *mut rd_kafka_group_info,
-    #[doc = "< Group count"]
     pub group_cnt: ::std::os::raw::c_int,
 }
-#[test]
-fn bindgen_test_layout_rd_kafka_group_list() {
-    assert_eq!(
-        ::std::mem::size_of::<rd_kafka_group_list>(),
-        16usize,
-        concat!("Size of: ", stringify!(rd_kafka_group_list))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<rd_kafka_group_list>(),
-        8usize,
-        concat!("Alignment of ", stringify!(rd_kafka_group_list))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_group_list>())).groups as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_list),
-            "::",
-            stringify!(groups)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<rd_kafka_group_list>())).group_cnt as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(rd_kafka_group_list),
-            "::",
-            stringify!(group_cnt)
-        )
-    );
-}
 extern "C" {
-    #[doc = " @brief List and describe client groups in cluster."]
-    #[doc = ""]
-    #[doc = " \\p group is an optional group name to describe, otherwise (\\p NULL) all"]
-    #[doc = " groups are returned."]
-    #[doc = ""]
-    #[doc = " \\p timeout_ms is the (approximate) maximum time to wait for response"]
-    #[doc = " from brokers and must be a positive value."]
-    #[doc = ""]
-    #[doc = " @returns \\c RD_KAFKA_RESP_ERR__NO_ERROR on success and \\p grplistp is"]
-    #[doc = "           updated to point to a newly allocated list of groups."]
-    #[doc = "           \\c RD_KAFKA_RESP_ERR__PARTIAL if not all brokers responded"]
-    #[doc = "           in time but at least one group is returned in  \\p grplistlp."]
-    #[doc = "           \\c RD_KAFKA_RESP_ERR__TIMED_OUT if no groups were returned in the"]
-    #[doc = "           given timeframe but not all brokers have yet responded, or"]
-    #[doc = "           if the list of brokers in the cluster could not be obtained within"]
-    #[doc = "           the given timeframe."]
-    #[doc = "           \\c RD_KAFKA_RESP_ERR__TRANSPORT if no brokers were found."]
-    #[doc = "           Other error codes may also be returned from the request layer."]
-    #[doc = ""]
-    #[doc = "           The \\p grplistp remains untouched if any error code is returned,"]
-    #[doc = "           with the exception of RD_KAFKA_RESP_ERR__PARTIAL which behaves"]
-    #[doc = "           as RD_KAFKA_RESP_ERR__NO_ERROR (success) but with an incomplete"]
-    #[doc = "           group list."]
-    #[doc = ""]
-    #[doc = " @sa Use rd_kafka_group_list_destroy() to release list memory."]
     pub fn rd_kafka_list_groups(
         rk: *mut rd_kafka_t,
         group: *const ::std::os::raw::c_char,
@@ -7784,53 +3108,15 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Release list memory"]
     pub fn rd_kafka_group_list_destroy(grplist: *const rd_kafka_group_list);
 }
 extern "C" {
-    #[doc = " @brief Adds one or more brokers to the kafka handle's list of initial"]
-    #[doc = "        bootstrap brokers."]
-    #[doc = ""]
-    #[doc = " Additional brokers will be discovered automatically as soon as rdkafka"]
-    #[doc = " connects to a broker by querying the broker metadata."]
-    #[doc = ""]
-    #[doc = " If a broker name resolves to multiple addresses (and possibly"]
-    #[doc = " address families) all will be used for connection attempts in"]
-    #[doc = " round-robin fashion."]
-    #[doc = ""]
-    #[doc = " \\p brokerlist is a ,-separated list of brokers in the format:"]
-    #[doc = "   \\c \\<broker1\\>,\\<broker2\\>,.."]
-    #[doc = " Where each broker is in either the host or URL based format:"]
-    #[doc = "   \\c \\<host\\>[:\\<port\\>]"]
-    #[doc = "   \\c \\<proto\\>://\\<host\\>[:port]"]
-    #[doc = " \\c \\<proto\\> is either \\c PLAINTEXT, \\c SSL, \\c SASL, \\c SASL_PLAINTEXT"]
-    #[doc = " The two formats can be mixed but ultimately the value of the"]
-    #[doc = " `security.protocol` config property decides what brokers are allowed."]
-    #[doc = ""]
-    #[doc = " Example:"]
-    #[doc = "    brokerlist = \"broker1:10000,broker2\""]
-    #[doc = "    brokerlist = \"SSL://broker3:9000,ssl://broker2\""]
-    #[doc = ""]
-    #[doc = " @returns the number of brokers successfully added."]
-    #[doc = ""]
-    #[doc = " @remark Brokers may also be defined with the \\c metadata.broker.list or"]
-    #[doc = "         \\c bootstrap.servers configuration property (preferred method)."]
     pub fn rd_kafka_brokers_add(
         rk: *mut rd_kafka_t,
         brokerlist: *const ::std::os::raw::c_char,
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Set logger function."]
-    #[doc = ""]
-    #[doc = " The default is to print to stderr, but a syslog logger is also available,"]
-    #[doc = " see rd_kafka_log_(print|syslog) for the builtin alternatives."]
-    #[doc = " Alternatively the application may provide its own logger callback."]
-    #[doc = " Or pass 'func' as NULL to disable logging."]
-    #[doc = ""]
-    #[doc = " @deprecated Use rd_kafka_conf_set_log_cb()"]
-    #[doc = ""]
-    #[doc = " @remark \\p rk may be passed as NULL in the callback."]
     pub fn rd_kafka_set_logger(
         rk: *mut rd_kafka_t,
         func: ::std::option::Option<
@@ -7844,17 +3130,9 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Specifies the maximum logging level emitted by"]
-    #[doc = "        internal kafka logging and debugging."]
-    #[doc = ""]
-    #[doc = " @deprecated Set the \\c \"log_level\" configuration property instead."]
-    #[doc = ""]
-    #[doc = " @remark If the \\p \\\"debug\\\" configuration property is set the log level is"]
-    #[doc = "         automatically adjusted to \\c LOG_DEBUG (7)."]
     pub fn rd_kafka_set_log_level(rk: *mut rd_kafka_t, level: ::std::os::raw::c_int);
 }
 extern "C" {
-    #[doc = " @brief Builtin (default) log sink: print to stderr"]
     pub fn rd_kafka_log_print(
         rk: *const rd_kafka_t,
         level: ::std::os::raw::c_int,
@@ -7863,7 +3141,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Builtin log sink: print to syslog."]
     pub fn rd_kafka_log_syslog(
         rk: *const rd_kafka_t,
         level: ::std::os::raw::c_int,
@@ -7872,130 +3149,41 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Returns the current out queue length."]
-    #[doc = ""]
-    #[doc = " The out queue length is the sum of:"]
-    #[doc = "  - number of messages waiting to be sent to, or acknowledged by,"]
-    #[doc = "    the broker."]
-    #[doc = "  - number of delivery reports (e.g., dr_msg_cb) waiting to be served"]
-    #[doc = "    by rd_kafka_poll() or rd_kafka_flush()."]
-    #[doc = "  - number of callbacks (e.g., error_cb, stats_cb, etc) waiting to be"]
-    #[doc = "    served by rd_kafka_poll(), rd_kafka_consumer_poll() or rd_kafka_flush()."]
-    #[doc = "  - number of events waiting to be served by background_event_cb() in"]
-    #[doc = "    the background queue (see rd_kafka_conf_set_background_event_cb)."]
-    #[doc = ""]
-    #[doc = " An application should wait for the return value of this function to reach"]
-    #[doc = " zero before terminating to make sure outstanding messages,"]
-    #[doc = " requests (such as offset commits), callbacks and events are fully processed."]
-    #[doc = " See rd_kafka_flush()."]
-    #[doc = ""]
-    #[doc = " @returns number of messages and events waiting in queues."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_flush()"]
     pub fn rd_kafka_outq_len(rk: *mut rd_kafka_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Dumps rdkafka's internal state for handle \\p rk to stream \\p fp"]
-    #[doc = ""]
-    #[doc = " This is only useful for debugging rdkafka, showing state and statistics"]
-    #[doc = " for brokers, topics, partitions, etc."]
     pub fn rd_kafka_dump(fp: *mut FILE, rk: *mut rd_kafka_t);
 }
 extern "C" {
-    #[doc = " @brief Retrieve the current number of threads in use by librdkafka."]
-    #[doc = ""]
-    #[doc = " Used by regression tests."]
     pub fn rd_kafka_thread_cnt() -> ::std::os::raw::c_int;
 }
-#[doc = "< librdkafka's internal main thread"]
 pub const rd_kafka_thread_type_t_RD_KAFKA_THREAD_MAIN: rd_kafka_thread_type_t = 0;
-#[doc = "< Background thread (if enabled)"]
 pub const rd_kafka_thread_type_t_RD_KAFKA_THREAD_BACKGROUND: rd_kafka_thread_type_t = 1;
-#[doc = "< Per-broker thread"]
 pub const rd_kafka_thread_type_t_RD_KAFKA_THREAD_BROKER: rd_kafka_thread_type_t = 2;
-#[doc = " @enum rd_kafka_thread_type_t"]
-#[doc = ""]
-#[doc = " @brief librdkafka internal thread type."]
-#[doc = ""]
-#[doc = " @sa rd_kafka_interceptor_add_on_thread_start()"]
 pub type rd_kafka_thread_type_t = u32;
 extern "C" {
-    #[doc = " @brief Wait for all rd_kafka_t objects to be destroyed."]
-    #[doc = ""]
-    #[doc = " Returns 0 if all kafka objects are now destroyed, or -1 if the"]
-    #[doc = " timeout was reached."]
-    #[doc = ""]
-    #[doc = " @remark This function is deprecated."]
     pub fn rd_kafka_wait_destroyed(timeout_ms: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Run librdkafka's built-in unit-tests."]
-    #[doc = ""]
-    #[doc = " @returns the number of failures, or 0 if all tests passed."]
     pub fn rd_kafka_unittest() -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Redirect the main (rd_kafka_poll()) queue to the KafkaConsumer's"]
-    #[doc = "        queue (rd_kafka_consumer_poll())."]
-    #[doc = ""]
-    #[doc = " @warning It is not permitted to call rd_kafka_poll() after directing the"]
-    #[doc = "          main queue with rd_kafka_poll_set_consumer()."]
     pub fn rd_kafka_poll_set_consumer(rk: *mut rd_kafka_t) -> rd_kafka_resp_err_t;
 }
-#[doc = " @brief Event types"]
 pub type rd_kafka_event_type_t = ::std::os::raw::c_int;
 extern "C" {
-    #[doc = " @returns the event type for the given event."]
-    #[doc = ""]
-    #[doc = " @remark As a convenience it is okay to pass \\p rkev as NULL in which case"]
-    #[doc = "         RD_KAFKA_EVENT_NONE is returned."]
     pub fn rd_kafka_event_type(rkev: *const rd_kafka_event_t) -> rd_kafka_event_type_t;
 }
 extern "C" {
-    #[doc = " @returns the event type's name for the given event."]
-    #[doc = ""]
-    #[doc = " @remark As a convenience it is okay to pass \\p rkev as NULL in which case"]
-    #[doc = "         the name for RD_KAFKA_EVENT_NONE is returned."]
     pub fn rd_kafka_event_name(rkev: *const rd_kafka_event_t) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @brief Destroy an event."]
-    #[doc = ""]
-    #[doc = " @remark Any references to this event, such as extracted messages,"]
-    #[doc = "         will not be usable after this call."]
-    #[doc = ""]
-    #[doc = " @remark As a convenience it is okay to pass \\p rkev as NULL in which case"]
-    #[doc = "         no action is performed."]
     pub fn rd_kafka_event_destroy(rkev: *mut rd_kafka_event_t);
 }
 extern "C" {
-    #[doc = " @returns the next message from an event."]
-    #[doc = ""]
-    #[doc = " Call repeatedly until it returns NULL."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - RD_KAFKA_EVENT_FETCH  (1 message)"]
-    #[doc = "  - RD_KAFKA_EVENT_DR     (>=1 message(s))"]
-    #[doc = ""]
-    #[doc = " @remark The returned message(s) MUST NOT be"]
-    #[doc = "         freed with rd_kafka_message_destroy()."]
-    #[doc = ""]
-    #[doc = " @remark on_consume() interceptor may be called"]
-    #[doc = "         from this function prior to passing message to application."]
     pub fn rd_kafka_event_message_next(rkev: *mut rd_kafka_event_t) -> *const rd_kafka_message_t;
 }
 extern "C" {
-    #[doc = " @brief Extacts \\p size message(s) from the event into the"]
-    #[doc = "        pre-allocated array \\p rkmessages."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - RD_KAFKA_EVENT_FETCH  (1 message)"]
-    #[doc = "  - RD_KAFKA_EVENT_DR     (>=1 message(s))"]
-    #[doc = ""]
-    #[doc = " @returns the number of messages extracted."]
-    #[doc = ""]
-    #[doc = " @remark on_consume() interceptor may be called"]
-    #[doc = "         from this function prior to passing message to application."]
     pub fn rd_kafka_event_message_array(
         rkev: *mut rd_kafka_event_t,
         rkmessages: *mut *const rd_kafka_message_t,
@@ -8003,76 +3191,28 @@ extern "C" {
     ) -> size_t;
 }
 extern "C" {
-    #[doc = " @returns the number of remaining messages in the event."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - RD_KAFKA_EVENT_FETCH  (1 message)"]
-    #[doc = "  - RD_KAFKA_EVENT_DR     (>=1 message(s))"]
     pub fn rd_kafka_event_message_count(rkev: *mut rd_kafka_event_t) -> size_t;
 }
 extern "C" {
-    #[doc = " @returns the associated configuration string for the event, or NULL"]
-    #[doc = "          if the configuration property is not set or if"]
-    #[doc = "          not applicable for the given event type."]
-    #[doc = ""]
-    #[doc = " The returned memory is read-only and its lifetime is the same as the"]
-    #[doc = " event object."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - RD_KAFKA_EVENT_OAUTHBEARER_TOKEN_REFRESH: value of sasl.oauthbearer.config"]
     pub fn rd_kafka_event_config_string(
         rkev: *mut rd_kafka_event_t,
     ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @returns the error code for the event."]
-    #[doc = ""]
-    #[doc = " Use rd_kafka_event_error_is_fatal() to detect if this is a fatal error."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - all"]
     pub fn rd_kafka_event_error(rkev: *mut rd_kafka_event_t) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @returns the error string (if any)."]
-    #[doc = "          An application should check that rd_kafka_event_error() returns"]
-    #[doc = "          non-zero before calling this function."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - all"]
     pub fn rd_kafka_event_error_string(
         rkev: *mut rd_kafka_event_t,
     ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @returns 1 if the error is a fatal error, else 0."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - RD_KAFKA_EVENT_ERROR"]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_fatal_error()"]
     pub fn rd_kafka_event_error_is_fatal(rkev: *mut rd_kafka_event_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @returns the event opaque (if any) as passed to rd_kafka_commit() (et.al) or"]
-    #[doc = "          rd_kafka_AdminOptions_set_opaque(), depending on event type."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - RD_KAFKA_EVENT_OFFSET_COMMIT"]
-    #[doc = "  - RD_KAFKA_EVENT_CREATETOPICS_RESULT"]
-    #[doc = "  - RD_KAFKA_EVENT_DELETETOPICS_RESULT"]
-    #[doc = "  - RD_KAFKA_EVENT_CREATEPARTITIONS_RESULT"]
-    #[doc = "  - RD_KAFKA_EVENT_ALTERCONFIGS_RESULT"]
-    #[doc = "  - RD_KAFKA_EVENT_DESCRIBECONFIGS_RESULT"]
     pub fn rd_kafka_event_opaque(rkev: *mut rd_kafka_event_t) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    #[doc = " @brief Extract log message from the event."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - RD_KAFKA_EVENT_LOG"]
-    #[doc = ""]
-    #[doc = " @returns 0 on success or -1 if unsupported event type."]
     pub fn rd_kafka_event_log(
         rkev: *mut rd_kafka_event_t,
         fac: *mut *const ::std::os::raw::c_char,
@@ -8081,159 +3221,60 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @brief Extract stats from the event."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - RD_KAFKA_EVENT_STATS"]
-    #[doc = ""]
-    #[doc = " @returns stats json string."]
-    #[doc = ""]
-    #[doc = " @remark the returned string will be freed automatically along with the event object"]
-    #[doc = ""]
     pub fn rd_kafka_event_stats(rkev: *mut rd_kafka_event_t) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @returns the topic partition list from the event."]
-    #[doc = ""]
-    #[doc = " @remark The list MUST NOT be freed with rd_kafka_topic_partition_list_destroy()"]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "  - RD_KAFKA_EVENT_REBALANCE"]
-    #[doc = "  - RD_KAFKA_EVENT_OFFSET_COMMIT"]
     pub fn rd_kafka_event_topic_partition_list(
         rkev: *mut rd_kafka_event_t,
     ) -> *mut rd_kafka_topic_partition_list_t;
 }
 extern "C" {
-    #[doc = " @returns a newly allocated topic_partition container, if applicable for the event type,"]
-    #[doc = "          else NULL."]
-    #[doc = ""]
-    #[doc = " @remark The returned pointer MUST be freed with rd_kafka_topic_partition_destroy()."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "   RD_KAFKA_EVENT_ERROR  (for partition level errors)"]
     pub fn rd_kafka_event_topic_partition(
         rkev: *mut rd_kafka_event_t,
     ) -> *mut rd_kafka_topic_partition_t;
 }
-#[doc = " CreateTopics result type"]
 pub type rd_kafka_CreateTopics_result_t = rd_kafka_event_t;
-#[doc = " DeleteTopics result type"]
 pub type rd_kafka_DeleteTopics_result_t = rd_kafka_event_t;
-#[doc = " CreatePartitions result type"]
 pub type rd_kafka_CreatePartitions_result_t = rd_kafka_event_t;
-#[doc = " AlterConfigs result type"]
 pub type rd_kafka_AlterConfigs_result_t = rd_kafka_event_t;
-#[doc = " CreateTopics result type"]
 pub type rd_kafka_DescribeConfigs_result_t = rd_kafka_event_t;
 extern "C" {
-    #[doc = " @brief Get CreateTopics result."]
-    #[doc = ""]
-    #[doc = " @returns the result of a CreateTopics request, or NULL if event is of"]
-    #[doc = "          different type."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "   RD_KAFKA_EVENT_CREATETOPICS_RESULT"]
     pub fn rd_kafka_event_CreateTopics_result(
         rkev: *mut rd_kafka_event_t,
     ) -> *const rd_kafka_CreateTopics_result_t;
 }
 extern "C" {
-    #[doc = " @brief Get DeleteTopics result."]
-    #[doc = ""]
-    #[doc = " @returns the result of a DeleteTopics request, or NULL if event is of"]
-    #[doc = "          different type."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "   RD_KAFKA_EVENT_DELETETOPICS_RESULT"]
     pub fn rd_kafka_event_DeleteTopics_result(
         rkev: *mut rd_kafka_event_t,
     ) -> *const rd_kafka_DeleteTopics_result_t;
 }
 extern "C" {
-    #[doc = " @brief Get CreatePartitions result."]
-    #[doc = ""]
-    #[doc = " @returns the result of a CreatePartitions request, or NULL if event is of"]
-    #[doc = "          different type."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "   RD_KAFKA_EVENT_CREATEPARTITIONS_RESULT"]
     pub fn rd_kafka_event_CreatePartitions_result(
         rkev: *mut rd_kafka_event_t,
     ) -> *const rd_kafka_CreatePartitions_result_t;
 }
 extern "C" {
-    #[doc = " @brief Get AlterConfigs result."]
-    #[doc = ""]
-    #[doc = " @returns the result of a AlterConfigs request, or NULL if event is of"]
-    #[doc = "          different type."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "   RD_KAFKA_EVENT_ALTERCONFIGS_RESULT"]
     pub fn rd_kafka_event_AlterConfigs_result(
         rkev: *mut rd_kafka_event_t,
     ) -> *const rd_kafka_AlterConfigs_result_t;
 }
 extern "C" {
-    #[doc = " @brief Get DescribeConfigs result."]
-    #[doc = ""]
-    #[doc = " @returns the result of a DescribeConfigs request, or NULL if event is of"]
-    #[doc = "          different type."]
-    #[doc = ""]
-    #[doc = " Event types:"]
-    #[doc = "   RD_KAFKA_EVENT_DESCRIBECONFIGS_RESULT"]
     pub fn rd_kafka_event_DescribeConfigs_result(
         rkev: *mut rd_kafka_event_t,
     ) -> *const rd_kafka_DescribeConfigs_result_t;
 }
 extern "C" {
-    #[doc = " @brief Poll a queue for an event for max \\p timeout_ms."]
-    #[doc = ""]
-    #[doc = " @returns an event, or NULL."]
-    #[doc = ""]
-    #[doc = " @remark Use rd_kafka_event_destroy() to free the event."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_conf_set_background_event_cb()"]
     pub fn rd_kafka_queue_poll(
         rkqu: *mut rd_kafka_queue_t,
         timeout_ms: ::std::os::raw::c_int,
     ) -> *mut rd_kafka_event_t;
 }
 extern "C" {
-    #[doc = " @brief Poll a queue for events served through callbacks for max \\p timeout_ms."]
-    #[doc = ""]
-    #[doc = " @returns the number of events served."]
-    #[doc = ""]
-    #[doc = " @remark This API must only be used for queues with callbacks registered"]
-    #[doc = "         for all expected event types. E.g., not a message queue."]
-    #[doc = ""]
-    #[doc = " @remark Also see rd_kafka_conf_set_background_event_cb() for triggering"]
-    #[doc = "         event callbacks from a librdkafka-managed background thread."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_conf_set_background_event_cb()"]
     pub fn rd_kafka_queue_poll_callback(
         rkqu: *mut rd_kafka_queue_t,
         timeout_ms: ::std::os::raw::c_int,
     ) -> ::std::os::raw::c_int;
 }
-#[doc = " @brief Plugin's configuration initializer method called each time the"]
-#[doc = "        library is referenced from configuration (even if previously loaded by"]
-#[doc = "        another client instance)."]
-#[doc = ""]
-#[doc = " @remark This method MUST be implemented by plugins and have the symbol name"]
-#[doc = "         \\c conf_init"]
-#[doc = ""]
-#[doc = " @param conf Configuration set up to this point."]
-#[doc = " @param plug_opaquep Plugin can set this pointer to a per-configuration"]
-#[doc = "                     opaque pointer."]
-#[doc = " @param errstr String buffer of size \\p errstr_size where plugin must write"]
-#[doc = "               a human readable error string in the case the initializer"]
-#[doc = "               fails (returns non-zero)."]
-#[doc = ""]
-#[doc = " @remark A plugin may add an on_conf_destroy() interceptor to clean up"]
-#[doc = "         plugin-specific resources created in the plugin's conf_init() method."]
-#[doc = ""]
-#[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or an error code on error."]
 pub type rd_kafka_plugin_f_conf_init_t = ::std::option::Option<
     unsafe extern "C" fn(
         conf: *mut rd_kafka_conf_t,
@@ -8242,23 +3283,6 @@ pub type rd_kafka_plugin_f_conf_init_t = ::std::option::Option<
         errstr_size: size_t,
     ) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_conf_set() is called from rd_kafka_*_conf_set() in the order"]
-#[doc = "        the interceptors were added."]
-#[doc = ""]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
-#[doc = " @param name The configuration property to set."]
-#[doc = " @param val The configuration value to set, or NULL for reverting to default"]
-#[doc = "            in which case the previous value should be freed."]
-#[doc = " @param errstr A human readable error string in case the interceptor fails."]
-#[doc = " @param errstr_size Maximum space (including \\0) in \\p errstr."]
-#[doc = ""]
-#[doc = " @returns RD_KAFKA_CONF_RES_OK if the property was known and successfully"]
-#[doc = "          handled by the interceptor, RD_KAFKA_CONF_RES_INVALID if the"]
-#[doc = "          property was handled by the interceptor but the value was invalid,"]
-#[doc = "          or RD_KAFKA_CONF_RES_UNKNOWN if the interceptor did not handle"]
-#[doc = "          this property, in which case the property is passed on on the"]
-#[doc = "          interceptor in the chain, finally ending up at the built-in"]
-#[doc = "          configuration handler."]
 pub type rd_kafka_interceptor_f_on_conf_set_t = ::std::option::Option<
     unsafe extern "C" fn(
         conf: *mut rd_kafka_conf_t,
@@ -8269,20 +3293,6 @@ pub type rd_kafka_interceptor_f_on_conf_set_t = ::std::option::Option<
         ic_opaque: *mut ::std::os::raw::c_void,
     ) -> rd_kafka_conf_res_t,
 >;
-#[doc = " @brief on_conf_dup() is called from rd_kafka_conf_dup() in the"]
-#[doc = "        order the interceptors were added and is used to let"]
-#[doc = "        an interceptor re-register its conf interecptors with a new"]
-#[doc = "        opaque value."]
-#[doc = "        The on_conf_dup() method is called prior to the configuration from"]
-#[doc = "        \\p old_conf being copied to \\p new_conf."]
-#[doc = ""]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
-#[doc = ""]
-#[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or an error code"]
-#[doc = "          on failure (which is logged but otherwise ignored)."]
-#[doc = ""]
-#[doc = " @remark No on_conf_* interceptors are copied to the new configuration"]
-#[doc = "         object on rd_kafka_conf_dup()."]
 pub type rd_kafka_interceptor_f_on_conf_dup_t = ::std::option::Option<
     unsafe extern "C" fn(
         new_conf: *mut rd_kafka_conf_t,
@@ -8292,28 +3302,9 @@ pub type rd_kafka_interceptor_f_on_conf_dup_t = ::std::option::Option<
         ic_opaque: *mut ::std::os::raw::c_void,
     ) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_conf_destroy() is called from rd_kafka_*_conf_destroy() in the"]
-#[doc = "        order the interceptors were added."]
-#[doc = ""]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
 pub type rd_kafka_interceptor_f_on_conf_destroy_t = ::std::option::Option<
     unsafe extern "C" fn(ic_opaque: *mut ::std::os::raw::c_void) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_new() is called from rd_kafka_new() prior toreturning"]
-#[doc = "        the newly created client instance to the application."]
-#[doc = ""]
-#[doc = " @param rk The client instance."]
-#[doc = " @param conf The client instance's final configuration."]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
-#[doc = " @param errstr A human readable error string in case the interceptor fails."]
-#[doc = " @param errstr_size Maximum space (including \\0) in \\p errstr."]
-#[doc = ""]
-#[doc = " @returns an error code on failure, the error is logged but otherwise ignored."]
-#[doc = ""]
-#[doc = " @warning The \\p rk client instance will not be fully set up when this"]
-#[doc = "          interceptor is called and the interceptor MUST NOT call any"]
-#[doc = "          other rk-specific APIs than rd_kafka_interceptor_add..()."]
-#[doc = ""]
 pub type rd_kafka_interceptor_f_on_new_t = ::std::option::Option<
     unsafe extern "C" fn(
         rk: *mut rd_kafka_t,
@@ -8323,35 +3314,12 @@ pub type rd_kafka_interceptor_f_on_new_t = ::std::option::Option<
         errstr_size: size_t,
     ) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_destroy() is called from rd_kafka_destroy() or (rd_kafka_new()"]
-#[doc = "        if rd_kafka_new() fails during initialization)."]
-#[doc = ""]
-#[doc = " @param rk The client instance."]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
 pub type rd_kafka_interceptor_f_on_destroy_t = ::std::option::Option<
     unsafe extern "C" fn(
         rk: *mut rd_kafka_t,
         ic_opaque: *mut ::std::os::raw::c_void,
     ) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_send() is called from rd_kafka_produce*() (et.al) prior to"]
-#[doc = "        the partitioner being called."]
-#[doc = ""]
-#[doc = " @param rk The client instance."]
-#[doc = " @param rkmessage The message being produced. Immutable."]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
-#[doc = ""]
-#[doc = " @remark This interceptor is only used by producer instances."]
-#[doc = ""]
-#[doc = " @remark The \\p rkmessage object is NOT mutable and MUST NOT be modified"]
-#[doc = "         by the interceptor."]
-#[doc = ""]
-#[doc = " @remark If the partitioner fails or an unknown partition was specified,"]
-#[doc = "         the on_acknowledgement() interceptor chain will be called from"]
-#[doc = "         within the rd_kafka_produce*() call to maintain send-acknowledgement"]
-#[doc = "         symmetry."]
-#[doc = ""]
-#[doc = " @returns an error code on failure, the error is logged but otherwise ignored."]
 pub type rd_kafka_interceptor_f_on_send_t = ::std::option::Option<
     unsafe extern "C" fn(
         rk: *mut rd_kafka_t,
@@ -8359,26 +3327,6 @@ pub type rd_kafka_interceptor_f_on_send_t = ::std::option::Option<
         ic_opaque: *mut ::std::os::raw::c_void,
     ) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_acknowledgement() is called to inform interceptors that a message"]
-#[doc = "        was succesfully delivered or permanently failed delivery."]
-#[doc = "        The interceptor chain is called from internal librdkafka background"]
-#[doc = "        threads, or rd_kafka_produce*() if the partitioner failed."]
-#[doc = ""]
-#[doc = " @param rk The client instance."]
-#[doc = " @param rkmessage The message being produced. Immutable."]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
-#[doc = ""]
-#[doc = " @remark This interceptor is only used by producer instances."]
-#[doc = ""]
-#[doc = " @remark The \\p rkmessage object is NOT mutable and MUST NOT be modified"]
-#[doc = "         by the interceptor."]
-#[doc = ""]
-#[doc = " @warning The on_acknowledgement() method may be called from internal"]
-#[doc = "         librdkafka threads. An on_acknowledgement() interceptor MUST NOT"]
-#[doc = "         call any librdkafka API's associated with the \\p rk, or perform"]
-#[doc = "         any blocking or prolonged work."]
-#[doc = ""]
-#[doc = " @returns an error code on failure, the error is logged but otherwise ignored."]
 pub type rd_kafka_interceptor_f_on_acknowledgement_t = ::std::option::Option<
     unsafe extern "C" fn(
         rk: *mut rd_kafka_t,
@@ -8386,20 +3334,6 @@ pub type rd_kafka_interceptor_f_on_acknowledgement_t = ::std::option::Option<
         ic_opaque: *mut ::std::os::raw::c_void,
     ) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_consume() is called just prior to passing the message to the"]
-#[doc = "        application in rd_kafka_consumer_poll(), rd_kafka_consume*(),"]
-#[doc = "        the event interface, etc."]
-#[doc = ""]
-#[doc = " @param rk The client instance."]
-#[doc = " @param rkmessage The message being consumed. Immutable."]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
-#[doc = ""]
-#[doc = " @remark This interceptor is only used by consumer instances."]
-#[doc = ""]
-#[doc = " @remark The \\p rkmessage object is NOT mutable and MUST NOT be modified"]
-#[doc = "         by the interceptor."]
-#[doc = ""]
-#[doc = " @returns an error code on failure, the error is logged but otherwise ignored."]
 pub type rd_kafka_interceptor_f_on_consume_t = ::std::option::Option<
     unsafe extern "C" fn(
         rk: *mut rd_kafka_t,
@@ -8407,24 +3341,6 @@ pub type rd_kafka_interceptor_f_on_consume_t = ::std::option::Option<
         ic_opaque: *mut ::std::os::raw::c_void,
     ) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_commit() is called on completed or failed offset commit."]
-#[doc = "        It is called from internal librdkafka threads."]
-#[doc = ""]
-#[doc = " @param rk The client instance."]
-#[doc = " @param offsets List of topic+partition+offset+error that were committed."]
-#[doc = "                The error message of each partition should be checked for"]
-#[doc = "                error."]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
-#[doc = ""]
-#[doc = " @remark This interceptor is only used by consumer instances."]
-#[doc = ""]
-#[doc = " @warning The on_commit() interceptor is called from internal"]
-#[doc = "          librdkafka threads. An on_commit() interceptor MUST NOT"]
-#[doc = "          call any librdkafka API's associated with the \\p rk, or perform"]
-#[doc = "          any blocking or prolonged work."]
-#[doc = ""]
-#[doc = ""]
-#[doc = " @returns an error code on failure, the error is logged but otherwise ignored."]
 pub type rd_kafka_interceptor_f_on_commit_t = ::std::option::Option<
     unsafe extern "C" fn(
         rk: *mut rd_kafka_t,
@@ -8433,25 +3349,6 @@ pub type rd_kafka_interceptor_f_on_commit_t = ::std::option::Option<
         ic_opaque: *mut ::std::os::raw::c_void,
     ) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_request_sent() is called when a request has been fully written"]
-#[doc = "        to a broker TCP connections socket."]
-#[doc = ""]
-#[doc = " @param rk The client instance."]
-#[doc = " @param sockfd Socket file descriptor."]
-#[doc = " @param brokername Broker request is being sent to."]
-#[doc = " @param brokerid Broker request is being sent to."]
-#[doc = " @param ApiKey Kafka protocol request type."]
-#[doc = " @param ApiVersion Kafka protocol request type version."]
-#[doc = " @param Corrid Kafka protocol request correlation id."]
-#[doc = " @param size Size of request."]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
-#[doc = ""]
-#[doc = " @warning The on_request_sent() interceptor is called from internal"]
-#[doc = "          librdkafka broker threads. An on_request_sent() interceptor MUST NOT"]
-#[doc = "          call any librdkafka API's associated with the \\p rk, or perform"]
-#[doc = "          any blocking or prolonged work."]
-#[doc = ""]
-#[doc = " @returns an error code on failure, the error is logged but otherwise ignored."]
 pub type rd_kafka_interceptor_f_on_request_sent_t = ::std::option::Option<
     unsafe extern "C" fn(
         rk: *mut rd_kafka_t,
@@ -8465,20 +3362,6 @@ pub type rd_kafka_interceptor_f_on_request_sent_t = ::std::option::Option<
         ic_opaque: *mut ::std::os::raw::c_void,
     ) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_thread_start() is called from a newly created librdkafka-managed"]
-#[doc = "        thread."]
-#[doc = ""]
-#[doc = " @param rk The client instance."]
-#[doc = " @param thread_type Thread type."]
-#[doc = " @param thread_name Human-readable thread name, may not be unique."]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
-#[doc = ""]
-#[doc = " @warning The on_thread_start() interceptor is called from internal"]
-#[doc = "          librdkafka threads. An on_thread_start() interceptor MUST NOT"]
-#[doc = "          call any librdkafka API's associated with the \\p rk, or perform"]
-#[doc = "          any blocking or prolonged work."]
-#[doc = ""]
-#[doc = " @returns an error code on failure, the error is logged but otherwise ignored."]
 pub type rd_kafka_interceptor_f_on_thread_start_t = ::std::option::Option<
     unsafe extern "C" fn(
         rk: *mut rd_kafka_t,
@@ -8487,23 +3370,6 @@ pub type rd_kafka_interceptor_f_on_thread_start_t = ::std::option::Option<
         ic_opaque: *mut ::std::os::raw::c_void,
     ) -> rd_kafka_resp_err_t,
 >;
-#[doc = " @brief on_thread_exit() is called just prior to a librdkafka-managed"]
-#[doc = "        thread exiting from the exiting thread itself."]
-#[doc = ""]
-#[doc = " @param rk The client instance."]
-#[doc = " @param thread_type Thread type.n"]
-#[doc = " @param thread_name Human-readable thread name, may not be unique."]
-#[doc = " @param ic_opaque The interceptor's opaque pointer specified in ..add..()."]
-#[doc = ""]
-#[doc = " @remark Depending on the thread type, librdkafka may execute additional"]
-#[doc = "         code on the thread after on_thread_exit() returns."]
-#[doc = ""]
-#[doc = " @warning The on_thread_exit() interceptor is called from internal"]
-#[doc = "          librdkafka threads. An on_thread_exit() interceptor MUST NOT"]
-#[doc = "          call any librdkafka API's associated with the \\p rk, or perform"]
-#[doc = "          any blocking or prolonged work."]
-#[doc = ""]
-#[doc = " @returns an error code on failure, the error is logged but otherwise ignored."]
 pub type rd_kafka_interceptor_f_on_thread_exit_t = ::std::option::Option<
     unsafe extern "C" fn(
         rk: *mut rd_kafka_t,
@@ -8513,16 +3379,6 @@ pub type rd_kafka_interceptor_f_on_thread_exit_t = ::std::option::Option<
     ) -> rd_kafka_resp_err_t,
 >;
 extern "C" {
-    #[doc = " @brief Append an on_conf_set() interceptor."]
-    #[doc = ""]
-    #[doc = " @param conf Configuration object."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_conf_set Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_conf_interceptor_add_on_conf_set(
         conf: *mut rd_kafka_conf_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8531,16 +3387,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_conf_dup() interceptor."]
-    #[doc = ""]
-    #[doc = " @param conf Configuration object."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_conf_dup Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_conf_interceptor_add_on_conf_dup(
         conf: *mut rd_kafka_conf_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8549,17 +3395,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_conf_destroy() interceptor."]
-    #[doc = ""]
-    #[doc = " @param conf Configuration object."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_conf_destroy Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR"]
-    #[doc = ""]
-    #[doc = " @remark Multiple on_conf_destroy() interceptors are allowed to be added"]
-    #[doc = "         to the same configuration object."]
     pub fn rd_kafka_conf_interceptor_add_on_conf_destroy(
         conf: *mut rd_kafka_conf_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8568,25 +3403,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_new() interceptor."]
-    #[doc = ""]
-    #[doc = " @param conf Configuration object."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_new Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @remark Since the on_new() interceptor is added to the configuration object"]
-    #[doc = "         it may be copied by rd_kafka_conf_dup()."]
-    #[doc = "         An interceptor implementation must thus be able to handle"]
-    #[doc = "         the same interceptor,ic_opaque tuple to be used by multiple"]
-    #[doc = "         client instances."]
-    #[doc = ""]
-    #[doc = " @remark An interceptor plugin should check the return value to make sure it"]
-    #[doc = "         has not already been added."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_conf_interceptor_add_on_new(
         conf: *mut rd_kafka_conf_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8595,16 +3411,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_destroy() interceptor."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_destroy Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_interceptor_add_on_destroy(
         rk: *mut rd_kafka_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8613,16 +3419,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_send() interceptor."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_send Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_interceptor_add_on_send(
         rk: *mut rd_kafka_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8631,16 +3427,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_acknowledgement() interceptor."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_acknowledgement Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_interceptor_add_on_acknowledgement(
         rk: *mut rd_kafka_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8649,16 +3435,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_consume() interceptor."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_consume Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_interceptor_add_on_consume(
         rk: *mut rd_kafka_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8667,16 +3443,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_commit() interceptor."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_commit() Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_interceptor_add_on_commit(
         rk: *mut rd_kafka_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8685,16 +3451,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_request_sent() interceptor."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_request_sent() Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_interceptor_add_on_request_sent(
         rk: *mut rd_kafka_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8703,16 +3459,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_thread_start() interceptor."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_thread_start() Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_interceptor_add_on_thread_start(
         rk: *mut rd_kafka_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8721,16 +3467,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Append an on_thread_exit() interceptor."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param ic_name Interceptor name, used in logging."]
-    #[doc = " @param on_thread_exit() Function pointer."]
-    #[doc = " @param ic_opaque Opaque value that will be passed to the function."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or RD_KAFKA_RESP_ERR__CONFLICT"]
-    #[doc = "          if an existing intercepted with the same \\p ic_name and function"]
-    #[doc = "          has already been added to \\p conf."]
     pub fn rd_kafka_interceptor_add_on_thread_exit(
         rk: *mut rd_kafka_t,
         ic_name: *const ::std::os::raw::c_char,
@@ -8739,106 +3475,44 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @returns the error code for the given topic result."]
     pub fn rd_kafka_topic_result_error(
         topicres: *const rd_kafka_topic_result_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @returns the human readable error string for the given topic result,"]
-    #[doc = "          or NULL if there was no error."]
-    #[doc = ""]
-    #[doc = " @remark lifetime of the returned string is the same as the \\p topicres."]
     pub fn rd_kafka_topic_result_error_string(
         topicres: *const rd_kafka_topic_result_t,
     ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @returns the name of the topic for the given topic result."]
-    #[doc = " @remark lifetime of the returned string is the same as the \\p topicres."]
-    #[doc = ""]
     pub fn rd_kafka_topic_result_name(
         topicres: *const rd_kafka_topic_result_t,
     ) -> *const ::std::os::raw::c_char;
 }
-#[doc = "< Default value"]
 pub const rd_kafka_admin_op_t_RD_KAFKA_ADMIN_OP_ANY: rd_kafka_admin_op_t = 0;
-#[doc = "< CreateTopics"]
 pub const rd_kafka_admin_op_t_RD_KAFKA_ADMIN_OP_CREATETOPICS: rd_kafka_admin_op_t = 1;
-#[doc = "< DeleteTopics"]
 pub const rd_kafka_admin_op_t_RD_KAFKA_ADMIN_OP_DELETETOPICS: rd_kafka_admin_op_t = 2;
-#[doc = "< CreatePartitions"]
 pub const rd_kafka_admin_op_t_RD_KAFKA_ADMIN_OP_CREATEPARTITIONS: rd_kafka_admin_op_t = 3;
-#[doc = "< AlterConfigs"]
 pub const rd_kafka_admin_op_t_RD_KAFKA_ADMIN_OP_ALTERCONFIGS: rd_kafka_admin_op_t = 4;
-#[doc = "< DescribeConfigs"]
 pub const rd_kafka_admin_op_t_RD_KAFKA_ADMIN_OP_DESCRIBECONFIGS: rd_kafka_admin_op_t = 5;
-#[doc = "< Number of ops defined"]
 pub const rd_kafka_admin_op_t_RD_KAFKA_ADMIN_OP__CNT: rd_kafka_admin_op_t = 6;
-#[doc = " @enum rd_kafka_admin_op_t"]
-#[doc = ""]
-#[doc = " @brief Admin operation enum name for use with rd_kafka_AdminOptions_new()"]
-#[doc = ""]
-#[doc = " @sa rd_kafka_AdminOptions_new()"]
 pub type rd_kafka_admin_op_t = u32;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rd_kafka_AdminOptions_s {
     _unused: [u8; 0],
 }
-#[doc = " @brief AdminOptions provides a generic mechanism for setting optional"]
-#[doc = "        parameters for the Admin API requests."]
-#[doc = ""]
-#[doc = " @remark Since AdminOptions is decoupled from the actual request type"]
-#[doc = "         there is no enforcement to prevent setting unrelated properties,"]
-#[doc = "         e.g. setting validate_only on a DescribeConfigs request is allowed"]
-#[doc = "         but is silently ignored by DescribeConfigs."]
-#[doc = "         Future versions may introduce such enforcement."]
 pub type rd_kafka_AdminOptions_t = rd_kafka_AdminOptions_s;
 extern "C" {
-    #[doc = " @brief Create a new AdminOptions object."]
-    #[doc = ""]
-    #[doc = "        The options object is not modified by the Admin API request APIs,"]
-    #[doc = "        (e.g. CreateTopics) and may be reused for multiple calls."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param for_api Specifies what Admin API this AdminOptions object will be used"]
-    #[doc = "                for, which will enforce what AdminOptions_set_..() calls may"]
-    #[doc = "                be used based on the API, causing unsupported set..() calls"]
-    #[doc = "                to fail."]
-    #[doc = "                Specifying RD_KAFKA_ADMIN_OP_ANY disables the enforcement"]
-    #[doc = "                allowing any option to be set, even if the option"]
-    #[doc = "                is not used in a future call to an Admin API method."]
-    #[doc = ""]
-    #[doc = " @returns a new AdminOptions object (which must be freed with"]
-    #[doc = "          rd_kafka_AdminOptions_destroy()), or NULL if \\p for_api was set to"]
-    #[doc = "          an unknown API op type."]
     pub fn rd_kafka_AdminOptions_new(
         rk: *mut rd_kafka_t,
         for_api: rd_kafka_admin_op_t,
     ) -> *mut rd_kafka_AdminOptions_t;
 }
 extern "C" {
-    #[doc = " @brief Destroy a AdminOptions object."]
     pub fn rd_kafka_AdminOptions_destroy(options: *mut rd_kafka_AdminOptions_t);
 }
 extern "C" {
-    #[doc = " @brief Sets the overall request timeout, including broker lookup,"]
-    #[doc = "        request transmission, operation time on broker, and response."]
-    #[doc = ""]
-    #[doc = " @param options Admin options."]
-    #[doc = " @param timeout_ms Timeout in milliseconds, use -1 for indefinite timeout."]
-    #[doc = "                   Defaults to `socket.timeout.ms`."]
-    #[doc = " @param errstr A human readable error string (nul-terminated) is written to"]
-    #[doc = "               this location that must be of at least \\p errstr_size bytes."]
-    #[doc = "               The \\p errstr is only written in case of error."]
-    #[doc = " @param errstr_size Writable size in \\p errstr."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success, or"]
-    #[doc = "          RD_KAFKA_RESP_ERR__INVALID_ARG if timeout was out of range in which"]
-    #[doc = "          case an error string will be written \\p errstr."]
-    #[doc = ""]
-    #[doc = " @remark This option is valid for all Admin API requests."]
     pub fn rd_kafka_AdminOptions_set_request_timeout(
         options: *mut rd_kafka_AdminOptions_t,
         timeout_ms: ::std::os::raw::c_int,
@@ -8847,30 +3521,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Sets the broker's operation timeout, such as the timeout for"]
-    #[doc = "        CreateTopics to complete the creation of topics on the controller"]
-    #[doc = "        before returning a result to the application."]
-    #[doc = ""]
-    #[doc = " CreateTopics: values <= 0 will return immediately after triggering topic"]
-    #[doc = " creation, while > 0 will wait this long for topic creation to propagate"]
-    #[doc = " in cluster. Default: 0."]
-    #[doc = ""]
-    #[doc = " DeleteTopics: same semantics as CreateTopics."]
-    #[doc = " CreatePartitions: same semantics as CreateTopics."]
-    #[doc = ""]
-    #[doc = " @param options Admin options."]
-    #[doc = " @param timeout_ms Timeout in milliseconds."]
-    #[doc = " @param errstr A human readable error string (nul-terminated) is written to"]
-    #[doc = "               this location that must be of at least \\p errstr_size bytes."]
-    #[doc = "               The \\p errstr is only written in case of error."]
-    #[doc = " @param errstr_size Writable size in \\p errstr."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success, or"]
-    #[doc = "          RD_KAFKA_RESP_ERR__INVALID_ARG if timeout was out of range in which"]
-    #[doc = "          case an error string will be written \\p errstr."]
-    #[doc = ""]
-    #[doc = " @remark This option is valid for CreateTopics, DeleteTopics and"]
-    #[doc = "         CreatePartitions."]
     pub fn rd_kafka_AdminOptions_set_operation_timeout(
         options: *mut rd_kafka_AdminOptions_t,
         timeout_ms: ::std::os::raw::c_int,
@@ -8879,22 +3529,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Tell broker to only validate the request, without performing"]
-    #[doc = "        the requested operation (create topics, etc)."]
-    #[doc = ""]
-    #[doc = " @param options Admin options."]
-    #[doc = " @param true_or_false Defaults to false."]
-    #[doc = " @param errstr A human readable error string (nul-terminated) is written to"]
-    #[doc = "               this location that must be of at least \\p errstr_size bytes."]
-    #[doc = "               The \\p errstr is only written in case of error."]
-    #[doc = " @param errstr_size Writable size in \\p errstr."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or an"]
-    #[doc = "          error code on failure in which case an error string will"]
-    #[doc = "          be written \\p errstr."]
-    #[doc = ""]
-    #[doc = " @remark This option is valid for CreateTopics,"]
-    #[doc = "         CreatePartitions, AlterConfigs."]
     pub fn rd_kafka_AdminOptions_set_validate_only(
         options: *mut rd_kafka_AdminOptions_t,
         true_or_false: ::std::os::raw::c_int,
@@ -8903,29 +3537,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Override what broker the Admin request will be sent to."]
-    #[doc = ""]
-    #[doc = " By default, Admin requests are sent to the controller broker, with"]
-    #[doc = " the following exceptions:"]
-    #[doc = "   - AlterConfigs with a BROKER resource are sent to the broker id set"]
-    #[doc = "     as the resource name."]
-    #[doc = "   - DescribeConfigs with a BROKER resource are sent to the broker id set"]
-    #[doc = "     as the resource name."]
-    #[doc = ""]
-    #[doc = " @param options Admin Options."]
-    #[doc = " @param broker_id The broker to send the request to."]
-    #[doc = " @param errstr A human readable error string (nul-terminated) is written to"]
-    #[doc = "               this location that must be of at least \\p errstr_size bytes."]
-    #[doc = "               The \\p errstr is only written in case of error."]
-    #[doc = " @param errstr_size Writable size in \\p errstr."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success or an"]
-    #[doc = "          error code on failure in which case an error string will"]
-    #[doc = "          be written \\p errstr."]
-    #[doc = ""]
-    #[doc = " @remark This API should typically not be used, but serves as a workaround"]
-    #[doc = "         if new resource types are to the broker that the client"]
-    #[doc = "         does not know where to send."]
     pub fn rd_kafka_AdminOptions_set_broker(
         options: *mut rd_kafka_AdminOptions_t,
         broker_id: i32,
@@ -8934,8 +3545,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Set application opaque value that can be extracted from the"]
-    #[doc = "        result event using rd_kafka_event_opaque()"]
     pub fn rd_kafka_AdminOptions_set_opaque(
         options: *mut rd_kafka_AdminOptions_t,
         ev_opaque: *mut ::std::os::raw::c_void,
@@ -8946,28 +3555,8 @@ extern "C" {
 pub struct rd_kafka_NewTopic_s {
     _unused: [u8; 0],
 }
-#[doc = " @section CreateTopics - create topics in cluster"]
-#[doc = ""]
-#[doc = ""]
 pub type rd_kafka_NewTopic_t = rd_kafka_NewTopic_s;
 extern "C" {
-    #[doc = " @brief Create a new NewTopic object. This object is later passed to"]
-    #[doc = "        rd_kafka_CreateTopics()."]
-    #[doc = ""]
-    #[doc = " @param topic Topic name to create."]
-    #[doc = " @param num_partitions Number of partitions in topic."]
-    #[doc = " @param replication_factor Default replication factor for the topic's"]
-    #[doc = "                           partitions, or -1 if set_replica_assignment()"]
-    #[doc = "                           will be used."]
-    #[doc = " @param errstr A human readable error string (nul-terminated) is written to"]
-    #[doc = "               this location that must be of at least \\p errstr_size bytes."]
-    #[doc = "               The \\p errstr is only written in case of error."]
-    #[doc = " @param errstr_size Writable size in \\p errstr."]
-    #[doc = ""]
-    #[doc = ""]
-    #[doc = " @returns a new allocated NewTopic object, or NULL if the input parameters"]
-    #[doc = "          are invalid."]
-    #[doc = "          Use rd_kafka_NewTopic_destroy() to free object when done."]
     pub fn rd_kafka_NewTopic_new(
         topic: *const ::std::os::raw::c_char,
         num_partitions: ::std::os::raw::c_int,
@@ -8977,39 +3566,15 @@ extern "C" {
     ) -> *mut rd_kafka_NewTopic_t;
 }
 extern "C" {
-    #[doc = " @brief Destroy and free a NewTopic object previously created with"]
-    #[doc = "        rd_kafka_NewTopic_new()"]
     pub fn rd_kafka_NewTopic_destroy(new_topic: *mut rd_kafka_NewTopic_t);
 }
 extern "C" {
-    #[doc = " @brief Helper function to destroy all NewTopic objects in the \\p new_topics"]
-    #[doc = "        array (of \\p new_topic_cnt elements)."]
-    #[doc = "        The array itself is not freed."]
     pub fn rd_kafka_NewTopic_destroy_array(
         new_topics: *mut *mut rd_kafka_NewTopic_t,
         new_topic_cnt: size_t,
     );
 }
 extern "C" {
-    #[doc = " @brief Set the replica (broker) assignment for \\p partition to the"]
-    #[doc = "        replica set in \\p broker_ids (of \\p broker_id_cnt elements)."]
-    #[doc = ""]
-    #[doc = " @remark When this method is used, rd_kafka_NewTopic_new() must have"]
-    #[doc = "         been called with a \\c replication_factor of -1."]
-    #[doc = ""]
-    #[doc = " @remark An application must either set the replica assignment for"]
-    #[doc = "         all new partitions, or none."]
-    #[doc = ""]
-    #[doc = " @remark If called, this function must be called consecutively for each"]
-    #[doc = "         partition, starting at 0."]
-    #[doc = ""]
-    #[doc = " @remark Use rd_kafka_metadata() to retrieve the list of brokers"]
-    #[doc = "         in the cluster."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success, or an error code"]
-    #[doc = "          if the arguments were invalid."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_AdminOptions_set_validate_only()"]
     pub fn rd_kafka_NewTopic_set_replica_assignment(
         new_topic: *mut rd_kafka_NewTopic_t,
         partition: i32,
@@ -9020,16 +3585,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Set (broker-side) topic configuration name/value pair."]
-    #[doc = ""]
-    #[doc = " @remark The name and value are not validated by the client, the validation"]
-    #[doc = "         takes place on the broker."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success, or an error code"]
-    #[doc = "          if the arguments were invalid."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_AdminOptions_set_validate_only()"]
-    #[doc = " @sa http://kafka.apache.org/documentation.html#topicconfigs"]
     pub fn rd_kafka_NewTopic_set_config(
         new_topic: *mut rd_kafka_NewTopic_t,
         name: *const ::std::os::raw::c_char,
@@ -9037,22 +3592,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Create topics in cluster as specified by the \\p new_topics"]
-    #[doc = "        array of size \\p new_topic_cnt elements."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param new_topics Array of new topics to create."]
-    #[doc = " @param new_topic_cnt Number of elements in \\p new_topics array."]
-    #[doc = " @param options Optional admin options, or NULL for defaults."]
-    #[doc = " @param rkqu Queue to emit result on."]
-    #[doc = ""]
-    #[doc = " Supported admin options:"]
-    #[doc = "  - rd_kafka_AdminOptions_set_validate_only() - default false"]
-    #[doc = "  - rd_kafka_AdminOptions_set_operation_timeout() - default 0"]
-    #[doc = "  - rd_kafka_AdminOptions_set_timeout() - default socket.timeout.ms"]
-    #[doc = ""]
-    #[doc = " @remark The result event type emitted on the supplied queue is of type"]
-    #[doc = "         \\c RD_KAFKA_EVENT_CREATETOPICS_RESULT"]
     pub fn rd_kafka_CreateTopics(
         rk: *mut rd_kafka_t,
         new_topics: *mut *mut rd_kafka_NewTopic_t,
@@ -9062,12 +3601,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Get an array of topic results from a CreateTopics result."]
-    #[doc = ""]
-    #[doc = " The returned \\p topics life-time is the same as the \\p result object."]
-    #[doc = ""]
-    #[doc = " @param result Result to get topics from."]
-    #[doc = " @param cntp Updated to the number of elements in the array."]
     pub fn rd_kafka_CreateTopics_result_topics(
         result: *const rd_kafka_CreateTopics_result_t,
         cntp: *mut size_t,
@@ -9078,48 +3611,22 @@ extern "C" {
 pub struct rd_kafka_DeleteTopic_s {
     _unused: [u8; 0],
 }
-#[doc = " @section DeleteTopics - delete topics from cluster"]
-#[doc = ""]
-#[doc = ""]
 pub type rd_kafka_DeleteTopic_t = rd_kafka_DeleteTopic_s;
 extern "C" {
-    #[doc = " @brief Create a new DeleteTopic object. This object is later passed to"]
-    #[doc = "        rd_kafka_DeleteTopics()."]
-    #[doc = ""]
-    #[doc = " @param topic Topic name to delete."]
-    #[doc = ""]
-    #[doc = " @returns a new allocated DeleteTopic object."]
-    #[doc = "          Use rd_kafka_DeleteTopic_destroy() to free object when done."]
     pub fn rd_kafka_DeleteTopic_new(
         topic: *const ::std::os::raw::c_char,
     ) -> *mut rd_kafka_DeleteTopic_t;
 }
 extern "C" {
-    #[doc = " @brief Destroy and free a DeleteTopic object previously created with"]
-    #[doc = "        rd_kafka_DeleteTopic_new()"]
     pub fn rd_kafka_DeleteTopic_destroy(del_topic: *mut rd_kafka_DeleteTopic_t);
 }
 extern "C" {
-    #[doc = " @brief Helper function to destroy all DeleteTopic objects in"]
-    #[doc = "        the \\p del_topics array (of \\p del_topic_cnt elements)."]
-    #[doc = "        The array itself is not freed."]
     pub fn rd_kafka_DeleteTopic_destroy_array(
         del_topics: *mut *mut rd_kafka_DeleteTopic_t,
         del_topic_cnt: size_t,
     );
 }
 extern "C" {
-    #[doc = " @brief Delete topics from cluster as specified by the \\p topics"]
-    #[doc = "        array of size \\p topic_cnt elements."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param del_topics Array of topics to delete."]
-    #[doc = " @param del_topic_cnt Number of elements in \\p topics array."]
-    #[doc = " @param options Optional admin options, or NULL for defaults."]
-    #[doc = " @param rkqu Queue to emit result on."]
-    #[doc = ""]
-    #[doc = " @remark The result event type emitted on the supplied queue is of type"]
-    #[doc = "         \\c RD_KAFKA_EVENT_DELETETOPICS_RESULT"]
     pub fn rd_kafka_DeleteTopics(
         rk: *mut rd_kafka_t,
         del_topics: *mut *mut rd_kafka_DeleteTopic_t,
@@ -9129,12 +3636,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Get an array of topic results from a DeleteTopics result."]
-    #[doc = ""]
-    #[doc = " The returned \\p topics life-time is the same as the \\p result object."]
-    #[doc = ""]
-    #[doc = " @param result Result to get topic results from."]
-    #[doc = " @param cntp is updated to the number of elements in the array."]
     pub fn rd_kafka_DeleteTopics_result_topics(
         result: *const rd_kafka_DeleteTopics_result_t,
         cntp: *mut size_t,
@@ -9145,23 +3646,8 @@ extern "C" {
 pub struct rd_kafka_NewPartitions_s {
     _unused: [u8; 0],
 }
-#[doc = " NewPartitions"]
 pub type rd_kafka_NewPartitions_t = rd_kafka_NewPartitions_s;
 extern "C" {
-    #[doc = " @brief Create a new NewPartitions. This object is later passed to"]
-    #[doc = "        rd_kafka_CreatePartitions() to increas the number of partitions"]
-    #[doc = "        to \\p new_total_cnt for an existing topic."]
-    #[doc = ""]
-    #[doc = " @param topic Topic name to create more partitions for."]
-    #[doc = " @param new_total_cnt Increase the topic's partition count to this value."]
-    #[doc = " @param errstr A human readable error string (nul-terminated) is written to"]
-    #[doc = "               this location that must be of at least \\p errstr_size bytes."]
-    #[doc = "               The \\p errstr is only written in case of error."]
-    #[doc = " @param errstr_size Writable size in \\p errstr."]
-    #[doc = ""]
-    #[doc = " @returns a new allocated NewPartitions object, or NULL if the"]
-    #[doc = "          input parameters are invalid."]
-    #[doc = "          Use rd_kafka_NewPartitions_destroy() to free object when done."]
     pub fn rd_kafka_NewPartitions_new(
         topic: *const ::std::os::raw::c_char,
         new_total_cnt: size_t,
@@ -9170,40 +3656,15 @@ extern "C" {
     ) -> *mut rd_kafka_NewPartitions_t;
 }
 extern "C" {
-    #[doc = " @brief Destroy and free a NewPartitions object previously created with"]
-    #[doc = "        rd_kafka_NewPartitions_new()"]
     pub fn rd_kafka_NewPartitions_destroy(new_parts: *mut rd_kafka_NewPartitions_t);
 }
 extern "C" {
-    #[doc = " @brief Helper function to destroy all NewPartitions objects in the"]
-    #[doc = "        \\p new_parts array (of \\p new_parts_cnt elements)."]
-    #[doc = "        The array itself is not freed."]
     pub fn rd_kafka_NewPartitions_destroy_array(
         new_parts: *mut *mut rd_kafka_NewPartitions_t,
         new_parts_cnt: size_t,
     );
 }
 extern "C" {
-    #[doc = " @brief Set the replica (broker id) assignment for \\p new_partition_idx to the"]
-    #[doc = "        replica set in \\p broker_ids (of \\p broker_id_cnt elements)."]
-    #[doc = ""]
-    #[doc = " @remark An application must either set the replica assignment for"]
-    #[doc = "         all new partitions, or none."]
-    #[doc = ""]
-    #[doc = " @remark If called, this function must be called consecutively for each"]
-    #[doc = "         new partition being created,"]
-    #[doc = "         where \\p new_partition_idx 0 is the first new partition,"]
-    #[doc = "         1 is the second, and so on."]
-    #[doc = ""]
-    #[doc = " @remark \\p broker_id_cnt should match the topic's replication factor."]
-    #[doc = ""]
-    #[doc = " @remark Use rd_kafka_metadata() to retrieve the list of brokers"]
-    #[doc = "         in the cluster."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR on success, or an error code"]
-    #[doc = "          if the arguments were invalid."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_AdminOptions_set_validate_only()"]
     pub fn rd_kafka_NewPartitions_set_replica_assignment(
         new_parts: *mut rd_kafka_NewPartitions_t,
         new_partition_idx: i32,
@@ -9214,22 +3675,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Create additional partitions for the given topics, as specified"]
-    #[doc = "        by the \\p new_parts array of size \\p new_parts_cnt elements."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param new_parts Array of topics for which new partitions are to be created."]
-    #[doc = " @param new_parts_cnt Number of elements in \\p new_parts array."]
-    #[doc = " @param options Optional admin options, or NULL for defaults."]
-    #[doc = " @param rkqu Queue to emit result on."]
-    #[doc = ""]
-    #[doc = " Supported admin options:"]
-    #[doc = "  - rd_kafka_AdminOptions_set_validate_only() - default false"]
-    #[doc = "  - rd_kafka_AdminOptions_set_operation_timeout() - default 0"]
-    #[doc = "  - rd_kafka_AdminOptions_set_timeout() - default socket.timeout.ms"]
-    #[doc = ""]
-    #[doc = " @remark The result event type emitted on the supplied queue is of type"]
-    #[doc = "         \\c RD_KAFKA_EVENT_CREATEPARTITIONS_RESULT"]
     pub fn rd_kafka_CreatePartitions(
         rk: *mut rd_kafka_t,
         new_parts: *mut *mut rd_kafka_NewPartitions_t,
@@ -9239,12 +3684,6 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Get an array of topic results from a CreatePartitions result."]
-    #[doc = ""]
-    #[doc = " The returned \\p topics life-time is the same as the \\p result object."]
-    #[doc = ""]
-    #[doc = " @param result Result o get topic results from."]
-    #[doc = " @param cntp is updated to the number of elements in the array."]
     pub fn rd_kafka_CreatePartitions_result_topics(
         result: *const rd_kafka_CreatePartitions_result_t,
         cntp: *mut size_t,
@@ -9263,10 +3702,8 @@ pub const rd_kafka_ConfigSource_t_RD_KAFKA_CONFIG_SOURCE_STATIC_BROKER_CONFIG:
 pub const rd_kafka_ConfigSource_t_RD_KAFKA_CONFIG_SOURCE_DEFAULT_CONFIG: rd_kafka_ConfigSource_t =
     5;
 pub const rd_kafka_ConfigSource_t_RD_KAFKA_CONFIG_SOURCE__CNT: rd_kafka_ConfigSource_t = 6;
-#[doc = " Apache Kafka config sources"]
 pub type rd_kafka_ConfigSource_t = u32;
 extern "C" {
-    #[doc = " @returns a string representation of the \\p confsource."]
     pub fn rd_kafka_ConfigSource_name(
         confsource: rd_kafka_ConfigSource_t,
     ) -> *const ::std::os::raw::c_char;
@@ -9276,88 +3713,56 @@ extern "C" {
 pub struct rd_kafka_ConfigEntry_s {
     _unused: [u8; 0],
 }
-#[doc = " ConfigEntry"]
 pub type rd_kafka_ConfigEntry_t = rd_kafka_ConfigEntry_s;
 extern "C" {
-    #[doc = " @returns the configuration property name"]
     pub fn rd_kafka_ConfigEntry_name(
         entry: *const rd_kafka_ConfigEntry_t,
     ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @returns the configuration value, may be NULL for sensitive or unset"]
-    #[doc = "          properties."]
     pub fn rd_kafka_ConfigEntry_value(
         entry: *const rd_kafka_ConfigEntry_t,
     ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @returns the config source."]
     pub fn rd_kafka_ConfigEntry_source(
         entry: *const rd_kafka_ConfigEntry_t,
     ) -> rd_kafka_ConfigSource_t;
 }
 extern "C" {
-    #[doc = " @returns 1 if the config property is read-only on the broker, else 0."]
-    #[doc = " @remark Shall only be used on a DescribeConfigs result, otherwise returns -1."]
     pub fn rd_kafka_ConfigEntry_is_read_only(
         entry: *const rd_kafka_ConfigEntry_t,
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @returns 1 if the config property is set to its default value on the broker,"]
-    #[doc = "          else 0."]
-    #[doc = " @remark Shall only be used on a DescribeConfigs result, otherwise returns -1."]
     pub fn rd_kafka_ConfigEntry_is_default(
         entry: *const rd_kafka_ConfigEntry_t,
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @returns 1 if the config property contains sensitive information (such as"]
-    #[doc = "          security configuration), else 0."]
-    #[doc = " @remark An application should take care not to include the value of"]
-    #[doc = "         sensitive configuration entries in its output."]
-    #[doc = " @remark Shall only be used on a DescribeConfigs result, otherwise returns -1."]
     pub fn rd_kafka_ConfigEntry_is_sensitive(
         entry: *const rd_kafka_ConfigEntry_t,
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @returns 1 if this entry is a synonym, else 0."]
     pub fn rd_kafka_ConfigEntry_is_synonym(
         entry: *const rd_kafka_ConfigEntry_t,
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[doc = " @returns the synonym config entry array."]
-    #[doc = ""]
-    #[doc = " @param entry Entry to get synonyms for."]
-    #[doc = " @param cntp is updated to the number of elements in the array."]
-    #[doc = ""]
-    #[doc = " @remark The lifetime of the returned entry is the same as \\p conf ."]
-    #[doc = " @remark Shall only be used on a DescribeConfigs result,"]
-    #[doc = "         otherwise returns NULL."]
     pub fn rd_kafka_ConfigEntry_synonyms(
         entry: *const rd_kafka_ConfigEntry_t,
         cntp: *mut size_t,
     ) -> *mut *const rd_kafka_ConfigEntry_t;
 }
-#[doc = "< Unknown"]
 pub const rd_kafka_ResourceType_t_RD_KAFKA_RESOURCE_UNKNOWN: rd_kafka_ResourceType_t = 0;
-#[doc = "< Any (used for lookups)"]
 pub const rd_kafka_ResourceType_t_RD_KAFKA_RESOURCE_ANY: rd_kafka_ResourceType_t = 1;
-#[doc = "< Topic"]
 pub const rd_kafka_ResourceType_t_RD_KAFKA_RESOURCE_TOPIC: rd_kafka_ResourceType_t = 2;
-#[doc = "< Group"]
 pub const rd_kafka_ResourceType_t_RD_KAFKA_RESOURCE_GROUP: rd_kafka_ResourceType_t = 3;
-#[doc = "< Broker"]
 pub const rd_kafka_ResourceType_t_RD_KAFKA_RESOURCE_BROKER: rd_kafka_ResourceType_t = 4;
-#[doc = "< Number of resource types defined"]
 pub const rd_kafka_ResourceType_t_RD_KAFKA_RESOURCE__CNT: rd_kafka_ResourceType_t = 5;
-#[doc = " Apache Kafka resource types"]
 pub type rd_kafka_ResourceType_t = u32;
 extern "C" {
-    #[doc = " @returns a string representation of the \\p restype"]
     pub fn rd_kafka_ResourceType_name(
         restype: rd_kafka_ResourceType_t,
     ) -> *const ::std::os::raw::c_char;
@@ -9367,46 +3772,23 @@ extern "C" {
 pub struct rd_kafka_ConfigResource_s {
     _unused: [u8; 0],
 }
-#[doc = " ConfigResource"]
 pub type rd_kafka_ConfigResource_t = rd_kafka_ConfigResource_s;
 extern "C" {
-    #[doc = " @brief Create new ConfigResource object."]
-    #[doc = ""]
-    #[doc = " @param restype The resource type (e.g., RD_KAFKA_RESOURCE_TOPIC)"]
-    #[doc = " @param resname The resource name (e.g., the topic name)"]
-    #[doc = ""]
-    #[doc = " @returns a newly allocated object"]
     pub fn rd_kafka_ConfigResource_new(
         restype: rd_kafka_ResourceType_t,
         resname: *const ::std::os::raw::c_char,
     ) -> *mut rd_kafka_ConfigResource_t;
 }
 extern "C" {
-    #[doc = " @brief Destroy and free a ConfigResource object previously created with"]
-    #[doc = "        rd_kafka_ConfigResource_new()"]
     pub fn rd_kafka_ConfigResource_destroy(config: *mut rd_kafka_ConfigResource_t);
 }
 extern "C" {
-    #[doc = " @brief Helper function to destroy all ConfigResource objects in"]
-    #[doc = "        the \\p configs array (of \\p config_cnt elements)."]
-    #[doc = "        The array itself is not freed."]
     pub fn rd_kafka_ConfigResource_destroy_array(
         config: *mut *mut rd_kafka_ConfigResource_t,
         config_cnt: size_t,
     );
 }
 extern "C" {
-    #[doc = " @brief Set configuration name value pair."]
-    #[doc = ""]
-    #[doc = " @param config ConfigResource to set config property on."]
-    #[doc = " @param name Configuration name, depends on resource type."]
-    #[doc = " @param value Configuration value, depends on resource type and \\p name."]
-    #[doc = "              Set to \\c NULL to revert configuration value to default."]
-    #[doc = ""]
-    #[doc = " This will overwrite the current value."]
-    #[doc = ""]
-    #[doc = " @returns RD_KAFKA_RESP_ERR_NO_ERROR if config was added to resource,"]
-    #[doc = "          or RD_KAFKA_RESP_ERR__INVALID_ARG on invalid input."]
     pub fn rd_kafka_ConfigResource_set_config(
         config: *mut rd_kafka_ConfigResource_t,
         name: *const ::std::os::raw::c_char,
@@ -9414,61 +3796,32 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief Get an array of config entries from a ConfigResource object."]
-    #[doc = ""]
-    #[doc = " The returned object life-times are the same as the \\p config object."]
-    #[doc = ""]
-    #[doc = " @param config ConfigResource to get configs from."]
-    #[doc = " @param cntp is updated to the number of elements in the array."]
     pub fn rd_kafka_ConfigResource_configs(
         config: *const rd_kafka_ConfigResource_t,
         cntp: *mut size_t,
     ) -> *mut *const rd_kafka_ConfigEntry_t;
 }
 extern "C" {
-    #[doc = " @returns the ResourceType for \\p config"]
     pub fn rd_kafka_ConfigResource_type(
         config: *const rd_kafka_ConfigResource_t,
     ) -> rd_kafka_ResourceType_t;
 }
 extern "C" {
-    #[doc = " @returns the name for \\p config"]
     pub fn rd_kafka_ConfigResource_name(
         config: *const rd_kafka_ConfigResource_t,
     ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @returns the error for this resource from an AlterConfigs request"]
     pub fn rd_kafka_ConfigResource_error(
         config: *const rd_kafka_ConfigResource_t,
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @returns the error string for this resource from an AlterConfigs"]
-    #[doc = "          request, or NULL if no error."]
     pub fn rd_kafka_ConfigResource_error_string(
         config: *const rd_kafka_ConfigResource_t,
     ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    #[doc = " @brief Update the configuration for the specified resources."]
-    #[doc = "        Updates are not transactional so they may succeed for a subset"]
-    #[doc = "        of the provided resources while the others fail."]
-    #[doc = "        The configuration for a particular resource is updated atomically,"]
-    #[doc = "        replacing values using the provided ConfigEntrys and reverting"]
-    #[doc = "        unspecified ConfigEntrys to their default values."]
-    #[doc = ""]
-    #[doc = " @remark Requires broker version >=0.11.0.0"]
-    #[doc = ""]
-    #[doc = " @warning AlterConfigs will replace all existing configuration for"]
-    #[doc = "          the provided resources with the new configuration given,"]
-    #[doc = "          reverting all other configuration to their default values."]
-    #[doc = ""]
-    #[doc = " @remark Multiple resources and resource types may be set, but at most one"]
-    #[doc = "         resource of type \\c RD_KAFKA_RESOURCE_BROKER is allowed per call"]
-    #[doc = "         since these resource requests must be sent to the broker specified"]
-    #[doc = "         in the resource."]
-    #[doc = ""]
     pub fn rd_kafka_AlterConfigs(
         rk: *mut rd_kafka_t,
         configs: *mut *mut rd_kafka_ConfigResource_t,
@@ -9478,46 +3831,12 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Get an array of resource results from a AlterConfigs result."]
-    #[doc = ""]
-    #[doc = " Use \\c rd_kafka_ConfigResource_error() and"]
-    #[doc = " \\c rd_kafka_ConfigResource_error_string() to extract per-resource error"]
-    #[doc = " results on the returned array elements."]
-    #[doc = ""]
-    #[doc = " The returned object life-times are the same as the \\p result object."]
-    #[doc = ""]
-    #[doc = " @param result Result object to get resource results from."]
-    #[doc = " @param cntp is updated to the number of elements in the array."]
-    #[doc = ""]
-    #[doc = " @returns an array of ConfigResource elements, or NULL if not available."]
     pub fn rd_kafka_AlterConfigs_result_resources(
         result: *const rd_kafka_AlterConfigs_result_t,
         cntp: *mut size_t,
     ) -> *mut *const rd_kafka_ConfigResource_t;
 }
 extern "C" {
-    #[doc = " @brief Get configuration for the specified resources in \\p configs."]
-    #[doc = ""]
-    #[doc = " The returned configuration includes default values and the"]
-    #[doc = " rd_kafka_ConfigEntry_is_default() or rd_kafka_ConfigEntry_source()"]
-    #[doc = " methods may be used to distinguish them from user supplied values."]
-    #[doc = ""]
-    #[doc = " The value of config entries where rd_kafka_ConfigEntry_is_sensitive()"]
-    #[doc = " is true will always be NULL to avoid disclosing sensitive"]
-    #[doc = " information, such as security settings."]
-    #[doc = ""]
-    #[doc = " Configuration entries where rd_kafka_ConfigEntry_is_read_only()"]
-    #[doc = " is true can't be updated (with rd_kafka_AlterConfigs())."]
-    #[doc = ""]
-    #[doc = " Synonym configuration entries are returned if the broker supports"]
-    #[doc = " it (broker version >= 1.1.0). See rd_kafka_ConfigEntry_synonyms()."]
-    #[doc = ""]
-    #[doc = " @remark Requires broker version >=0.11.0.0"]
-    #[doc = ""]
-    #[doc = " @remark Multiple resources and resource types may be requested, but at most"]
-    #[doc = "         one resource of type \\c RD_KAFKA_RESOURCE_BROKER is allowed per call"]
-    #[doc = "         since these resource requests must be sent to the broker specified"]
-    #[doc = "         in the resource."]
     pub fn rd_kafka_DescribeConfigs(
         rk: *mut rd_kafka_t,
         configs: *mut *mut rd_kafka_ConfigResource_t,
@@ -9527,60 +3846,12 @@ extern "C" {
     );
 }
 extern "C" {
-    #[doc = " @brief Get an array of resource results from a DescribeConfigs result."]
-    #[doc = ""]
-    #[doc = " The returned \\p resources life-time is the same as the \\p result object."]
-    #[doc = ""]
-    #[doc = " @param result Result object to get resource results from."]
-    #[doc = " @param cntp is updated to the number of elements in the array."]
     pub fn rd_kafka_DescribeConfigs_result_resources(
         result: *const rd_kafka_DescribeConfigs_result_t,
         cntp: *mut size_t,
     ) -> *mut *const rd_kafka_ConfigResource_t;
 }
 extern "C" {
-    #[doc = " @brief Set SASL/OAUTHBEARER token and metadata"]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param token_value the mandatory token value to set, often (but not"]
-    #[doc = "  necessarily) a JWS compact serialization as per"]
-    #[doc = "  https://tools.ietf.org/html/rfc7515#section-3.1."]
-    #[doc = " @param md_lifetime_ms when the token expires, in terms of the number of"]
-    #[doc = "  milliseconds since the epoch."]
-    #[doc = " @param md_principal_name the mandatory Kafka principal name associated"]
-    #[doc = "  with the token."]
-    #[doc = " @param extensions optional SASL extensions key-value array with"]
-    #[doc = "  \\p extensions_size elements (number of keys * 2), where [i] is the key and"]
-    #[doc = "  [i+1] is the key's value, to be communicated to the broker"]
-    #[doc = "  as additional key-value pairs during the initial client response as per"]
-    #[doc = "  https://tools.ietf.org/html/rfc7628#section-3.1. The key-value pairs are"]
-    #[doc = "  copied."]
-    #[doc = " @param extension_size the number of SASL extension keys plus values,"]
-    #[doc = "  which must be a non-negative multiple of 2."]
-    #[doc = " @param errstr A human readable error string (nul-terminated) is written to"]
-    #[doc = "               this location that must be of at least \\p errstr_size bytes."]
-    #[doc = "               The \\p errstr is only written in case of error."]
-    #[doc = " @param errstr_size Writable size in \\p errstr."]
-    #[doc = ""]
-    #[doc = " The SASL/OAUTHBEARER token refresh callback or event handler should invoke"]
-    #[doc = " this method upon success. The extension keys must not include the reserved"]
-    #[doc = " key \"`auth`\", and all extension keys and values must conform to the required"]
-    #[doc = " format as per https://tools.ietf.org/html/rfc7628#section-3.1:"]
-    #[doc = ""]
-    #[doc = "     key            = 1*(ALPHA)"]
-    #[doc = "     value          = *(VCHAR / SP / HTAB / CR / LF )"]
-    #[doc = ""]
-    #[doc = " @returns \\c RD_KAFKA_RESP_ERR_NO_ERROR on success, otherwise \\p errstr set"]
-    #[doc = "              and:<br>"]
-    #[doc = "          \\c RD_KAFKA_RESP_ERR__INVALID_ARG if any of the arguments are"]
-    #[doc = "              invalid;<br>"]
-    #[doc = "          \\c RD_KAFKA_RESP_ERR__NOT_IMPLEMENTED if SASL/OAUTHBEARER is not"]
-    #[doc = "              supported by this build;<br>"]
-    #[doc = "          \\c RD_KAFKA_RESP_ERR__STATE if SASL/OAUTHBEARER is supported but is"]
-    #[doc = "              not configured as the client's authentication mechanism.<br>"]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_oauthbearer_set_token_failure"]
-    #[doc = " @sa rd_kafka_conf_set_oauthbearer_token_refresh_cb"]
     pub fn rd_kafka_oauthbearer_set_token(
         rk: *mut rd_kafka_t,
         token_value: *const ::std::os::raw::c_char,
@@ -9593,24 +3864,6 @@ extern "C" {
     ) -> rd_kafka_resp_err_t;
 }
 extern "C" {
-    #[doc = " @brief SASL/OAUTHBEARER token refresh failure indicator."]
-    #[doc = ""]
-    #[doc = " @param rk Client instance."]
-    #[doc = " @param errstr mandatory human readable error reason for failing to acquire"]
-    #[doc = "  a token."]
-    #[doc = ""]
-    #[doc = " The SASL/OAUTHBEARER token refresh callback or event handler should invoke"]
-    #[doc = " this method upon failure."]
-    #[doc = ""]
-    #[doc = " @returns \\c RD_KAFKA_RESP_ERR_NO_ERROR on success, otherwise:<br>"]
-    #[doc = "          \\c RD_KAFKA_RESP_ERR__NOT_IMPLEMENTED if SASL/OAUTHBEARER is not"]
-    #[doc = "              supported by this build;<br>"]
-    #[doc = "          \\c RD_KAFKA_RESP_ERR__STATE if SASL/OAUTHBEARER is supported but is"]
-    #[doc = "              not configured as the client's authentication mechanism,<br>"]
-    #[doc = "          \\c RD_KAFKA_RESP_ERR__INVALID_ARG if no error string is supplied."]
-    #[doc = ""]
-    #[doc = " @sa rd_kafka_oauthbearer_set_token"]
-    #[doc = " @sa rd_kafka_conf_set_oauthbearer_token_refresh_cb"]
     pub fn rd_kafka_oauthbearer_set_token_failure(
         rk: *mut rd_kafka_t,
         errstr: *const ::std::os::raw::c_char,
@@ -9624,57 +3877,4 @@ pub struct __va_list_tag {
     pub fp_offset: ::std::os::raw::c_uint,
     pub overflow_arg_area: *mut ::std::os::raw::c_void,
     pub reg_save_area: *mut ::std::os::raw::c_void,
-}
-#[test]
-fn bindgen_test_layout___va_list_tag() {
-    assert_eq!(
-        ::std::mem::size_of::<__va_list_tag>(),
-        24usize,
-        concat!("Size of: ", stringify!(__va_list_tag))
-    );
-    assert_eq!(
-        ::std::mem::align_of::<__va_list_tag>(),
-        8usize,
-        concat!("Alignment of ", stringify!(__va_list_tag))
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).gp_offset as *const _ as usize },
-        0usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(gp_offset)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).fp_offset as *const _ as usize },
-        4usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(fp_offset)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).overflow_arg_area as *const _ as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(overflow_arg_area)
-        )
-    );
-    assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).reg_save_area as *const _ as usize },
-        16usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(__va_list_tag),
-            "::",
-            stringify!(reg_save_area)
-        )
-    );
 }

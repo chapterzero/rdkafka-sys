@@ -6,7 +6,7 @@ fn main() {
         .set("group.id", "rdkafka_sysv1");
 
     let mut consumer = conf.build_consumer().unwrap();
-    consumer.subscribe(&vec!["ecrawler_categories"]);
+    consumer.subscribe(&vec!["some_topic"]);
     loop {
         for message in consumer.get_messages(1000).unwrap() {
             println!("Message: {:?}", message);

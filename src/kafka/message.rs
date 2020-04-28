@@ -18,7 +18,6 @@ impl Message {
             let b = CStr::from_ptr((*msg).payload as *const c_char).to_bytes();
             let payload_len = (*msg).len as usize;
             Self {
-                // payload: payload.to_string(),
                 payload: String::from_utf8_lossy(&b[..payload_len]).to_string(),
                 partition: (*msg).partition,
                 offset: (*msg).offset,
