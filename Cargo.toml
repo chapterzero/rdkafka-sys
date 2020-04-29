@@ -1,12 +1,19 @@
 [package]
 name = "rdkafka_sys"
-version = "0.1.0"
+version = "1.2.2"
 authors = ["chapterzero"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[features]
+default = []
+gssapi = []
+ssl = []
+zstd = []
+lz4 = []
 
 [build-dependencies]
 bindgen = "0.53.1"
