@@ -1,10 +1,11 @@
 use super::consumer::Consumer;
+use super::producer::Producer;
 use std::collections::HashMap;
 use std::ffi::{CStr, CString};
 
 use crate::bindings::{
     rd_kafka_conf_new, rd_kafka_conf_s, rd_kafka_conf_set, rd_kafka_new,
-    rd_kafka_type_t_RD_KAFKA_CONSUMER,
+    rd_kafka_type_t_RD_KAFKA_CONSUMER, rd_kafka_type_t_RD_KAFKA_PRODUCER,
 };
 
 #[derive(Debug)]
@@ -39,6 +40,23 @@ impl Config {
                 })
             }
             Ok(Consumer::new(rk))
+        }
+    }
+
+    pub fn build_producer(mut self) -> Result<Producer, ConfigError> {
+        let conf = self.create_rdkafka_conf()?;
+        unsafe {
+            let err = CString::new(String::with_capacity(512)).unwrap().into_raw();
+            let rk = rd_kafka_new(rd_kafka_type_t_RD_KAFKA_PRODUCER, conf, err, 512);
+            let err = CStr::from_ptr(err).to_str().unwrap();
+            if err.len() != 0 {
+                return Err(ConfigError{
+                    key: String::new(),
+                    value: String::from("Creating kafka producer object"),
+                    reason: err.to_string(),
+                })
+            }
+            Ok(Producer::new(rk))
         }
     }
 

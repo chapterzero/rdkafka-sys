@@ -6,7 +6,7 @@ use crate::bindings::{
 
 use std::ffi::CString;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Consumer {
     rk: *mut rd_kafka_s,
 }

@@ -1,6 +1,5 @@
 use crate::bindings::{
-    rd_kafka_consumer_poll, rd_kafka_err2str, rd_kafka_message_destroy, rd_kafka_message_t,
-    rd_kafka_resp_err_t, rd_kafka_s,
+    rd_kafka_consumer_poll, rd_kafka_message_destroy, rd_kafka_message_t, rd_kafka_s,
 };
 use std::ffi::CStr;
 use std::os::raw::c_char;
@@ -38,20 +37,6 @@ impl Messages {
             poll_timeout_ms,
         }
     }
-
-    fn get_error_str(code: rd_kafka_resp_err_t) -> Option<String> {
-        if code == 0 {
-            return None;
-        }
-
-        unsafe {
-            Some(
-                CStr::from_ptr(rd_kafka_err2str(code))
-                    .to_string_lossy()
-                    .to_string(),
-            )
-        }
-    }
 }
 
 impl Iterator for Messages {
@@ -63,7 +48,7 @@ impl Iterator for Messages {
             match msg.is_null() {
                 true => None,
                 false => {
-                    let res = match Self::get_error_str((*msg).err) {
+                    let res = match super::get_error_str((*msg).err) {
                         Some(s) => Some(Err(MessageError { kafka_msg: s })),
                         None => Some(Ok(Message::from_kafka_msg(msg))),
                     };
