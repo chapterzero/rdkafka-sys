@@ -56,10 +56,15 @@ impl Producer {
             }
 
             std::mem::forget(payload);
-            rd_kafka_poll(self.rk, 0);
         }
 
         Ok(())
+    }
+
+    pub fn poll(&self) {
+        unsafe {
+            rd_kafka_poll(self.rk, 0);
+        }
     }
 
     pub fn flush(&self, timeout_ms: i32) {
