@@ -1,7 +1,7 @@
 use crate::bindings::{
     rd_kafka_flush, rd_kafka_last_error, rd_kafka_poll, rd_kafka_produce, rd_kafka_s,
     rd_kafka_topic_conf_new, rd_kafka_topic_destroy, rd_kafka_topic_new, rd_kafka_topic_t,
-    RD_KAFKA_MSG_F_COPY,
+    RD_KAFKA_MSG_F_FREE,
 };
 use std::ffi::c_void;
 use std::ffi::CString;
@@ -32,17 +32,17 @@ impl Producer {
         }
     }
 
-    pub fn send(&self, payload: &str, partition: Option<i32>) -> Result<(), ProducerError> {
+    pub fn send(&self, payload: &[u8], partition: Option<i32>) -> Result<(), ProducerError> {
         if self.rkt.is_null() {
             return Err(ProducerError::NoTopic);
         }
 
         unsafe {
-            let mut payload = String::from(payload);
+            let mut payload = payload.to_vec();
             let res = rd_kafka_produce(
                 self.rkt,
                 partition.unwrap_or(-1),
-                RD_KAFKA_MSG_F_COPY as i32,
+                RD_KAFKA_MSG_F_FREE as i32,
                 payload.as_mut_ptr() as *mut c_void,
                 payload.len() as u64,
                 ptr::null(),
@@ -55,6 +55,7 @@ impl Producer {
                 }
             }
 
+            std::mem::forget(payload);
             rd_kafka_poll(self.rk, 0);
         }
 
