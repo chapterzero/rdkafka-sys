@@ -33,11 +33,11 @@ impl Config {
             let rk = rd_kafka_new(rd_kafka_type_t_RD_KAFKA_CONSUMER, conf, err, 512);
             let err = CStr::from_ptr(err).to_str().unwrap();
             if err.len() != 0 {
-                return Err(ConfigError{
+                return Err(ConfigError {
                     key: String::new(),
                     value: String::from("Creating kafka consumer object"),
                     reason: err.to_string(),
-                })
+                });
             }
             Ok(Consumer::new(rk))
         }
@@ -50,11 +50,11 @@ impl Config {
             let rk = rd_kafka_new(rd_kafka_type_t_RD_KAFKA_PRODUCER, conf, err, 512);
             let err = CStr::from_ptr(err).to_str().unwrap();
             if err.len() != 0 {
-                return Err(ConfigError{
+                return Err(ConfigError {
                     key: String::new(),
                     value: String::from("Creating kafka producer object"),
                     reason: err.to_string(),
-                })
+                });
             }
             Ok(Producer::new(rk))
         }
@@ -78,8 +78,6 @@ impl Config {
             Ok(conf)
         }
     }
-
-
 }
 
 fn cstr(s: &str) -> CString {

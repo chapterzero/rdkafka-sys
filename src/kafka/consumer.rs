@@ -16,7 +16,7 @@ impl Consumer {
         Consumer { rk }
     }
 
-    pub fn subscribe(&mut self, topics: &[&str]) {
+    pub fn subscribe(&self, topics: &[&str]) {
         unsafe {
             let top_par = rd_kafka_topic_partition_list_new(topics.len() as i32);
             for topic in topics {
@@ -47,3 +47,6 @@ impl std::error::Error for ConsumerError {
         None
     }
 }
+
+unsafe impl Send for Consumer {}
+unsafe impl Sync for Consumer {}

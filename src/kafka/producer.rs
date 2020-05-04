@@ -1,6 +1,6 @@
 use crate::bindings::{
     rd_kafka_flush, rd_kafka_last_error, rd_kafka_poll, rd_kafka_produce, rd_kafka_s,
-    rd_kafka_topic_conf_new, rd_kafka_topic_destroy, rd_kafka_topic_new, rd_kafka_topic_t,
+    rd_kafka_topic_conf_new, rd_kafka_topic_destroy, rd_kafka_topic_new, rd_kafka_topic_t, rd_kafka_destroy,
     RD_KAFKA_MSG_F_FREE,
 };
 use std::ffi::c_void;
@@ -70,6 +70,19 @@ impl Producer {
     pub fn flush(&self, timeout_ms: i32) {
         unsafe {
             rd_kafka_flush(self.rk, timeout_ms);
+        }
+    }
+}
+
+impl Drop for Producer {
+    fn drop(&mut self) {
+        if !self.rkt.is_null() {
+            unsafe {
+                rd_kafka_topic_destroy(self.rkt);
+            }
+        }
+        unsafe {
+            rd_kafka_destroy(self.rk);
         }
     }
 }

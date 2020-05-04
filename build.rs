@@ -7,9 +7,11 @@ fn main() {
     let out_dir = format!("{}/rdkafka", env::var("OUT_DIR").unwrap());
 
     // clone and compile librdkafka
-    let archive = clone_librdkafka("temp", &ver);
-    let libdir = unpack_archive(&archive, "temp", &ver);
+    let clone_dir = format!("{}/temp", out_dir);
+    let archive = clone_librdkafka(&clone_dir, &ver);
+    let libdir = unpack_archive(&archive, &clone_dir, &ver);
     compile_librdkafka(&libdir, &out_dir);
+    copy_librdkafka(&out_dir);
 
     // generate bindings
     let bindings = bindgen::Builder::default()
@@ -66,7 +68,7 @@ fn clone_librdkafka(dir: &str, ver: &str) -> String {
     );
     eprintln!("Downloading librdkafka ver {}: {}", ver, url);
     Command::new("curl")
-        .args(&["-L", "-o", &target_file, &url])
+        .args(&["-L", "--create-dirs", "-o", &target_file, &url])
         .output()
         .expect("Error downloading librdkafka");
     return target_file;
@@ -132,4 +134,25 @@ fn compile_librdkafka(libdir: &str, targetdir: &str) {
             std::str::from_utf8(&res.stderr).unwrap()
         );
     }
+}
+
+fn copy_librdkafka(out_dir: &str) -> String {
+    let copy_to = format!("{}/../../../..", out_dir);
+    let librdkafka_file = format!("{}/lib/librdkafka.so.1", out_dir);
+    eprintln!("Copying librdkafka {} to {}", librdkafka_file, copy_to);
+
+    let res = Command::new("cp")
+        .args(&[&librdkafka_file, &copy_to])
+        .output()
+        .expect("Error when copying librdkafka");
+
+    if !res.status.success() {
+        panic!(
+            "Copy Got non 0 status code: {:?}, {}",
+            res.status.code(),
+            std::str::from_utf8(&res.stderr).unwrap()
+        );
+    }
+
+    return copy_to
 }
