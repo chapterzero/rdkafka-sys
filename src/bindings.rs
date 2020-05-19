@@ -1588,6 +1588,7 @@ pub struct __kernel_fsid_t {
 }
 pub type __kernel_off_t = __kernel_long_t;
 pub type __kernel_loff_t = ::std::os::raw::c_longlong;
+pub type __kernel_old_time_t = __kernel_long_t;
 pub type __kernel_time_t = __kernel_long_t;
 pub type __kernel_time64_t = ::std::os::raw::c_longlong;
 pub type __kernel_clock_t = __kernel_long_t;

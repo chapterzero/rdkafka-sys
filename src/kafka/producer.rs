@@ -1,7 +1,7 @@
 use crate::bindings::{
-    rd_kafka_flush, rd_kafka_last_error, rd_kafka_poll, rd_kafka_produce, rd_kafka_s,
-    rd_kafka_topic_conf_new, rd_kafka_topic_destroy, rd_kafka_topic_new, rd_kafka_topic_t, rd_kafka_destroy,
-    RD_KAFKA_MSG_F_FREE,
+    rd_kafka_destroy, rd_kafka_flush, rd_kafka_last_error, rd_kafka_poll, rd_kafka_produce,
+    rd_kafka_s, rd_kafka_topic_conf_new, rd_kafka_topic_destroy, rd_kafka_topic_new,
+    rd_kafka_topic_t, RD_KAFKA_MSG_F_FREE,
 };
 use std::ffi::c_void;
 use std::ffi::CString;
