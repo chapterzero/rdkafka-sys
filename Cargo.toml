@@ -7,6 +7,7 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+bindgen = { version = "0.53.1", optional = true }
 
 [features]
 default = []
@@ -14,6 +15,8 @@ gssapi = []
 ssl = []
 zstd = []
 lz4 = []
+build-binding = ["bindgen"]
 
-[build-dependencies]
-bindgen = "0.53.1"
+[[bin]]
+name = "binding"
+required-features = ["build-binding"]

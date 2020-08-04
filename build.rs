@@ -13,18 +13,6 @@ fn main() {
     compile_librdkafka(&libdir, &out_dir);
     copy_librdkafka(&out_dir);
 
-    // generate bindings
-    let bindings = bindgen::Builder::default()
-        .header(&format!("{}/include/librdkafka/rdkafka.h", out_dir))
-        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-        .layout_tests(false)
-        .generate_comments(false)
-        .generate()
-        .expect("Unable to generate bindings");
-    bindings
-        .write_to_file("src/bindings.rs")
-        .expect("Could not write bindings!");
-
     // linking
     println!("cargo:rustc-link-search={}/lib", out_dir);
     println!("cargo:rustc-link-lib=rdkafka");
