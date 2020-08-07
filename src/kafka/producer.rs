@@ -3,44 +3,51 @@ use crate::bindings::{
     rd_kafka_s, rd_kafka_topic_conf_new, rd_kafka_topic_destroy, rd_kafka_topic_new,
     rd_kafka_topic_t, RD_KAFKA_MSG_F_FREE,
 };
-use std::ffi::c_void;
-use std::ffi::CString;
+use std::ffi::{c_void, CString};
 use std::ptr;
+use std::collections::HashMap;
 
 #[derive(Debug, Clone)]
 pub struct Producer {
     rk: *mut rd_kafka_s,
-    rkt: *mut rd_kafka_topic_t,
+    rkt: HashMap<String, *mut rd_kafka_topic_t>,
 }
 
 impl Producer {
     pub fn new(rk: *mut rd_kafka_s) -> Producer {
         Producer {
             rk,
-            rkt: ptr::null_mut(),
+            rkt: HashMap::new(),
         }
     }
 
-    pub fn set_topic(&mut self, topic: &str) {
+    pub fn set_topics(&mut self, topics: &[&str]) {
         unsafe {
-            if !self.rkt.is_null() {
-                rd_kafka_topic_destroy(self.rkt);
+            for topic_name in topics {
+                if self.rkt.contains_key(*topic_name) {
+                    continue;
+                }
+
+                let topic = CString::new(String::from(*topic_name)).unwrap().into_raw();
+                let topic_conf = rd_kafka_topic_conf_new();
+                self.rkt.insert(
+                    topic_name.to_string(),
+                    rd_kafka_topic_new(self.rk, topic, topic_conf),
+                );
             }
-            let topic = CString::new(String::from(topic)).unwrap().into_raw();
-            let topic_conf = rd_kafka_topic_conf_new();
-            self.rkt = rd_kafka_topic_new(self.rk, topic, topic_conf);
         }
     }
 
-    pub fn send(&self, payload: &[u8], partition: Option<i32>) -> Result<(), ProducerError> {
-        if self.rkt.is_null() {
-            return Err(ProducerError::NoTopic);
-        }
+    pub fn send(&self, payload: &[u8], topic: &str, partition: Option<i32>) -> Result<(), ProducerError> {
+        let rkt = match self.rkt.get(topic) {
+            None => return Err(ProducerError::UnregisteredTopic),
+            Some(v) => v,
+        };
 
         unsafe {
             let mut payload = payload.to_vec();
             let res = rd_kafka_produce(
-                self.rkt,
+                *rkt,
                 partition.unwrap_or(-1),
                 RD_KAFKA_MSG_F_FREE as i32,
                 payload.as_mut_ptr() as *mut c_void,
@@ -76,12 +83,14 @@ impl Producer {
 
 impl Drop for Producer {
     fn drop(&mut self) {
-        if !self.rkt.is_null() {
-            unsafe {
-                rd_kafka_topic_destroy(self.rkt);
-            }
-        }
         unsafe {
+            // destroy producer topics
+            let keys: Vec<String> = self.rkt.keys().map(|s| s.to_string()).collect();
+            for key in keys {
+                let rkt = self.rkt.remove(&key).unwrap();
+                rd_kafka_topic_destroy(rkt);
+            }
+
             rd_kafka_destroy(self.rk);
         }
     }
@@ -89,7 +98,7 @@ impl Drop for Producer {
 
 #[derive(Debug, Clone)]
 pub enum ProducerError {
-    NoTopic,
+    UnregisteredTopic,
     SendError(String),
 }
 
@@ -100,11 +109,7 @@ impl fmt::Display for ProducerError {
     }
 }
 
-impl std::error::Error for ProducerError {
-    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
-        None
-    }
-}
+impl std::error::Error for ProducerError {}
 
 unsafe impl Send for Producer {}
 unsafe impl Sync for Producer {}

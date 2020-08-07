@@ -37,6 +37,10 @@ impl Consumer {
     }
 
     pub fn get_messages(&self, poll_timeout_ms: i32) -> Result<Messages, ConsumerError> {
+        if self.topic_partition.is_null() {
+            return Err(ConsumerError::NoTopic);
+        }
+
         Ok(Messages::new(self.rk, poll_timeout_ms))
     }
 
@@ -73,6 +77,7 @@ impl Drop for Consumer {
 use std::fmt;
 #[derive(Debug, Clone)]
 pub enum ConsumerError {
+    NoTopic,
     CloseError(String),
 }
 

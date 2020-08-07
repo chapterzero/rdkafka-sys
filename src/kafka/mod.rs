@@ -3,6 +3,9 @@ pub mod consumer;
 pub mod producer;
 pub mod message;
 
+pub use consumer::Consumer;
+pub use producer::Producer;
+
 use crate::bindings::{rd_kafka_resp_err_t, rd_kafka_err2str};
 use std::ffi::CStr;
 
